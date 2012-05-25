@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD31CFB51570094500905B59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB41570094500905B59 /* UIKit.framework */; };
+		FD31CFB71570094500905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB61570094500905B59 /* Foundation.framework */; };
+		FD31CFB91570094500905B59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB81570094500905B59 /* CoreGraphics.framework */; };
+		FD31CFBF1570094500905B59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD31CFBD1570094500905B59 /* InfoPlist.strings */; };
+		FD31CFC11570094500905B59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CFC01570094500905B59 /* main.m */; };
+		FD31CFC51570094500905B59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CFC41570094500905B59 /* AppDelegate.m */; };
+		FD31CFC81570094500905B59 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD31CFC61570094500905B59 /* MainStoryboard.storyboard */; };
+		FD31CFCB1570094500905B59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CFCA1570094500905B59 /* ViewController.m */; };
+		FD31CFD31570094500905B59 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFD21570094500905B59 /* SenTestingKit.framework */; };
+		FD31CFD41570094500905B59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB41570094500905B59 /* UIKit.framework */; };
+		FD31CFD51570094500905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB61570094500905B59 /* Foundation.framework */; };
+		FD31CFDD1570094500905B59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD31CFDB1570094500905B59 /* InfoPlist.strings */; };
+		FD31CFE01570094500905B59 /* friend_bearing_client_ios_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CFDF1570094500905B59 /* friend_bearing_client_ios_appTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD31CFD61570094500905B59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD31CFA71570094500905B59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD31CFAF1570094500905B59;
+			remoteInfo = "friend-bearing-client-ios-app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD31CFB01570094500905B59 /* friend-bearing-client-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "friend-bearing-client-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD31CFB41570094500905B59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FD31CFB61570094500905B59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FD31CFB81570094500905B59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FD31CFBC1570094500905B59 /* friend-bearing-client-ios-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-app-Info.plist"; sourceTree = "<group>"; };
+		FD31CFBE1570094500905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD31CFC01570094500905B59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD31CFC21570094500905B59 /* friend-bearing-client-ios-app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "friend-bearing-client-ios-app-Prefix.pch"; sourceTree = "<group>"; };
+		FD31CFC31570094500905B59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD31CFC41570094500905B59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD31CFC71570094500905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FD31CFC91570094500905B59 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FD31CFCA1570094500905B59 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FD31CFD11570094500905B59 /* friend-bearing-client-ios-appTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "friend-bearing-client-ios-appTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD31CFD21570094500905B59 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FD31CFDA1570094500905B59 /* friend-bearing-client-ios-appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-appTests-Info.plist"; sourceTree = "<group>"; };
+		FD31CFDC1570094500905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD31CFDE1570094500905B59 /* friend_bearing_client_ios_appTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = friend_bearing_client_ios_appTests.h; sourceTree = "<group>"; };
+		FD31CFDF1570094500905B59 /* friend_bearing_client_ios_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = friend_bearing_client_ios_appTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD31CFAD1570094500905B59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31CFB51570094500905B59 /* UIKit.framework in Frameworks */,
+				FD31CFB71570094500905B59 /* Foundation.framework in Frameworks */,
+				FD31CFB91570094500905B59 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31CFCD1570094500905B59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31CFD31570094500905B59 /* SenTestingKit.framework in Frameworks */,
+				FD31CFD41570094500905B59 /* UIKit.framework in Frameworks */,
+				FD31CFD51570094500905B59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD31CFA51570094500905B59 = {
+			isa = PBXGroup;
+			children = (
+				FD31CFBA1570094500905B59 /* friend-bearing-client-ios-app */,
+				FD31CFD81570094500905B59 /* friend-bearing-client-ios-appTests */,
+				FD31CFB31570094500905B59 /* Frameworks */,
+				FD31CFB11570094500905B59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD31CFB11570094500905B59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFB01570094500905B59 /* friend-bearing-client-ios-app.app */,
+				FD31CFD11570094500905B59 /* friend-bearing-client-ios-appTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD31CFB31570094500905B59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFB41570094500905B59 /* UIKit.framework */,
+				FD31CFB61570094500905B59 /* Foundation.framework */,
+				FD31CFB81570094500905B59 /* CoreGraphics.framework */,
+				FD31CFD21570094500905B59 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD31CFBA1570094500905B59 /* friend-bearing-client-ios-app */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFC31570094500905B59 /* AppDelegate.h */,
+				FD31CFC41570094500905B59 /* AppDelegate.m */,
+				FD31CFC61570094500905B59 /* MainStoryboard.storyboard */,
+				FD31CFC91570094500905B59 /* ViewController.h */,
+				FD31CFCA1570094500905B59 /* ViewController.m */,
+				FD31CFBB1570094500905B59 /* Supporting Files */,
+			);
+			path = "friend-bearing-client-ios-app";
+			sourceTree = "<group>";
+		};
+		FD31CFBB1570094500905B59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFBC1570094500905B59 /* friend-bearing-client-ios-app-Info.plist */,
+				FD31CFBD1570094500905B59 /* InfoPlist.strings */,
+				FD31CFC01570094500905B59 /* main.m */,
+				FD31CFC21570094500905B59 /* friend-bearing-client-ios-app-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD31CFD81570094500905B59 /* friend-bearing-client-ios-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFDE1570094500905B59 /* friend_bearing_client_ios_appTests.h */,
+				FD31CFDF1570094500905B59 /* friend_bearing_client_ios_appTests.m */,
+				FD31CFD91570094500905B59 /* Supporting Files */,
+			);
+			path = "friend-bearing-client-ios-appTests";
+			sourceTree = "<group>";
+		};
+		FD31CFD91570094500905B59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFDA1570094500905B59 /* friend-bearing-client-ios-appTests-Info.plist */,
+				FD31CFDB1570094500905B59 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD31CFAF1570094500905B59 /* friend-bearing-client-ios-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD31CFE31570094500905B59 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-app" */;
+			buildPhases = (
+				FD31CFAC1570094500905B59 /* Sources */,
+				FD31CFAD1570094500905B59 /* Frameworks */,
+				FD31CFAE1570094500905B59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "friend-bearing-client-ios-app";
+			productName = "friend-bearing-client-ios-app";
+			productReference = FD31CFB01570094500905B59 /* friend-bearing-client-ios-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD31CFD01570094500905B59 /* friend-bearing-client-ios-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD31CFE61570094500905B59 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-appTests" */;
+			buildPhases = (
+				FD31CFCC1570094500905B59 /* Sources */,
+				FD31CFCD1570094500905B59 /* Frameworks */,
+				FD31CFCE1570094500905B59 /* Resources */,
+				FD31CFCF1570094500905B59 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD31CFD71570094500905B59 /* PBXTargetDependency */,
+			);
+			name = "friend-bearing-client-ios-appTests";
+			productName = "friend-bearing-client-ios-appTests";
+			productReference = FD31CFD11570094500905B59 /* friend-bearing-client-ios-appTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD31CFA71570094500905B59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = FD31CFAA1570094500905B59 /* Build configuration list for PBXProject "friend-bearing-client-ios-app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD31CFA51570094500905B59;
+			productRefGroup = FD31CFB11570094500905B59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD31CFAF1570094500905B59 /* friend-bearing-client-ios-app */,
+				FD31CFD01570094500905B59 /* friend-bearing-client-ios-appTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD31CFAE1570094500905B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31CFBF1570094500905B59 /* InfoPlist.strings in Resources */,
+				FD31CFC81570094500905B59 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31CFCE1570094500905B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31CFDD1570094500905B59 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FD31CFCF1570094500905B59 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD31CFAC1570094500905B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31CFC11570094500905B59 /* main.m in Sources */,
+				FD31CFC51570094500905B59 /* AppDelegate.m in Sources */,
+				FD31CFCB1570094500905B59 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD31CFCC1570094500905B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD31CFE01570094500905B59 /* friend_bearing_client_ios_appTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD31CFD71570094500905B59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD31CFAF1570094500905B59 /* friend-bearing-client-ios-app */;
+			targetProxy = FD31CFD61570094500905B59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD31CFBD1570094500905B59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD31CFBE1570094500905B59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FD31CFC61570094500905B59 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD31CFC71570094500905B59 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		FD31CFDB1570094500905B59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD31CFDC1570094500905B59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD31CFE11570094500905B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FD31CFE21570094500905B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD31CFE41570094500905B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Prefix.pch";
+				INFOPLIST_FILE = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FD31CFE51570094500905B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Prefix.pch";
+				INFOPLIST_FILE = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FD31CFE71570094500905B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/friend-bearing-client-ios-app.app/friend-bearing-client-ios-app";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Prefix.pch";
+				INFOPLIST_FILE = "friend-bearing-client-ios-appTests/friend-bearing-client-ios-appTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FD31CFE81570094500905B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/friend-bearing-client-ios-app.app/friend-bearing-client-ios-app";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Prefix.pch";
+				INFOPLIST_FILE = "friend-bearing-client-ios-appTests/friend-bearing-client-ios-appTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD31CFAA1570094500905B59 /* Build configuration list for PBXProject "friend-bearing-client-ios-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD31CFE11570094500905B59 /* Debug */,
+				FD31CFE21570094500905B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD31CFE31570094500905B59 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD31CFE41570094500905B59 /* Debug */,
+				FD31CFE51570094500905B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD31CFE61570094500905B59 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD31CFE71570094500905B59 /* Debug */,
+				FD31CFE81570094500905B59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD31CFA71570094500905B59 /* Project object */;
+}

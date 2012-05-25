@@ -57,8 +57,8 @@ Dependencies:
 
 Client:
 
-- `friend-bearing-client-lib`: `Client Library`
-- `friend-bearing-client-ios-app`: `iOS App`
+- `friend-bearing-client-ios/friend-bearing-client-ios-lib`: `Client Library`
+- `friend-bearing-client-ios/friend-bearing-client-ios-app`: `iOS App`
 
 Server:
 

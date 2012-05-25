@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'friend-bearing-client-ios-lib' target in the 'friend-bearing-client-ios-lib' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
