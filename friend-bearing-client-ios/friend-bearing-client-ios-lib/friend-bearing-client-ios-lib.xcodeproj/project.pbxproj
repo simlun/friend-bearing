@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FD31CF7F1570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
-		FD31CF851570090000905B59 /* friend_bearing_client_ios_lib.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CF841570090000905B59 /* friend_bearing_client_ios_lib.m */; };
 		FD31CF8D1570090000905B59 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8C1570090000905B59 /* SenTestingKit.framework */; };
 		FD31CF8F1570090000905B59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8E1570090000905B59 /* UIKit.framework */; };
 		FD31CF901570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
 		FD31CF931570090000905B59 /* libfriend-bearing-client-ios-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */; };
 		FD31CF991570090000905B59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD31CF971570090000905B59 /* InfoPlist.strings */; };
-		FD31CF9C1570090000905B59 /* friend_bearing_client_ios_libTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CF9B1570090000905B59 /* friend_bearing_client_ios_libTests.m */; };
+		FDAE22E715701E34006B3353 /* ChooseFriendPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */; };
+		FDAE22E815701E34006B3353 /* ChooseFriendPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */; };
+		FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */; };
+		FDAE22ED157028D6006B3353 /* ChooseFriendPresenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22EC157028D6006B3353 /* ChooseFriendPresenterTest.m */; };
+		FDAE22F215702AA2006B3353 /* FakeSessionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F115702AA2006B3353 /* FakeSessionSource.m */; };
+		FDAE22F515702BBD006B3353 /* Session.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22F315702BBD006B3353 /* Session.h */; };
+		FDAE22F615702BBD006B3353 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F415702BBD006B3353 /* Session.m */; };
+		FDAE22F915702CFA006B3353 /* FakeChooseFriendDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +37,23 @@
 		FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfriend-bearing-client-ios-lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31CF7E1570090000905B59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD31CF821570090000905B59 /* friend-bearing-client-ios-lib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "friend-bearing-client-ios-lib-Prefix.pch"; sourceTree = "<group>"; };
-		FD31CF831570090000905B59 /* friend_bearing_client_ios_lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = friend_bearing_client_ios_lib.h; sourceTree = "<group>"; };
-		FD31CF841570090000905B59 /* friend_bearing_client_ios_lib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = friend_bearing_client_ios_lib.m; sourceTree = "<group>"; };
 		FD31CF8B1570090000905B59 /* friend-bearing-client-ios-libTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "friend-bearing-client-ios-libTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31CF8C1570090000905B59 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FD31CF8E1570090000905B59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FD31CF961570090000905B59 /* friend-bearing-client-ios-libTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-libTests-Info.plist"; sourceTree = "<group>"; };
 		FD31CF981570090000905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FD31CF9A1570090000905B59 /* friend_bearing_client_ios_libTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = friend_bearing_client_ios_libTests.h; sourceTree = "<group>"; };
-		FD31CF9B1570090000905B59 /* friend_bearing_client_ios_libTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = friend_bearing_client_ios_libTests.m; sourceTree = "<group>"; };
+		FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendPresenter.h; sourceTree = "<group>"; };
+		FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendPresenter.m; sourceTree = "<group>"; };
+		FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendDisplay.h; sourceTree = "<group>"; };
+		FDAE22EB157028D6006B3353 /* ChooseFriendPresenterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendPresenterTest.h; sourceTree = "<group>"; };
+		FDAE22EC157028D6006B3353 /* ChooseFriendPresenterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendPresenterTest.m; sourceTree = "<group>"; };
+		FDAE22EE15702A5D006B3353 /* SessionSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionSource.h; sourceTree = "<group>"; };
+		FDAE22F015702AA2006B3353 /* FakeSessionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeSessionSource.h; sourceTree = "<group>"; };
+		FDAE22F115702AA2006B3353 /* FakeSessionSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeSessionSource.m; sourceTree = "<group>"; };
+		FDAE22F315702BBD006B3353 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		FDAE22F415702BBD006B3353 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		FDAE22F715702CFA006B3353 /* FakeChooseFriendDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeChooseFriendDisplay.h; sourceTree = "<group>"; };
+		FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeChooseFriendDisplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +111,9 @@
 		FD31CF801570090000905B59 /* friend-bearing-client-ios-lib */ = {
 			isa = PBXGroup;
 			children = (
-				FD31CF831570090000905B59 /* friend_bearing_client_ios_lib.h */,
-				FD31CF841570090000905B59 /* friend_bearing_client_ios_lib.m */,
+				FD31CFF115700C4600905B59 /* Use Cases */,
+				FD31D0011570107600905B59 /* Models */,
+				FD31CFFE1570103700905B59 /* Services */,
 				FD31CF811570090000905B59 /* Supporting Files */,
 			);
 			path = "friend-bearing-client-ios-lib";
@@ -115,8 +130,7 @@
 		FD31CF941570090000905B59 /* friend-bearing-client-ios-libTests */ = {
 			isa = PBXGroup;
 			children = (
-				FD31CF9A1570090000905B59 /* friend_bearing_client_ios_libTests.h */,
-				FD31CF9B1570090000905B59 /* friend_bearing_client_ios_libTests.m */,
+				FD31CFF215700C4C00905B59 /* Use Cases */,
 				FD31CF951570090000905B59 /* Supporting Files */,
 			);
 			path = "friend-bearing-client-ios-libTests";
@@ -131,6 +145,86 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FD31CFF115700C4600905B59 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFF315700C5500905B59 /* Start the App */,
+				FD31D00B15701AC700905B59 /* Choose Friend */,
+			);
+			name = "Use Cases";
+			sourceTree = "<group>";
+		};
+		FD31CFF215700C4C00905B59 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				FD31CFF415700C6800905B59 /* Start the App */,
+				FD31D00C15701AD900905B59 /* Choose Friend */,
+				FDAE22EF15702A91006B3353 /* Services */,
+			);
+			name = "Use Cases";
+			sourceTree = "<group>";
+		};
+		FD31CFF315700C5500905B59 /* Start the App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Start the App";
+			sourceTree = "<group>";
+		};
+		FD31CFF415700C6800905B59 /* Start the App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Start the App";
+			sourceTree = "<group>";
+		};
+		FD31CFFE1570103700905B59 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE22EE15702A5D006B3353 /* SessionSource.h */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		FD31D0011570107600905B59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE22F315702BBD006B3353 /* Session.h */,
+				FDAE22F415702BBD006B3353 /* Session.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FD31D00B15701AC700905B59 /* Choose Friend */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */,
+				FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */,
+				FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */,
+			);
+			name = "Choose Friend";
+			sourceTree = "<group>";
+		};
+		FD31D00C15701AD900905B59 /* Choose Friend */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE22EB157028D6006B3353 /* ChooseFriendPresenterTest.h */,
+				FDAE22EC157028D6006B3353 /* ChooseFriendPresenterTest.m */,
+				FDAE22F715702CFA006B3353 /* FakeChooseFriendDisplay.h */,
+				FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */,
+			);
+			name = "Choose Friend";
+			sourceTree = "<group>";
+		};
+		FDAE22EF15702A91006B3353 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE22F015702AA2006B3353 /* FakeSessionSource.h */,
+				FDAE22F115702AA2006B3353 /* FakeSessionSource.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -138,6 +232,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDAE22E715701E34006B3353 /* ChooseFriendPresenter.h in Headers */,
+				FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */,
+				FDAE22F515702BBD006B3353 /* Session.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD31CF851570090000905B59 /* friend_bearing_client_ios_lib.m in Sources */,
+				FDAE22E815701E34006B3353 /* ChooseFriendPresenter.m in Sources */,
+				FDAE22F615702BBD006B3353 /* Session.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +344,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD31CF9C1570090000905B59 /* friend_bearing_client_ios_libTests.m in Sources */,
+				FDAE22ED157028D6006B3353 /* ChooseFriendPresenterTest.m in Sources */,
+				FDAE22F215702AA2006B3353 /* FakeSessionSource.m in Sources */,
+				FDAE22F915702CFA006B3353 /* FakeChooseFriendDisplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +487,7 @@
 				FD31CFA11570090000905B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD31CFA21570090000905B59 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-libTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +496,7 @@
 				FD31CFA41570090000905B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
