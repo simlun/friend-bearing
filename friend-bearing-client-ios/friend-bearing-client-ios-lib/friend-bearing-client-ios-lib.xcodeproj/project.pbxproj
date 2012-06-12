@@ -15,7 +15,7 @@
 		FD31CF991570090000905B59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD31CF971570090000905B59 /* InfoPlist.strings */; };
 		FDAE22E715701E34006B3353 /* ChooseFriendPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */; };
 		FDAE22E815701E34006B3353 /* ChooseFriendPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */; };
-		FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */; };
+		FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDAE22ED157028D6006B3353 /* ChooseFriendPresenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22EC157028D6006B3353 /* ChooseFriendPresenterTest.m */; };
 		FDAE22F215702AA2006B3353 /* FakeSessionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F115702AA2006B3353 /* FakeSessionSource.m */; };
 		FDAE22F515702BBD006B3353 /* Session.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22F315702BBD006B3353 /* Session.h */; };
