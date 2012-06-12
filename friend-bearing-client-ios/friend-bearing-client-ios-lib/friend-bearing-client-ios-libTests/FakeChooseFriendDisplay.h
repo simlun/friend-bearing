@@ -11,4 +11,6 @@
 
 @interface FakeChooseFriendDisplay : NSObject <ChooseFriendDisplay>
 
+@property (nonatomic, strong) NSString* state;
+
 @end

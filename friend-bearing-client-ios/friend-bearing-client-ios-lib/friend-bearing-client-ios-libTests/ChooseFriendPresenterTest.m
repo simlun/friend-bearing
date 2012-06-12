@@ -13,7 +13,7 @@
 
 @implementation ChooseFriendPresenterTest
 
-- (void)test_itGetsTheUserID_fromTheCurrentSession_andDisplaysIt
+- (void)test_itGetsTheUserID_fromTheSessionSource_andDisplaysIt
 {
     ChooseFriendPresenter *p = [ChooseFriendPresenter new];
     p.sessionSource = [[FakeSessionSource alloc] initWithFixedUserID:@"17"];
@@ -22,6 +22,17 @@
     [p updateDisplay];
 
     STAssertEqualObjects(p.display.userID, @"17", nil);
+}
+
+- (void)test_itShowsTheFriendLocatorDisplay_onSubmitButtonPressed
+{
+    ChooseFriendPresenter *p = [ChooseFriendPresenter new];
+    FakeChooseFriendDisplay *d = [FakeChooseFriendDisplay new];
+    p.display = d;
+    
+    [p submitButtonPressed];
+    
+    STAssertEqualObjects(d.state, @"Shows friend locator display", nil);
 }
 
 @end

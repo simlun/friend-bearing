@@ -14,7 +14,6 @@
 		FD31CFC11570094500905B59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CFC01570094500905B59 /* main.m */; };
 		FD31CFC51570094500905B59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CFC41570094500905B59 /* AppDelegate.m */; };
 		FD31CFC81570094500905B59 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD31CFC61570094500905B59 /* MainStoryboard.storyboard */; };
-		FD31CFCB1570094500905B59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CFCA1570094500905B59 /* ViewController.m */; };
 		FD31CFD31570094500905B59 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFD21570094500905B59 /* SenTestingKit.framework */; };
 		FD31CFD41570094500905B59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB41570094500905B59 /* UIKit.framework */; };
 		FD31CFD51570094500905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB61570094500905B59 /* Foundation.framework */; };
@@ -44,8 +43,6 @@
 		FD31CFC31570094500905B59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD31CFC41570094500905B59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FD31CFC71570094500905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FD31CFC91570094500905B59 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FD31CFCA1570094500905B59 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FD31CFD11570094500905B59 /* friend-bearing-client-ios-appTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "friend-bearing-client-ios-appTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31CFD21570094500905B59 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FD31CFDA1570094500905B59 /* friend-bearing-client-ios-appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-appTests-Info.plist"; sourceTree = "<group>"; };
@@ -114,8 +111,6 @@
 				FD31CFC31570094500905B59 /* AppDelegate.h */,
 				FD31CFC41570094500905B59 /* AppDelegate.m */,
 				FD31CFC61570094500905B59 /* MainStoryboard.storyboard */,
-				FD31CFC91570094500905B59 /* ViewController.h */,
-				FD31CFCA1570094500905B59 /* ViewController.m */,
 				FD31CFBB1570094500905B59 /* Supporting Files */,
 			);
 			path = "friend-bearing-client-ios-app";
@@ -259,7 +254,6 @@
 			files = (
 				FD31CFC11570094500905B59 /* main.m in Sources */,
 				FD31CFC51570094500905B59 /* AppDelegate.m in Sources */,
-				FD31CFCB1570094500905B59 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +354,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Prefix.pch";
 				INFOPLIST_FILE = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -371,6 +366,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Prefix.pch";
 				INFOPLIST_FILE = "friend-bearing-client-ios-app/friend-bearing-client-ios-app-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -429,6 +425,7 @@
 				FD31CFE51570094500905B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD31CFE61570094500905B59 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-appTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +434,7 @@
 				FD31CFE81570094500905B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

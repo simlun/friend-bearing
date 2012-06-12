@@ -19,4 +19,9 @@
     self.display.userID = self.sessionSource.currentSession.userID;
 }
 
+- (void)submitButtonPressed
+{
+    [self.display showFriendLocatorDisplay];
+}
+
 @end

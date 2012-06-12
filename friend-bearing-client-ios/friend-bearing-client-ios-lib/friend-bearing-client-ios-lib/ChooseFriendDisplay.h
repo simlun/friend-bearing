@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSString *userID;
 
+- (void)showFriendLocatorDisplay;
+
 @end

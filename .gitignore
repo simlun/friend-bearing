@@ -23,3 +23,6 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+
+# VIM
+*.swp

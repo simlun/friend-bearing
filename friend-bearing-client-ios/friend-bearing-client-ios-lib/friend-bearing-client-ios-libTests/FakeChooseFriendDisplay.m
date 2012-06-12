@@ -10,6 +10,13 @@
 
 @implementation FakeChooseFriendDisplay
 
+@synthesize state = _state;
+
 @synthesize userID = _userID;
+
+- (void)showFriendLocatorDisplay
+{
+    self.state = @"Shows friend locator display";
+}
 
 @end

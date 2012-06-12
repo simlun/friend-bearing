@@ -17,4 +17,6 @@
 
 - (void)updateDisplay;
 
+- (void)submitButtonPressed;
+
 @end
