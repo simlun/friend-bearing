@@ -11,6 +11,7 @@
 @protocol ChooseFriendDisplay <NSObject>
 
 @property (nonatomic, strong) NSString *userID;
+@property (nonatomic, strong) NSString *friendID;
 
 - (void)showFriendLocatorDisplay;
 

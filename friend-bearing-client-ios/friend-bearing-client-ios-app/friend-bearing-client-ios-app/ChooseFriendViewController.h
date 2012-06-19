@@ -12,5 +12,6 @@
 @interface ChooseFriendViewController : UIViewController <ChooseFriendDisplay>
 
 @property (weak, nonatomic) IBOutlet UILabel *userIDLabel;
+@property (weak, nonatomic) IBOutlet UITextField *friendIDField;
 
 @end

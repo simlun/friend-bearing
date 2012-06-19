@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2C9BE21587FF9B00EF0978 /* FriendLocatorDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C9BE11587FF9B00EF0978 /* FriendLocatorDisplay.h */; };
 		FD31CF7F1570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
 		FD31CF8D1570090000905B59 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8C1570090000905B59 /* SenTestingKit.framework */; };
 		FD31CF8F1570090000905B59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8E1570090000905B59 /* UIKit.framework */; };
 		FD31CF901570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
 		FD31CF931570090000905B59 /* libfriend-bearing-client-ios-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */; };
 		FD31CF991570090000905B59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD31CF971570090000905B59 /* InfoPlist.strings */; };
+		FD63D37C1587AC7C00308336 /* FriendLocatorPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */; };
+		FD63D37D1587AC7C00308336 /* FriendLocatorPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63D37B1587AC7C00308336 /* FriendLocatorPresenter.m */; };
 		FDAE22E715701E34006B3353 /* ChooseFriendPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */; };
 		FDAE22E815701E34006B3353 /* ChooseFriendPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */; };
 		FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD2C9BE11587FF9B00EF0978 /* FriendLocatorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorDisplay.h; sourceTree = "<group>"; };
 		FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfriend-bearing-client-ios-lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31CF7E1570090000905B59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FD31CF821570090000905B59 /* friend-bearing-client-ios-lib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "friend-bearing-client-ios-lib-Prefix.pch"; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		FD31CF8E1570090000905B59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FD31CF961570090000905B59 /* friend-bearing-client-ios-libTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-libTests-Info.plist"; sourceTree = "<group>"; };
 		FD31CF981570090000905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorPresenter.h; sourceTree = "<group>"; };
+		FD63D37B1587AC7C00308336 /* FriendLocatorPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendLocatorPresenter.m; sourceTree = "<group>"; };
 		FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendPresenter.h; sourceTree = "<group>"; };
 		FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendPresenter.m; sourceTree = "<group>"; };
 		FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendDisplay.h; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			children = (
 				FD31CFF315700C5500905B59 /* Start the App */,
 				FD31D00B15701AC700905B59 /* Choose Friend */,
+				FD63D3791587AC6400308336 /* Friend Locator */,
 			);
 			name = "Use Cases";
 			sourceTree = "<group>";
@@ -216,6 +223,16 @@
 			name = "Choose Friend";
 			sourceTree = "<group>";
 		};
+		FD63D3791587AC6400308336 /* Friend Locator */ = {
+			isa = PBXGroup;
+			children = (
+				FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */,
+				FD63D37B1587AC7C00308336 /* FriendLocatorPresenter.m */,
+				FD2C9BE11587FF9B00EF0978 /* FriendLocatorDisplay.h */,
+			);
+			name = "Friend Locator";
+			sourceTree = "<group>";
+		};
 		FDAE22EF15702A91006B3353 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +252,8 @@
 				FDAE22E715701E34006B3353 /* ChooseFriendPresenter.h in Headers */,
 				FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */,
 				FDAE22F515702BBD006B3353 /* Session.h in Headers */,
+				FD63D37C1587AC7C00308336 /* FriendLocatorPresenter.h in Headers */,
+				FD2C9BE21587FF9B00EF0978 /* FriendLocatorDisplay.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +356,7 @@
 			files = (
 				FDAE22E815701E34006B3353 /* ChooseFriendPresenter.m in Sources */,
 				FDAE22F615702BBD006B3353 /* Session.m in Sources */,
+				FD63D37D1587AC7C00308336 /* FriendLocatorPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

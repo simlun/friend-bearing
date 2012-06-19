@@ -13,6 +13,7 @@
 
 @synthesize display = _display;
 @synthesize sessionSource = _sessionSource;
+@synthesize friendLocatorPresenter = _friendLocatorPresenter;
 
 - (void)updateDisplay
 {
@@ -21,7 +22,10 @@
 
 - (void)submitButtonPressed
 {
+    // TODO Fix this bug! The show.. should be called last.
     [self.display showFriendLocatorDisplay];
+    self.friendLocatorPresenter = [FriendLocatorPresenter new];
+    self.friendLocatorPresenter.friendID = self.display.friendID;
 }
 
 @end

@@ -9,14 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "SessionSource.h"
 #import "ChooseFriendDisplay.h"
+#import "FriendLocatorPresenter.h"
 
 @interface ChooseFriendPresenter : NSObject
 
 @property (nonatomic, strong) id<ChooseFriendDisplay> display;
 @property (nonatomic, strong) id<SessionSource> sessionSource;
+@property (nonatomic, strong) FriendLocatorPresenter* friendLocatorPresenter;
 
 - (void)updateDisplay;
-
 - (void)submitButtonPressed;
 
 @end

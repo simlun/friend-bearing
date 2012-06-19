@@ -10,9 +10,9 @@
 
 @implementation FakeChooseFriendDisplay
 
-@synthesize state = _state;
-
 @synthesize userID = _userID;
+@synthesize friendID = _friendID;
+@synthesize state = _state;
 
 - (void)showFriendLocatorDisplay
 {
