@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FriendLocatorDisplay.h"
 
 @interface FriendLocatorPresenter : NSObject
 
+@property (nonatomic, strong) id<FriendLocatorDisplay> display;
+
 @property (nonatomic, strong) NSString* friendID;
+@property (nonatomic) double friendHeading;
+@property (nonatomic) double deviceHeading;
 
 @end

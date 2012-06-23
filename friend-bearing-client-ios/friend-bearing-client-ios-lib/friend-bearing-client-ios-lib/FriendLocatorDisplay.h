@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FriendLocatorPresenter.h"
 
 @protocol FriendLocatorDisplay <NSObject>
 
-@property (nonatomic, strong) FriendLocatorPresenter* presenter;
+@property (nonatomic) BOOL deviceIsPointingAtFriend;
 
 @end
+
