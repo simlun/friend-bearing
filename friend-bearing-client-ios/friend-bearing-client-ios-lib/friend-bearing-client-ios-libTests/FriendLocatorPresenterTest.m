@@ -12,6 +12,9 @@
 
 @implementation FriendLocatorPresenterTest
 
+
+#pragma mark - Starting and loading friend heading
+
 - (void)test_theDisplay_isNot_pointingAtFriend_whenStarted
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
@@ -19,6 +22,27 @@
     
     STAssertFalse(p.display.deviceIsPointingAtFriend, nil);
 }
+
+- (void)test_theDisplay_showsThatFriendHeading_hasNotLoaded_whenStarted
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    p.display = [FakedFriendLocatorDisplay new];
+    
+    STAssertFalse(p.display.isFriendHeadingLoaded, nil);
+}
+
+- (void)test_theDisplay_showsThatFriendHeading_hasLoaded_friendHeadingIsSet
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    p.display = [FakedFriendLocatorDisplay new];
+    
+    p.friendHeading = 17.0;
+    
+    STAssertTrue(p.display.isFriendHeadingLoaded, nil);
+}
+
+
+#pragma mark - Pointing the device at friends heading
 
 - (void)test_theDisplay_isNot_pointingAtFriend_whenDeviceIsPointed_awayFromFriend
 {
@@ -56,7 +80,6 @@
     
     p.deviceHeading = 45.0;
     STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
-
 }
 
 - (void)test_theDisplay_is_pointingAtFriend_whenDeviceIsPointed_almostAtAFriend
@@ -100,7 +123,6 @@
     p.friendHeading = 355.0;
     p.deviceHeading = 359.0;
     STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
-
 }
 
 - (void)test_theDisplay_isNot_pointingAtFriend_whenDeviceIsPointed_almostAlmostAtAFriend

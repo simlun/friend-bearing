@@ -11,6 +11,7 @@
 @protocol FriendLocatorDisplay <NSObject>
 
 @property (nonatomic) BOOL deviceIsPointingAtFriend;
+@property (nonatomic) BOOL isFriendHeadingLoaded;
 
 @end
 

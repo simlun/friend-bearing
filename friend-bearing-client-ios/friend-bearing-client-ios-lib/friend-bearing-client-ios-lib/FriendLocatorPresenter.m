@@ -37,6 +37,12 @@
     self.display.deviceIsPointingAtFriend = [self areHeadingsCloseEnough];
 }
 
+- (void)setFriendHeading:(double)friendHeading
+{
+    _friendHeading = friendHeading;
+    self.display.isFriendHeadingLoaded = true;
+}
+
 - (void)setDeviceHeading:(double)deviceHeading
 {
     _deviceHeading = deviceHeading;
