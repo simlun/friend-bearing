@@ -11,6 +11,4 @@
 
 @interface FriendLocatorViewController : UIViewController <FriendLocatorDisplay>
 
-@property (weak, nonatomic) IBOutlet UILabel *friendIDLabel;
-
 @end

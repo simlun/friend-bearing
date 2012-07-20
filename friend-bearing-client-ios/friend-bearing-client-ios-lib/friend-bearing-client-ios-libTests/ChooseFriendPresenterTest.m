@@ -55,4 +55,6 @@
     STAssertEqualObjects(d.state, @"Shows friend locator display", nil);
 }
 
+// TODO: User must supply a friend ID
+
 @end

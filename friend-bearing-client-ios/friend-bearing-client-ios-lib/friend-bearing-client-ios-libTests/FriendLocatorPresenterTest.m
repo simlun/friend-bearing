@@ -31,4 +31,6 @@
     STAssertFalse(p.display.isFriendHeadingLoaded, nil);
 }
 
+// TODO: Make sure it updates the display/does something when friendLocatorPresenter.friendID is changed
+
 @end

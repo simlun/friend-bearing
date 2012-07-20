@@ -14,7 +14,6 @@
 
 @implementation FriendLocatorViewController
 
-@synthesize friendIDLabel = _friendIDLabel;
 @synthesize presenter = _presenter;
 
 // TODO Implement displaying these Display properties
@@ -39,9 +38,16 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"viewDidAppear");
+    NSLog(@"Presenter: %@", self.presenter);
+    NSLog(@"Presenter.friendID: %@", self.presenter.friendID);
+    [super viewDidAppear:animated];
+}
+
 - (void)viewDidUnload
 {
-    [self setFriendIDLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
