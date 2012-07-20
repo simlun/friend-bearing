@@ -16,9 +16,9 @@
 
 @synthesize presenter = _presenter;
 
-// TODO Implement displaying these Display properties
+// TODO: Implement displaying these Display properties
 @synthesize deviceIsPointingAtFriend;
-@synthesize isFriendHeadingLoaded;
+@synthesize isFriendHeadingLoaded; // TODO: Implement this as a spinner
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

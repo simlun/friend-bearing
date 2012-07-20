@@ -12,9 +12,16 @@
 // http://stackoverflow.com/a/5425502
 @protocol FriendLocatorDisplay;
 
+#import "FriendHeadingSource.h"
+
 @interface FriendLocatorPresenter : NSObject
 
 @property (nonatomic, strong) id<FriendLocatorDisplay> display;
+@property (nonatomic, strong) id<FriendHeadingSource> friendHeadingSource;
+
 @property (nonatomic, strong) NSString* friendID;
+@property (nonatomic) double friendHeading;
+
+
 
 @end

@@ -11,6 +11,23 @@
 @implementation FriendLocatorPresenter
 
 @synthesize display = _display;
+@synthesize friendHeadingSource = _friendHeadingSource;
+
 @synthesize friendID = _friendID;
+@synthesize friendHeading = _friendHeading;
+
+- (void)updateFriendHeading
+{
+    SuccessfulFriendHeadingSourceBlock_t success = ^(double heading) {
+        self.friendHeading = heading;
+    };
+    [self.friendHeadingSource getHeadingOf:self.friendID andSucceed:success orFail:nil];
+}
+
+- (void)setFriendID:(NSString *)friendID
+{
+    _friendID = friendID;
+    [self updateFriendHeading];
+}
 
 @end

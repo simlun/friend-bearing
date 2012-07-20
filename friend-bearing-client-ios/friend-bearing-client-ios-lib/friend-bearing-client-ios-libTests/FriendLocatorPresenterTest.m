@@ -9,6 +9,7 @@
 #import "FriendLocatorPresenterTest.h"
 #import "FriendLocatorPresenter.h"
 #import "FakedFriendLocatorDisplay.h"
+#import "FakedFriendHeadingSource.h"
 
 @implementation FriendLocatorPresenterTest
 
@@ -31,6 +32,32 @@
     STAssertFalse(p.display.isFriendHeadingLoaded, nil);
 }
 
-// TODO: Make sure it updates the display/does something when friendLocatorPresenter.friendID is changed
+- (void)test_itCallsTheFriendHeadingSource_withTheSuppliedFriendID_whenFriendID_isSet
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    FakedFriendHeadingSource *fakedHeadingSource = [FakedFriendHeadingSource new];
+    p.friendHeadingSource = fakedHeadingSource;
+    
+    p.friendID = @"4711";
+    
+    STAssertEqualObjects(fakedHeadingSource.wasCalledWithFriendID, @"4711", nil);
+}
+
+- (void)test_itGetsAFriendHeading_whenFriendID_isSet
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    FakedFriendHeadingSource *fakedHeadingSource = [FakedFriendHeadingSource new];
+    p.friendHeadingSource = fakedHeadingSource;
+    
+    double before = p.friendHeading;
+    p.friendID = @"4711";
+    double after = p.friendHeading;
+    
+    STAssertTrue(before != after, nil);
+    STAssertEqualsWithAccuracy(p.friendHeading, 45.0, 0.1, nil);
+}
+
+// TODO: Show that friend heading has been loaded, when it has been.
+// TODO: What happens when it's unable to get the friend heading?
 
 @end
