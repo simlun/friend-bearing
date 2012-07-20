@@ -29,6 +29,7 @@
     self.presenter = [ChooseFriendPresenter new];
     self.presenter.display = self;
     
+    // TODO
     //self.presenter.sessionSource = ...
     
     [self.presenter updateDisplay];
@@ -91,8 +92,8 @@
 {
     NSLog(@"Preparing for segue");
     if ([segue.identifier isEqualToString:@"goToFriendLocator"]) {
-        id<FriendLocatorDisplay> display = segue.destinationViewController;
-        display.presenter = self.presenter.friendLocatorPresenter;
+        id<FriendLocatorDisplay> destinationDisplay = segue.destinationViewController;
+        destinationDisplay.presenter = self.presenter.friendLocatorPresenter;
     }
 }
 

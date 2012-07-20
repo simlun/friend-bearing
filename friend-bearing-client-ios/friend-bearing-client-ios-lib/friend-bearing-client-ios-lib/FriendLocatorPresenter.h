@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FriendLocatorDisplay.h"
+
+// Circular dependency
+// http://stackoverflow.com/a/5425502
+@protocol FriendLocatorDisplay;
 
 @interface FriendLocatorPresenter : NSObject
 

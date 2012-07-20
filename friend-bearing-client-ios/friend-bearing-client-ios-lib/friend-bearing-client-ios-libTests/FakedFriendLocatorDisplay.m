@@ -10,6 +10,8 @@
 
 @implementation FakedFriendLocatorDisplay
 
+@synthesize presenter;
+
 @synthesize deviceIsPointingAtFriend;
 @synthesize isFriendHeadingLoaded;
 

@@ -55,17 +55,4 @@
     STAssertEqualObjects(d.state, @"Shows friend locator display", nil);
 }
 
-- (void)test_onSubmitButtonPressed_theCallOrderIsCorrect
-{
-    ChooseFriendPresenter *p = [ChooseFriendPresenter new];
-    FakeChooseFriendDisplay *d = [FakeChooseFriendDisplay new];
-    p.display = d;
-    
-    d.friendID = @"4711";
-    [p submitButtonPressed];
-    
-    STAssertEqualObjects(p.friendLocatorPresenter.friendID, @"4711", nil);
-    STAssertEqualObjects(d.state, @"Shows friend locator display", nil);
-}
-
 @end

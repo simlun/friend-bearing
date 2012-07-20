@@ -22,7 +22,6 @@
 
 - (void)submitButtonPressed
 {
-    // TODO Fix this bug! The show.. should be called last.
     [self.display showFriendLocatorDisplay];
     self.friendLocatorPresenter = [FriendLocatorPresenter new];
     self.friendLocatorPresenter.friendID = self.display.friendID;

@@ -8,10 +8,18 @@
 
 #import "FriendLocatorViewController.h"
 
+// Circular dependency
+// http://stackoverflow.com/a/5425502
+#import "FriendLocatorPresenter.h"
+
 @implementation FriendLocatorViewController
 
 @synthesize friendIDLabel = _friendIDLabel;
 @synthesize presenter = _presenter;
+
+// TODO Implement displaying these Display properties
+@synthesize deviceIsPointingAtFriend;
+@synthesize isFriendHeadingLoaded;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,12 +44,6 @@
     [self setFriendIDLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    NSLog(@"viewWillAppear");
-    self.friendIDLabel.text = self.presenter.friendID;
 }
 
 @end
