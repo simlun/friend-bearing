@@ -13,15 +13,23 @@
 @protocol FriendLocatorDisplay;
 
 #import "FriendHeadingSource.h"
+#import "DeviceHeadingSupplier.h"
+#import "DeviceHeadingReceiver.h"
 
-@interface FriendLocatorPresenter : NSObject
+@interface FriendLocatorPresenter : NSObject <DeviceHeadingReceiver>
 
-@property (nonatomic, strong) id<FriendLocatorDisplay> display;
+
+#pragma mark - Dependencies
+
+@property (nonatomic, weak) id<FriendLocatorDisplay> display;
 @property (nonatomic, strong) id<FriendHeadingSource> friendHeadingSource;
+@property (nonatomic, strong) id<DeviceHeadingSupplier> deviceHeadingSupplier;
+
+
+#pragma mark - Data
 
 @property (nonatomic, strong) NSString* friendID;
 @property (nonatomic) double friendHeading;
-
-
+@property (nonatomic) double deviceHeading;
 
 @end

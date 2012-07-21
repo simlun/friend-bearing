@@ -10,6 +10,7 @@
 #import "FriendLocatorPresenter.h"
 #import "FakedFriendLocatorDisplay.h"
 #import "FakedFriendHeadingSource.h"
+#import "FakedDeviceHeadingSupplier.h"
 
 @implementation FriendLocatorPresenterTest
 
@@ -35,19 +36,18 @@
 - (void)test_itCallsTheFriendHeadingSource_withTheSuppliedFriendID_whenFriendID_isSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
-    FakedFriendHeadingSource *fakedHeadingSource = [FakedFriendHeadingSource new];
-    p.friendHeadingSource = fakedHeadingSource;
+    FakedFriendHeadingSource *fakedSource = [FakedFriendHeadingSource new];
+    p.friendHeadingSource = fakedSource;
     
     p.friendID = @"4711";
     
-    STAssertEqualObjects(fakedHeadingSource.wasCalledWithFriendID, @"4711", nil);
+    STAssertEqualObjects(fakedSource.wasCalledWithFriendID, @"4711", nil);
 }
 
 - (void)test_itGetsAFriendHeading_whenFriendID_isSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
-    FakedFriendHeadingSource *fakedHeadingSource = [FakedFriendHeadingSource new];
-    p.friendHeadingSource = fakedHeadingSource;
+    p.friendHeadingSource = [FakedFriendHeadingSource new];
     
     double before = p.friendHeading;
     p.friendID = @"4711";
@@ -67,8 +67,45 @@
     STAssertTrue(p.display.isFriendHeadingLoaded, nil);
 }
 
+- (void)test_theDisplay_showsThatDeviceIsPointing_inTheSameHeading_asFriendHeading
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    p.display = [FakedFriendLocatorDisplay new];
+    
+    p.friendHeading = 90.0;
+    p.deviceHeading = 90.0;
+    
+    STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
+}
 
+- (void)test_itDoesNotMatter_inWhichOrder_theFriendOrDeviceHeading_getsSet
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    p.display = [FakedFriendLocatorDisplay new];
+
+    p.deviceHeading = 90.0;
+    p.friendHeading = 90.0;
+
+    STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
+}
+
+- (void)test_itGetsADeviceHeading_whenDeviceHeadingSource_isUpdated
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    FakedDeviceHeadingSupplier *fakedSupplier = [FakedDeviceHeadingSupplier new];
+    id<DeviceHeadingReceiver> r = p;
+    fakedSupplier.receiver = r;
+    p.deviceHeadingSupplier = fakedSupplier;
+    
+    double before = p.deviceHeading;
+    [fakedSupplier simulateDeviceHeadingUpdate];
+    double after = p.deviceHeading;
+    
+    STAssertTrue(before != after, nil);
+}
 
 // TODO: What happens when it's unable to get the friend heading?
+// TODO: What happens when it's unable to get the device heading?
+
 
 @end

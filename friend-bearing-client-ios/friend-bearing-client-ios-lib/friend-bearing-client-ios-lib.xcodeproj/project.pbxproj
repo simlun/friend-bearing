@@ -12,6 +12,7 @@
 		FD08AB7B15AB75E900B5A2AC /* CompassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08AB7A15AB75E900B5A2AC /* CompassTest.m */; };
 		FD18145915B9D501004ADD09 /* FriendHeadingSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FD18145815B9D501004ADD09 /* FriendHeadingSource.h */; };
 		FD18145D15B9D516004ADD09 /* FakedFriendHeadingSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18145C15B9D516004ADD09 /* FakedFriendHeadingSource.m */; };
+		FD18146115BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18146015BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m */; };
 		FD2C9BE21587FF9B00EF0978 /* FriendLocatorDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C9BE11587FF9B00EF0978 /* FriendLocatorDisplay.h */; };
 		FD31CF7F1570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
 		FD31CF8D1570090000905B59 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8C1570090000905B59 /* SenTestingKit.framework */; };
@@ -51,6 +52,10 @@
 		FD18145815B9D501004ADD09 /* FriendHeadingSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendHeadingSource.h; sourceTree = "<group>"; };
 		FD18145B15B9D516004ADD09 /* FakedFriendHeadingSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakedFriendHeadingSource.h; sourceTree = "<group>"; };
 		FD18145C15B9D516004ADD09 /* FakedFriendHeadingSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakedFriendHeadingSource.m; sourceTree = "<group>"; };
+		FD18145E15BB50A5004ADD09 /* DeviceHeadingSupplier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceHeadingSupplier.h; sourceTree = "<group>"; };
+		FD18145F15BB50C6004ADD09 /* FakedDeviceHeadingSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakedDeviceHeadingSupplier.h; sourceTree = "<group>"; };
+		FD18146015BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakedDeviceHeadingSupplier.m; sourceTree = "<group>"; };
+		FD18146215BB5114004ADD09 /* DeviceHeadingReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceHeadingReceiver.h; sourceTree = "<group>"; };
 		FD2C9BE11587FF9B00EF0978 /* FriendLocatorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorDisplay.h; sourceTree = "<group>"; };
 		FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfriend-bearing-client-ios-lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31CF7E1570090000905B59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -219,6 +224,8 @@
 			children = (
 				FDAE22EE15702A5D006B3353 /* SessionSource.h */,
 				FD18145815B9D501004ADD09 /* FriendHeadingSource.h */,
+				FD18145E15BB50A5004ADD09 /* DeviceHeadingSupplier.h */,
+				FD18146215BB5114004ADD09 /* DeviceHeadingReceiver.h */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -283,6 +290,8 @@
 				FDBE19F115905AC8007C868C /* FakedFriendLocatorDisplay.m */,
 				FD18145B15B9D516004ADD09 /* FakedFriendHeadingSource.h */,
 				FD18145C15B9D516004ADD09 /* FakedFriendHeadingSource.m */,
+				FD18145F15BB50C6004ADD09 /* FakedDeviceHeadingSupplier.h */,
+				FD18146015BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m */,
 			);
 			name = "Friend Locator";
 			sourceTree = "<group>";
@@ -419,6 +428,7 @@
 				FDBE19F215905AC8007C868C /* FakedFriendLocatorDisplay.m in Sources */,
 				FD08AB7B15AB75E900B5A2AC /* CompassTest.m in Sources */,
 				FD18145D15B9D516004ADD09 /* FakedFriendHeadingSource.m in Sources */,
+				FD18146115BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
