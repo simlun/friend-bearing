@@ -57,7 +57,18 @@
     STAssertEqualsWithAccuracy(p.friendHeading, 45.0, 0.1, nil);
 }
 
-// TODO: Show that friend heading has been loaded, when it has been.
+- (void)test_theDisplay_showsThatFriendHeading_hasLoaded_whenItIsSet
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    p.display = [FakedFriendLocatorDisplay new];
+    
+    p.friendHeading = 17.0;
+    
+    STAssertTrue(p.display.isFriendHeadingLoaded, nil);
+}
+
+
+
 // TODO: What happens when it's unable to get the friend heading?
 
 @end

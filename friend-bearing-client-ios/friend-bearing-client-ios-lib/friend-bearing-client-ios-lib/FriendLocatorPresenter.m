@@ -8,6 +8,10 @@
 
 #import "FriendLocatorPresenter.h"
 
+// Circular dependency
+// http://stackoverflow.com/a/5425502
+#import "FriendLocatorDisplay.h"
+
 @implementation FriendLocatorPresenter
 
 @synthesize display = _display;
@@ -15,6 +19,12 @@
 
 @synthesize friendID = _friendID;
 @synthesize friendHeading = _friendHeading;
+
+- (void)setFriendHeading:(double)friendHeading
+{
+    _friendHeading = friendHeading;
+    self.display.isFriendHeadingLoaded = true;
+}
 
 - (void)updateFriendHeading
 {
