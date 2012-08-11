@@ -13,7 +13,7 @@
 
 @implementation ChooseFriendPresenterTest
 
-- (void)test_itGetsTheUserID_fromTheSessionSource_andDisplaysIt
+- (void)test_itGetsTheUserId_fromTheSessionSource_andDisplaysIt
 {
     ChooseFriendPresenter *p = [ChooseFriendPresenter new];
     p.sessionSource = [[FakeSessionSource alloc] initWithFixedUserID:@"17"];
@@ -33,7 +33,7 @@
     STAssertNotNil(p.friendLocatorPresenter, nil);
 }
 
-- (void)test_onFriendIDEntered_andSubmitButtonPressed_itGivesTheFriendID_toTheFriendLocatorPresenter
+- (void)test_onFriendIdEntered_andSubmitButtonPressed_itGivesTheFriendId_toTheFriendLocatorPresenter
 {
     ChooseFriendPresenter *p = [ChooseFriendPresenter new];
     p.display = [FakeChooseFriendDisplay new];

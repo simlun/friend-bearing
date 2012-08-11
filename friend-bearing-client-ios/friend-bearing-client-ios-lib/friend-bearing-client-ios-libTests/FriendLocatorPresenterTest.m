@@ -33,7 +33,7 @@
     STAssertFalse(p.display.isFriendHeadingLoaded, nil);
 }
 
-- (void)test_itCallsTheFriendHeadingSource_withTheSuppliedFriendID_whenFriendID_isSet
+- (void)test_itCallsTheFriendHeadingSource_withTheSuppliedFriendId_whenFriendId_isSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     FakedFriendHeadingSource *fakedSource = [FakedFriendHeadingSource new];
@@ -44,7 +44,7 @@
     STAssertEqualObjects(fakedSource.wasCalledWithFriendID, @"4711", nil);
 }
 
-- (void)test_itGetsAFriendHeading_whenFriendID_isSet
+- (void)test_itGetsAFriendHeading_whenFriendId_isSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     p.friendHeadingSource = [FakedFriendHeadingSource new];
