@@ -170,7 +170,6 @@
 			children = (
 				FD31CFF215700C4C00905B59 /* Use Cases */,
 				FD08AB6C15AB752D00B5A2AC /* Models */,
-				FDAE22EF15702A91006B3353 /* Services */,
 				FD31CF951570090000905B59 /* Supporting Files */,
 			);
 			path = "friend-bearing-client-ios-libTests";
@@ -256,8 +255,7 @@
 			children = (
 				FDAE22EB157028D6006B3353 /* ChooseFriendPresenterTest.h */,
 				FDAE22EC157028D6006B3353 /* ChooseFriendPresenterTest.m */,
-				FDAE22F715702CFA006B3353 /* FakeChooseFriendDisplay.h */,
-				FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */,
+				FDB86F4915D722BE00668922 /* Fakes */,
 			);
 			name = "Choose Friend";
 			sourceTree = "<group>";
@@ -272,13 +270,28 @@
 			name = "Friend Locator";
 			sourceTree = "<group>";
 		};
-		FDAE22EF15702A91006B3353 /* Services */ = {
+		FDB86F4715D722B600668922 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				FDBE19F015905AC8007C868C /* FakedFriendLocatorDisplay.h */,
+				FDBE19F115905AC8007C868C /* FakedFriendLocatorDisplay.m */,
+				FD18145B15B9D516004ADD09 /* FakedFriendHeadingSource.h */,
+				FD18145C15B9D516004ADD09 /* FakedFriendHeadingSource.m */,
+				FD18145F15BB50C6004ADD09 /* FakedDeviceHeadingSupplier.h */,
+				FD18146015BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m */,
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		FDB86F4915D722BE00668922 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
 				FDAE22F015702AA2006B3353 /* FakeSessionSource.h */,
 				FDAE22F115702AA2006B3353 /* FakeSessionSource.m */,
+				FDAE22F715702CFA006B3353 /* FakeChooseFriendDisplay.h */,
+				FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */,
 			);
-			name = Services;
+			name = Fakes;
 			sourceTree = "<group>";
 		};
 		FDBE19EB15905478007C868C /* Friend Locator */ = {
@@ -286,12 +299,7 @@
 			children = (
 				FDBE19ED1590549E007C868C /* FriendLocatorPresenterTest.h */,
 				FDBE19EE1590549E007C868C /* FriendLocatorPresenterTest.m */,
-				FDBE19F015905AC8007C868C /* FakedFriendLocatorDisplay.h */,
-				FDBE19F115905AC8007C868C /* FakedFriendLocatorDisplay.m */,
-				FD18145B15B9D516004ADD09 /* FakedFriendHeadingSource.h */,
-				FD18145C15B9D516004ADD09 /* FakedFriendHeadingSource.m */,
-				FD18145F15BB50C6004ADD09 /* FakedDeviceHeadingSupplier.h */,
-				FD18146015BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m */,
+				FDB86F4715D722B600668922 /* Fakes */,
 			);
 			name = "Friend Locator";
 			sourceTree = "<group>";

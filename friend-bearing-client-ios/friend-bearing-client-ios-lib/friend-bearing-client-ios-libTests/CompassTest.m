@@ -10,7 +10,7 @@
 #import "Compass.h"
 
 @implementation CompassTest
-- (void)test_theDisplay_isNot_pointingAtFriend_whenDeviceIsPointed_awayFromFriend
+- (void)test_itIsNot_pointingAtFriend_whenDeviceIsPointed_awayFromFriend
 {
     Compass *c = [Compass new];
     
@@ -20,7 +20,7 @@
     STAssertFalse(c.isPointingAtFriend, nil);
 }
 
-- (void)test_theDisplay_is_pointingAtFriend_whenDeviceIsPointed_directlyAtAFriend
+- (void)test_itIs_pointingAtFriend_whenDeviceIsPointed_directlyAtAFriend
 {
     Compass *c = [Compass new];
     
@@ -30,7 +30,7 @@
     STAssertTrue(c.isPointingAtFriend, nil);
 }
 
-- (void)test_theDisplayPointing_canSwitchBackAndForth
+- (void)test_thePointing_canSwitchBackAndForth
 {
     Compass *c = [Compass new];
     c.friendHeading = 45.0;
@@ -45,7 +45,7 @@
     STAssertTrue(c.isPointingAtFriend, nil);
 }
 
-- (void)test_theDisplay_is_pointingAtFriend_whenDeviceIsPointed_almostAtAFriend
+- (void)test_itIs_pointingAtFriend_whenDeviceIsPointed_almostAtAFriend
 {
     Compass *c = [Compass new];
     c.friendHeading = 20.0;
@@ -86,7 +86,7 @@
     STAssertTrue(c.isPointingAtFriend, nil);
 }
 
-- (void)test_theDisplay_isNot_pointingAtFriend_whenDeviceIsPointed_almostAlmostAtAFriend
+- (void)test_itIsNot_pointingAtFriend_whenDeviceIsPointed_almostAlmostAtAFriend
 {
     Compass *c = [Compass new];
     c.friendHeading = 20.0;

@@ -13,9 +13,18 @@
 
 @interface ChooseFriendPresenter : NSObject
 
+#pragma mark - Dependencies
+
 @property (nonatomic, strong) id<ChooseFriendDisplay> display;
 @property (nonatomic, strong) id<SessionSource> sessionSource;
+
+
+#pragma mark - Data
+
 @property (nonatomic, strong) FriendLocatorPresenter* friendLocatorPresenter;
+
+
+#pragma mark - Actions
 
 - (void)updateDisplay;
 - (void)submitButtonPressed;
