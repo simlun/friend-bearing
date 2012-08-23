@@ -18,7 +18,12 @@
 
 // TODO: Implement displaying these Display properties
 @synthesize deviceIsPointingAtFriend;
-@synthesize isFriendHeadingLoaded; // TODO: Implement this as a spinner
+@synthesize isFriendHeadingLoaded = _isFriendHeadingLoaded;
+- (void)setIsFriendHeadingLoaded:(BOOL)isFriendHeadingLoaded
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!isFriendHeadingLoaded];
+    _isFriendHeadingLoaded = isFriendHeadingLoaded;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +34,11 @@
     return self;
 }
 
+- (void)setInitialState
+{
+    self.isFriendHeadingLoaded = self.isFriendHeadingLoaded;
+}
+
 - (void)viewDidLoad
 {
     NSLog(@"viewDidLoad");
@@ -36,6 +46,7 @@
     NSLog(@"Presenter.friendID: %@", self.presenter.friendID);
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self setInitialState];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -44,6 +55,11 @@
     NSLog(@"Presenter: %@", self.presenter);
     NSLog(@"Presenter.friendID: %@", self.presenter.friendID);
     [super viewDidAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 - (void)viewDidUnload

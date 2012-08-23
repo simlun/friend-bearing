@@ -24,6 +24,7 @@
 {
     [self.display showFriendLocatorDisplay];
     self.friendLocatorPresenter = [FriendLocatorPresenter new];
+    // TODO: Fix the problem that the friendID is set before there's a FriendHeadingSource set...
     self.friendLocatorPresenter.friendID = self.display.friendID;
 }
 
