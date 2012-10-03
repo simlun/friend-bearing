@@ -56,7 +56,7 @@
 		FD31CFDF1570094500905B59 /* friend_bearing_client_ios_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = friend_bearing_client_ios_appTests.m; sourceTree = "<group>"; };
 		FD63D36D15879DAC00308336 /* ChooseFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendViewController.h; sourceTree = "<group>"; };
 		FD63D36E15879DAC00308336 /* ChooseFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendViewController.m; sourceTree = "<group>"; };
-		FD63D3751587A13300308336 /* libfriend-bearing-client-ios-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libfriend-bearing-client-ios-lib.a"; path = "../DerivedData/friend-bearing-client-ios/Build/Products/Debug-iphonesimulator/libfriend-bearing-client-ios-lib.a"; sourceTree = SOURCE_ROOT; };
+		FD63D3751587A13300308336 /* libfriend-bearing-client-ios-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libfriend-bearing-client-ios-lib.a"; path = "../DerivedData/friend-bearing/Build/Products/Debug-iphonesimulator/libfriend-bearing-client-ios-lib.a"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
