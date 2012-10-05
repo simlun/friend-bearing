@@ -8,21 +8,27 @@
 
 #import "ChooseFriendPresenterTest.h"
 #import "ChooseFriendPresenter.h"
-#import "FakeSessionSource.h"
+#import "FakeAsyncSessionSource.h"
 #import "FakeChooseFriendDisplay.h"
 #import "FakeFriendLocatorPresenterFactory.h"
 
 @implementation ChooseFriendPresenterTest
 
-- (void)test_itGetsTheUserId_fromTheSessionSource_andDisplaysIt
+- (void)test_itGetsTheUserId_fromTheSessionSource_andDisplaysIt_asynchronously
 {
     ChooseFriendPresenter *p = [ChooseFriendPresenter new];
-    p.sessionSource = [[FakeSessionSource alloc] initWithFixedUserID:@"17"];
+    FakeAsyncSessionSource *fakeSessionSource = [[FakeAsyncSessionSource alloc] initWithFixedUserID:@"17"];
+    p.sessionSource = fakeSessionSource;
     p.display = [FakeChooseFriendDisplay new];
     
-    [p updateDisplay];
-
+    [p showUserID];
+    
+    STAssertEqualObjects(p.display.userID, @"Loading...", nil);
+    
+    [fakeSessionSource doneLoading];
+    
     STAssertEqualObjects(p.display.userID, @"17", nil);
+    
 }
 
 - (void)test_onSubmitButtonPressed_itCreatesTheFriendLocatorPresenter

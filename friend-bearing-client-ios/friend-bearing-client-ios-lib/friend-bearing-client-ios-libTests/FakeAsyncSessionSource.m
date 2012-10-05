@@ -6,15 +6,18 @@
 //  Copyright (c) 2012 Simon Lundmark. All rights reserved.
 //
 
-#import "FakeSessionSource.h"
+#import "FakeAsyncSessionSource.h"
 
-@interface FakeSessionSource()
+@interface FakeAsyncSessionSource()
 @property (nonatomic, strong) NSString *fixedUserID;
+@property (nonatomic, strong) Session *session;
+@property (nonatomic, strong) SuccessfulSessionSourceBlock_t succeed;
 @end
 
-@implementation FakeSessionSource
+@implementation FakeAsyncSessionSource
 
 @synthesize fixedUserID = _fixedUserID;
+@synthesize succeed = _succeed;
 
 - (id)initWithFixedUserID:(NSString*)userID
 {
@@ -27,9 +30,14 @@
 
 - (void)getCurrentSessionAndSucceed:(SuccessfulSessionSourceBlock_t)succeed orFail:(FailedSessionSourceBlock_t)fail
 {
-    Session *s = [Session new];
-    s.userID = self.fixedUserID;
-    succeed(s);
+    self.session = [Session new];
+    self.session.userID = self.fixedUserID;
+    self.succeed = succeed;
+}
+
+- (void)doneLoading
+{
+    self.succeed(self.session);
 }
 
 @end

@@ -26,7 +26,7 @@
 		FDAE22E815701E34006B3353 /* ChooseFriendPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */; };
 		FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDAE22ED157028D6006B3353 /* ChooseFriendPresenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22EC157028D6006B3353 /* ChooseFriendPresenterTest.m */; };
-		FDAE22F215702AA2006B3353 /* FakeSessionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F115702AA2006B3353 /* FakeSessionSource.m */; };
+		FDAE22F215702AA2006B3353 /* FakeAsyncSessionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F115702AA2006B3353 /* FakeAsyncSessionSource.m */; };
 		FDAE22F515702BBD006B3353 /* Session.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22F315702BBD006B3353 /* Session.h */; };
 		FDAE22F615702BBD006B3353 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F415702BBD006B3353 /* Session.m */; };
 		FDAE22F915702CFA006B3353 /* FakeChooseFriendDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */; };
@@ -76,8 +76,8 @@
 		FDAE22EB157028D6006B3353 /* ChooseFriendPresenterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendPresenterTest.h; sourceTree = "<group>"; };
 		FDAE22EC157028D6006B3353 /* ChooseFriendPresenterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendPresenterTest.m; sourceTree = "<group>"; };
 		FDAE22EE15702A5D006B3353 /* SessionSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionSource.h; sourceTree = "<group>"; };
-		FDAE22F015702AA2006B3353 /* FakeSessionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeSessionSource.h; sourceTree = "<group>"; };
-		FDAE22F115702AA2006B3353 /* FakeSessionSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeSessionSource.m; sourceTree = "<group>"; };
+		FDAE22F015702AA2006B3353 /* FakeAsyncSessionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeAsyncSessionSource.h; sourceTree = "<group>"; };
+		FDAE22F115702AA2006B3353 /* FakeAsyncSessionSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeAsyncSessionSource.m; sourceTree = "<group>"; };
 		FDAE22F315702BBD006B3353 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		FDAE22F415702BBD006B3353 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		FDAE22F715702CFA006B3353 /* FakeChooseFriendDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeChooseFriendDisplay.h; sourceTree = "<group>"; };
@@ -278,8 +278,8 @@
 		FDB86F4915D722BE00668922 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
-				FDAE22F015702AA2006B3353 /* FakeSessionSource.h */,
-				FDAE22F115702AA2006B3353 /* FakeSessionSource.m */,
+				FDAE22F015702AA2006B3353 /* FakeAsyncSessionSource.h */,
+				FDAE22F115702AA2006B3353 /* FakeAsyncSessionSource.m */,
 				FDAE22F715702CFA006B3353 /* FakeChooseFriendDisplay.h */,
 				FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */,
 				FDEFA8BE161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.h */,
@@ -436,7 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDAE22ED157028D6006B3353 /* ChooseFriendPresenterTest.m in Sources */,
-				FDAE22F215702AA2006B3353 /* FakeSessionSource.m in Sources */,
+				FDAE22F215702AA2006B3353 /* FakeAsyncSessionSource.m in Sources */,
 				FDAE22F915702CFA006B3353 /* FakeChooseFriendDisplay.m in Sources */,
 				FDBE19EF1590549E007C868C /* FriendLocatorPresenterTest.m in Sources */,
 				FDBE19F215905AC8007C868C /* FakedFriendLocatorDisplay.m in Sources */,

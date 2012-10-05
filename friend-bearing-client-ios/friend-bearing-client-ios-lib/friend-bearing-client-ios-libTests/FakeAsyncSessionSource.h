@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "SessionSource.h"
 
-@interface FakeSessionSource : NSObject <SessionSource>
+@interface FakeAsyncSessionSource : NSObject <SessionSource>
 
 - (id)initWithFixedUserID:(NSString*)userID;
+
+- (void)doneLoading;
 
 @end

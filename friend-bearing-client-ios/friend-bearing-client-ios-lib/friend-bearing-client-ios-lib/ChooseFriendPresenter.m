@@ -17,8 +17,10 @@
 @synthesize friendLocatorPresenterFactory = _friendLocatorPresenterFactory;
 @synthesize friendLocatorPresenter = _friendLocatorPresenter;
 
-- (void)updateDisplay
+- (void)showUserID
 {
+    self.display.userID = @"Loading...";
+    
     SuccessfulSessionSourceBlock_t success = ^(Session *session) {
         self.display.userID = session.userID;
     };

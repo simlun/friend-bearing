@@ -35,7 +35,7 @@
     // TODO
     //self.presenter.sessionSource = ...
     
-    [self.presenter updateDisplay];
+    [self.presenter showUserID];
 }
 
 - (void)viewDidLoad

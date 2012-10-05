@@ -28,7 +28,7 @@
 
 #pragma mark - Actions
 
-- (void)updateDisplay;
+- (void)showUserID;
 - (void)submitButtonPressed;
 
 @end
