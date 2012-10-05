@@ -10,6 +10,7 @@
 #import "ChooseFriendPresenter.h"
 #import "FriendLocatorDisplay.h"
 #import "FriendLocatorPresenterFactory.h"
+#import "FakeSleepingAsyncSessionSource.h"
 
 
 @interface ChooseFriendViewController()
@@ -27,13 +28,15 @@
 
 - (void)bindPresenter
 {
+    // TODO: Break out this object graph construction to its own class!
+    
     self.presenter = [ChooseFriendPresenter new];
     self.presenter.display = self;
     
     self.presenter.friendLocatorPresenterFactory = [FriendLocatorPresenterFactory new];
     
     // TODO
-    //self.presenter.sessionSource = ...
+    self.presenter.sessionSource = [FakeSleepingAsyncSessionSource new];
     
     [self.presenter showUserID];
 }
