@@ -19,7 +19,10 @@
 
 - (void)updateDisplay
 {
-    self.display.userID = self.sessionSource.currentSession.userID;
+    SuccessfulSessionSourceBlock_t success = ^(Session *session) {
+        self.display.userID = session.userID;
+    };
+    [self.sessionSource getCurrentSessionAndSucceed:success orFail:nil];
 }
 
 - (void)submitButtonPressed

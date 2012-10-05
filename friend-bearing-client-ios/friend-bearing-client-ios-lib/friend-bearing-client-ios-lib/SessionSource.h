@@ -11,6 +11,9 @@
 
 @protocol SessionSource <NSObject>
 
-@property (nonatomic, readonly, strong) Session* currentSession;
+typedef void (^SuccessfulSessionSourceBlock_t)(Session *);
+typedef void (^FailedSessionSourceBlock_t)(NSString *);
+
+- (void)getCurrentSessionAndSucceed:(SuccessfulSessionSourceBlock_t)succeed orFail:(FailedSessionSourceBlock_t)fail;
 
 @end

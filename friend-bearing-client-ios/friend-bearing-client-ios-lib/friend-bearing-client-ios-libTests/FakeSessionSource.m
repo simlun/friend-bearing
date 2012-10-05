@@ -25,11 +25,11 @@
     return self;
 }
 
-- (Session*)currentSession
+- (void)getCurrentSessionAndSucceed:(SuccessfulSessionSourceBlock_t)succeed orFail:(FailedSessionSourceBlock_t)fail
 {
     Session *s = [Session new];
     s.userID = self.fixedUserID;
-    return s;
+    succeed(s);
 }
 
 @end
