@@ -9,6 +9,7 @@
 #import "ChooseFriendViewController.h"
 #import "ChooseFriendPresenter.h"
 #import "FriendLocatorDisplay.h"
+#import "FriendLocatorPresenterFactory.h"
 
 
 @interface ChooseFriendViewController()
@@ -29,6 +30,8 @@
     self.presenter = [ChooseFriendPresenter new];
     self.presenter.display = self;
     
+    self.presenter.friendLocatorPresenterFactory = [FriendLocatorPresenterFactory new];
+    
     // TODO
     //self.presenter.sessionSource = ...
     
@@ -37,6 +40,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"ChooseFriendViewController.viewDidLoad");
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self bindPresenter];
@@ -44,6 +48,7 @@
 
 - (void)viewDidUnload
 {
+    NSLog(@"ChooseFriendViewController.viewDidUnload");
     [self setUserIDLabel:nil];
     [self setFriendIDField:nil];
     [super viewDidUnload];
@@ -59,7 +64,7 @@
 }
 - (void)setUserID:(NSString *)userID
 {
-    NSLog(@"setUserID was called with userID %@", userID);
+    NSLog(@"ChooseFriendViewController.setUserID was called with userID %@", userID);
     self.userIDLabel.text = userID;
 }
 
@@ -69,13 +74,13 @@
 }
 - (void)setFriendID:(NSString *)friendID 
 {
-    NSLog(@"setFriendID was called with friendID %@", friendID);
+    NSLog(@"ChooseFriendViewController.setFriendID was called with friendID %@", friendID);
     self.friendIDField.text = friendID;
 }
 
 - (void)showFriendLocatorDisplay
 {
-    NSLog(@"showFriendLocatorDisplay called");
+    NSLog(@"ChooseFriendViewController.showFriendLocatorDisplay called");
     [self performSegueWithIdentifier:@"goToFriendLocator" sender:self];
 }
 
@@ -84,13 +89,13 @@
 
 - (IBAction)searchButtonPressed:(id)sender
 {
-    NSLog(@"searchButtonPressed");
+    NSLog(@"ChooseFriendViewController.searchButtonPressed");
     [self.presenter submitButtonPressed];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"Preparing for segue");
+    NSLog(@"ChooseFriendViewController.prepareForSegue");
     if ([segue.identifier isEqualToString:@"goToFriendLocator"]) {
         id<FriendLocatorDisplay> destinationDisplay = segue.destinationViewController;
         destinationDisplay.presenter = self.presenter.friendLocatorPresenter;

@@ -10,6 +10,7 @@
 #import "SessionSource.h"
 #import "ChooseFriendDisplay.h"
 #import "FriendLocatorPresenter.h"
+#import "FriendLocatorPresenterFactory.h"
 
 @interface ChooseFriendPresenter : NSObject
 
@@ -17,11 +18,12 @@
 
 @property (nonatomic, strong) id<ChooseFriendDisplay> display;
 @property (nonatomic, strong) id<SessionSource> sessionSource;
+@property (nonatomic, strong) FriendLocatorPresenterFactory *friendLocatorPresenterFactory;
 
 
 #pragma mark - Data
 
-@property (nonatomic, strong) FriendLocatorPresenter* friendLocatorPresenter;
+@property (nonatomic, strong) FriendLocatorPresenter *friendLocatorPresenter;
 
 
 #pragma mark - Actions

@@ -32,6 +32,9 @@
 		FDAE22F915702CFA006B3353 /* FakeChooseFriendDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */; };
 		FDBE19EF1590549E007C868C /* FriendLocatorPresenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBE19EE1590549E007C868C /* FriendLocatorPresenterTest.m */; };
 		FDBE19F215905AC8007C868C /* FakedFriendLocatorDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBE19F115905AC8007C868C /* FakedFriendLocatorDisplay.m */; };
+		FDEFA8C0161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */; };
+		FDEFA8C7161F094800FCED39 /* FriendLocatorPresenterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */; };
+		FDEFA8C8161F094800FCED39 /* FriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,10 @@
 		FDBE19EE1590549E007C868C /* FriendLocatorPresenterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendLocatorPresenterTest.m; sourceTree = "<group>"; };
 		FDBE19F015905AC8007C868C /* FakedFriendLocatorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakedFriendLocatorDisplay.h; sourceTree = "<group>"; };
 		FDBE19F115905AC8007C868C /* FakedFriendLocatorDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakedFriendLocatorDisplay.m; sourceTree = "<group>"; };
+		FDEFA8BE161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeFriendLocatorPresenterFactory.h; sourceTree = "<group>"; };
+		FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeFriendLocatorPresenterFactory.m; sourceTree = "<group>"; };
+		FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorPresenterFactory.h; sourceTree = "<group>"; };
+		FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendLocatorPresenterFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +159,7 @@
 				FD31CFF115700C4600905B59 /* Use Cases */,
 				FD31D0011570107600905B59 /* Models */,
 				FD31CFFE1570103700905B59 /* Services */,
+				FDEFA8C9161F097100FCED39 /* Factories */,
 				FD31CF811570090000905B59 /* Supporting Files */,
 			);
 			path = "friend-bearing-client-ios-lib";
@@ -187,7 +195,6 @@
 		FD31CFF115700C4600905B59 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
-				FD31CFF315700C5500905B59 /* Start the App */,
 				FD31D00B15701AC700905B59 /* Choose Friend */,
 				FD63D3791587AC6400308336 /* Friend Locator */,
 			);
@@ -197,25 +204,10 @@
 		FD31CFF215700C4C00905B59 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
-				FD31CFF415700C6800905B59 /* Start the App */,
 				FD31D00C15701AD900905B59 /* Choose Friend */,
 				FDBE19EB15905478007C868C /* Friend Locator */,
 			);
 			name = "Use Cases";
-			sourceTree = "<group>";
-		};
-		FD31CFF315700C5500905B59 /* Start the App */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Start the App";
-			sourceTree = "<group>";
-		};
-		FD31CFF415700C6800905B59 /* Start the App */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Start the App";
 			sourceTree = "<group>";
 		};
 		FD31CFFE1570103700905B59 /* Services */ = {
@@ -290,6 +282,8 @@
 				FDAE22F115702AA2006B3353 /* FakeSessionSource.m */,
 				FDAE22F715702CFA006B3353 /* FakeChooseFriendDisplay.h */,
 				FDAE22F815702CFA006B3353 /* FakeChooseFriendDisplay.m */,
+				FDEFA8BE161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.h */,
+				FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -302,6 +296,15 @@
 				FDB86F4715D722B600668922 /* Fakes */,
 			);
 			name = "Friend Locator";
+			sourceTree = "<group>";
+		};
+		FDEFA8C9161F097100FCED39 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */,
+				FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */,
+			);
+			name = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +321,7 @@
 				FD2C9BE21587FF9B00EF0978 /* FriendLocatorDisplay.h in Headers */,
 				FD08AB7715AB75CA00B5A2AC /* Compass.h in Headers */,
 				FD18145915B9D501004ADD09 /* FriendHeadingSource.h in Headers */,
+				FDEFA8C7161F094800FCED39 /* FriendLocatorPresenterFactory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +371,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Simon Lundmark";
 			};
 			buildConfigurationList = FD31CF75157008FF00905B59 /* Build configuration list for PBXProject "friend-bearing-client-ios-lib" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -422,6 +427,7 @@
 				FDAE22F615702BBD006B3353 /* Session.m in Sources */,
 				FD63D37D1587AC7C00308336 /* FriendLocatorPresenter.m in Sources */,
 				FD08AB7815AB75CA00B5A2AC /* Compass.m in Sources */,
+				FDEFA8C8161F094800FCED39 /* FriendLocatorPresenterFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +443,7 @@
 				FD08AB7B15AB75E900B5A2AC /* CompassTest.m in Sources */,
 				FD18145D15B9D516004ADD09 /* FakedFriendHeadingSource.m in Sources */,
 				FD18146115BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m in Sources */,
+				FDEFA8C0161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

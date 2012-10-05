@@ -8,11 +8,13 @@
 
 #import "ChooseFriendPresenter.h"
 #import "Session.h"
+#import "FriendLocatorPresenterFactory.h"
 
 @implementation ChooseFriendPresenter
 
 @synthesize display = _display;
 @synthesize sessionSource = _sessionSource;
+@synthesize friendLocatorPresenterFactory = _friendLocatorPresenterFactory;
 @synthesize friendLocatorPresenter = _friendLocatorPresenter;
 
 - (void)updateDisplay
@@ -23,8 +25,7 @@
 - (void)submitButtonPressed
 {
     [self.display showFriendLocatorDisplay];
-    self.friendLocatorPresenter = [FriendLocatorPresenter new];
-    // TODO: Fix the problem that the friendID is set before there's a FriendHeadingSource set...
+    self.friendLocatorPresenter = [self.friendLocatorPresenterFactory build];
     self.friendLocatorPresenter.friendID = self.display.friendID;
 }
 

@@ -10,6 +10,7 @@
 #import "ChooseFriendPresenter.h"
 #import "FakeSessionSource.h"
 #import "FakeChooseFriendDisplay.h"
+#import "FakeFriendLocatorPresenterFactory.h"
 
 @implementation ChooseFriendPresenterTest
 
@@ -27,6 +28,7 @@
 - (void)test_onSubmitButtonPressed_itCreatesTheFriendLocatorPresenter
 {
     ChooseFriendPresenter *p = [ChooseFriendPresenter new];
+    p.friendLocatorPresenterFactory = [FakeFriendLocatorPresenterFactory new];
     
     [p submitButtonPressed];
     
@@ -36,6 +38,7 @@
 - (void)test_onFriendIdEntered_andSubmitButtonPressed_itGivesTheFriendId_toTheFriendLocatorPresenter
 {
     ChooseFriendPresenter *p = [ChooseFriendPresenter new];
+    p.friendLocatorPresenterFactory = [FakeFriendLocatorPresenterFactory new];
     p.display = [FakeChooseFriendDisplay new];
     
     p.display.friendID = @"4711";

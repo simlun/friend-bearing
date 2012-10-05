@@ -27,6 +27,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    NSLog(@"FriendLocatorViewController.initWithNibName");
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -41,9 +42,9 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"viewDidLoad");
-    NSLog(@"Presenter: %@", self.presenter);
-    NSLog(@"Presenter.friendID: %@", self.presenter.friendID);
+    NSLog(@"FriendLocatorViewController.viewDidLoad");
+    NSLog(@"FriendLocatorViewController, Presenter: %@", self.presenter);
+    NSLog(@"FriendLocatorViewController, Presenter.friendID: %@", self.presenter.friendID);
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self setInitialState];
@@ -51,15 +52,16 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSLog(@"viewDidAppear");
-    NSLog(@"Presenter: %@", self.presenter);
-    NSLog(@"Presenter.friendID: %@", self.presenter.friendID);
+    NSLog(@"FriendLocatorViewController.viewDidAppear");
+    NSLog(@"FriendLocatorViewController, Presenter: %@", self.presenter);
+    NSLog(@"FriendLocatorViewController, Presenter.friendID: %@", self.presenter.friendID);
     [super viewDidAppear:animated];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    NSLog(@"FriendLocatorViewController.viewDidDisappear");
+    //[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 - (void)viewDidUnload

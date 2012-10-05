@@ -230,6 +230,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Simon Lundmark";
 			};
 			buildConfigurationList = FD31CFAA1570094500905B59 /* Build configuration list for PBXProject "friend-bearing-client-ios-app" */;
 			compatibilityVersion = "Xcode 3.2";
