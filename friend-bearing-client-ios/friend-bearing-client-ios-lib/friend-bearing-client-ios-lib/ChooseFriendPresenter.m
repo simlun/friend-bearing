@@ -24,9 +24,11 @@
 
 - (void)submitButtonPressed
 {
-    [self.display showFriendLocatorDisplay];
     self.friendLocatorPresenter = [self.friendLocatorPresenterFactory build];
     self.friendLocatorPresenter.friendID = self.display.friendID;
+    
+    // Must be the last call of this method (depends on the friendLocatorPresenter)
+    [self.display showFriendLocatorDisplay];
 }
 
 @end
