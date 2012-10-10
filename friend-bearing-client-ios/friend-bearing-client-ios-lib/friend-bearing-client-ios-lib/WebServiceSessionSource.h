@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SessionSource.h"
 #import "SessionStorage.h"
+#import "AsyncRequestSender.h"
 
 @interface WebServiceSessionSource : NSObject <SessionSource>
 
@@ -16,6 +17,6 @@
 
 @property (nonatomic, strong) id<SessionStorage> sessionStorage;
 @property (nonatomic, strong) NSOperationQueue *queue;
-
+@property (nonatomic, strong) id<AsyncRequestSender> asyncRequestSender;
 
 @end

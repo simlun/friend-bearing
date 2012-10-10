@@ -19,15 +19,15 @@
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         NSLog(@"Contacting web service...");
-        [NSURLConnection sendAsynchronousRequest:request
-                                           queue:self.queue
-                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                                   NSLog(@">>> Response: %@", response);
-                                   NSLog(@">>> Data: %@", data);
-                                   NSLog(@">>> Error: %@", error);
-                                   Session *s = [Session new];
-                                   s.userID = @"123";
-                                   succeed(s);
+        [self.asyncRequestSender sendAsynchronousRequest:request
+                                                   queue:self.queue
+                                       completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                           NSLog(@">>> Response: %@", response);
+                                           NSLog(@">>> Data: %@", data);
+                                           NSLog(@">>> Error: %@", error);
+                                           Session *s = [Session new];
+                                           s.userID = @"123";
+                                           succeed(s);
         }];
         
     }

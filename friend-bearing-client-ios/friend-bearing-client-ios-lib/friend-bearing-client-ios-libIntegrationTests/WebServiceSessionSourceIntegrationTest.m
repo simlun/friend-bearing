@@ -10,6 +10,8 @@
 #import "WebServiceSessionSource.h"
 #import "InMemorySessionStorage.h"
 #import "TestUtils.h"
+#import "AsyncRequestSender.h"
+#import "StubbedAsyncRequestSender.h"
 
 @implementation WebServiceSessionSourceIntegrationTest
 
@@ -33,11 +35,11 @@
 - (void)test_itGetsANewSession_viaTheWebService_ifNotFoundInStorage
 {
     WebServiceSessionSource *ws = [WebServiceSessionSource new];
-    NSOperationQueue *queue = [NSOperationQueue new];
-    ws.queue = queue;
     InMemorySessionStorage *sessionStorage = [InMemorySessionStorage new];
     sessionStorage.session = nil;
     ws.sessionStorage = sessionStorage;
+    ws.queue = [NSOperationQueue new];
+    ws.asyncRequestSender = [StubbedAsyncRequestSender new];
     
     __block NSString *userID = nil;
     __block BOOL completed = NO;
