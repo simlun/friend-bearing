@@ -13,6 +13,13 @@
 		FD18145915B9D501004ADD09 /* FriendHeadingSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FD18145815B9D501004ADD09 /* FriendHeadingSource.h */; };
 		FD18145D15B9D516004ADD09 /* FakedFriendHeadingSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18145C15B9D516004ADD09 /* FakedFriendHeadingSource.m */; };
 		FD18146115BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m in Sources */ = {isa = PBXBuildFile; fileRef = FD18146015BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m */; };
+		FD1BCE79162611430036E3E8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8C1570090000905B59 /* SenTestingKit.framework */; };
+		FD1BCE7A162611430036E3E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8E1570090000905B59 /* UIKit.framework */; };
+		FD1BCE7B162611430036E3E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
+		FD1BCE81162611430036E3E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD1BCE7F162611430036E3E8 /* InfoPlist.strings */; };
+		FD1BCE8E162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1BCE8D162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.m */; };
+		FD1BCE91162613300036E3E8 /* libfriend-bearing-client-ios-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */; };
+		FD1BCE93162613700036E3E8 /* TestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D883D16260BA2006B8779 /* TestUtils.m */; };
 		FD2C9BE21587FF9B00EF0978 /* FriendLocatorDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FD2C9BE11587FF9B00EF0978 /* FriendLocatorDisplay.h */; };
 		FD31CF7F1570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
 		FD31CF8D1570090000905B59 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF8C1570090000905B59 /* SenTestingKit.framework */; };
@@ -44,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FD1BCE8F162612FB0036E3E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD31CF72157008FF00905B59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD31CF7A1570090000905B59;
+			remoteInfo = "friend-bearing-client-ios-lib";
+		};
 		FD31CF911570090000905B59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD31CF72157008FF00905B59 /* Project object */;
@@ -65,6 +79,12 @@
 		FD18145F15BB50C6004ADD09 /* FakedDeviceHeadingSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakedDeviceHeadingSupplier.h; sourceTree = "<group>"; };
 		FD18146015BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakedDeviceHeadingSupplier.m; sourceTree = "<group>"; };
 		FD18146215BB5114004ADD09 /* DeviceHeadingReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceHeadingReceiver.h; sourceTree = "<group>"; };
+		FD1BCE78162611420036E3E8 /* friend-bearing-client-ios-libIntegrationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "friend-bearing-client-ios-libIntegrationTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1BCE7E162611430036E3E8 /* friend-bearing-client-ios-libIntegrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-libIntegrationTests-Info.plist"; sourceTree = "<group>"; };
+		FD1BCE80162611430036E3E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD1BCE85162611430036E3E8 /* friend-bearing-client-ios-libIntegrationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "friend-bearing-client-ios-libIntegrationTests-Prefix.pch"; sourceTree = "<group>"; };
+		FD1BCE8C162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceSessionSourceIntegrationTest.h; sourceTree = "<group>"; };
+		FD1BCE8D162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceSessionSourceIntegrationTest.m; sourceTree = "<group>"; };
 		FD2C9BE11587FF9B00EF0978 /* FriendLocatorDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorDisplay.h; sourceTree = "<group>"; };
 		FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libfriend-bearing-client-ios-lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31CF7E1570090000905B59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +128,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD1BCE74162611420036E3E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1BCE91162613300036E3E8 /* libfriend-bearing-client-ios-lib.a in Frameworks */,
+				FD1BCE79162611430036E3E8 /* SenTestingKit.framework in Frameworks */,
+				FD1BCE7A162611430036E3E8 /* UIKit.framework in Frameworks */,
+				FD1BCE7B162611430036E3E8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD31CF781570090000905B59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,11 +170,48 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		FD1BCE7C162611430036E3E8 /* friend-bearing-client-ios-libIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BCE8A162611720036E3E8 /* Services */,
+				FD1BCE7D162611430036E3E8 /* Supporting Files */,
+			);
+			path = "friend-bearing-client-ios-libIntegrationTests";
+			sourceTree = "<group>";
+		};
+		FD1BCE7D162611430036E3E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BCE7E162611430036E3E8 /* friend-bearing-client-ios-libIntegrationTests-Info.plist */,
+				FD1BCE7F162611430036E3E8 /* InfoPlist.strings */,
+				FD1BCE85162611430036E3E8 /* friend-bearing-client-ios-libIntegrationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD1BCE8A162611720036E3E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BCE8B1626117B0036E3E8 /* Session */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		FD1BCE8B1626117B0036E3E8 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				FD1BCE8C162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.h */,
+				FD1BCE8D162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.m */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
 		FD31CF70157008FF00905B59 = {
 			isa = PBXGroup;
 			children = (
 				FD31CF801570090000905B59 /* friend-bearing-client-ios-lib */,
 				FD31CF941570090000905B59 /* friend-bearing-client-ios-libTests */,
+				FD1BCE7C162611430036E3E8 /* friend-bearing-client-ios-libIntegrationTests */,
 				FD31CF7D1570090000905B59 /* Frameworks */,
 				FD31CF7C1570090000905B59 /* Products */,
 			);
@@ -154,6 +222,7 @@
 			children = (
 				FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */,
 				FD31CF8B1570090000905B59 /* friend-bearing-client-ios-libTests.octest */,
+				FD1BCE78162611420036E3E8 /* friend-bearing-client-ios-libIntegrationTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,10 +271,10 @@
 		FD31CF951570090000905B59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FD31CF961570090000905B59 /* friend-bearing-client-ios-libTests-Info.plist */,
-				FD31CF971570090000905B59 /* InfoPlist.strings */,
 				FD5D883C16260BA2006B8779 /* TestUtils.h */,
 				FD5D883D16260BA2006B8779 /* TestUtils.m */,
+				FD31CF961570090000905B59 /* friend-bearing-client-ios-libTests-Info.plist */,
+				FD31CF971570090000905B59 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -386,6 +455,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FD1BCE77162611420036E3E8 /* friend-bearing-client-ios-libIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD1BCE88162611430036E3E8 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-libIntegrationTests" */;
+			buildPhases = (
+				FD1BCE73162611420036E3E8 /* Sources */,
+				FD1BCE74162611420036E3E8 /* Frameworks */,
+				FD1BCE75162611420036E3E8 /* Resources */,
+				FD1BCE76162611420036E3E8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD1BCE90162612FB0036E3E8 /* PBXTargetDependency */,
+			);
+			name = "friend-bearing-client-ios-libIntegrationTests";
+			productName = "friend-bearing-client-ios-libIntegrationTests";
+			productReference = FD1BCE78162611420036E3E8 /* friend-bearing-client-ios-libIntegrationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		FD31CF7A1570090000905B59 /* friend-bearing-client-ios-lib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD31CF9F1570090000905B59 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-lib" */;
@@ -445,11 +533,20 @@
 			targets = (
 				FD31CF7A1570090000905B59 /* friend-bearing-client-ios-lib */,
 				FD31CF8A1570090000905B59 /* friend-bearing-client-ios-libTests */,
+				FD1BCE77162611420036E3E8 /* friend-bearing-client-ios-libIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD1BCE75162611420036E3E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1BCE81162611430036E3E8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD31CF881570090000905B59 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,6 +558,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		FD1BCE76162611420036E3E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		FD31CF891570090000905B59 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,6 +587,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD1BCE73162611420036E3E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1BCE8E162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.m in Sources */,
+				FD1BCE93162613700036E3E8 /* TestUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD31CF771570090000905B59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,6 +631,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD1BCE90162612FB0036E3E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD31CF7A1570090000905B59 /* friend-bearing-client-ios-lib */;
+			targetProxy = FD1BCE8F162612FB0036E3E8 /* PBXContainerItemProxy */;
+		};
 		FD31CF921570090000905B59 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FD31CF7A1570090000905B59 /* friend-bearing-client-ios-lib */;
@@ -520,6 +644,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FD1BCE7F162611430036E3E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD1BCE80162611430036E3E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		FD31CF971570090000905B59 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -531,6 +663,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD1BCE86162611430036E3E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "friend-bearing-client-ios-libIntegrationTests/friend-bearing-client-ios-libIntegrationTests-Prefix.pch";
+				INFOPLIST_FILE = "friend-bearing-client-ios-libIntegrationTests/friend-bearing-client-ios-libIntegrationTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FD1BCE87162611430036E3E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "friend-bearing-client-ios-libIntegrationTests/friend-bearing-client-ios-libIntegrationTests-Prefix.pch";
+				INFOPLIST_FILE = "friend-bearing-client-ios-libIntegrationTests/friend-bearing-client-ios-libIntegrationTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		FD31CF9D1570090000905B59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -630,6 +803,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD1BCE88162611430036E3E8 /* Build configuration list for PBXNativeTarget "friend-bearing-client-ios-libIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD1BCE86162611430036E3E8 /* Debug */,
+				FD1BCE87162611430036E3E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FD31CF75157008FF00905B59 /* Build configuration list for PBXProject "friend-bearing-client-ios-lib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
