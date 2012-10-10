@@ -13,6 +13,9 @@
 #import "AsyncRequestSender.h"
 #import "StubbedAsyncRequestSender.h"
 
+// TODO: Remove
+#import "NSURLConnectionAsyncRequestSender.h"
+
 @implementation WebServiceSessionSourceIntegrationTest
 
 - (void)test_itReturnsTheSession_ifFoundInStorage
@@ -39,7 +42,8 @@
     sessionStorage.session = nil;
     ws.sessionStorage = sessionStorage;
     ws.queue = [NSOperationQueue new];
-    ws.asyncRequestSender = [StubbedAsyncRequestSender new];
+    //TODO: Use this instead: ws.asyncRequestSender = [StubbedAsyncRequestSender new];
+    ws.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
     
     __block NSString *userID = nil;
     __block BOOL completed = NO;
