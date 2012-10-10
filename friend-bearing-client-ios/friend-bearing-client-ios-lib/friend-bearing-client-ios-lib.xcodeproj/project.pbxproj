@@ -20,6 +20,7 @@
 		FD31CF901570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
 		FD31CF931570090000905B59 /* libfriend-bearing-client-ios-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */; };
 		FD31CF991570090000905B59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD31CF971570090000905B59 /* InfoPlist.strings */; };
+		FD5D883E16260BA2006B8779 /* TestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D883D16260BA2006B8779 /* TestUtils.m */; };
 		FD63D37C1587AC7C00308336 /* FriendLocatorPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */; };
 		FD63D37D1587AC7C00308336 /* FriendLocatorPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63D37B1587AC7C00308336 /* FriendLocatorPresenter.m */; };
 		FDAE22E715701E34006B3353 /* ChooseFriendPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */; };
@@ -35,6 +36,11 @@
 		FDEFA8C0161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */; };
 		FDEFA8C7161F094800FCED39 /* FriendLocatorPresenterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */; };
 		FDEFA8C8161F094800FCED39 /* FriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */; };
+		FDEFA8DD161F8F8600FCED39 /* WebServiceSessionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEFA8DB161F8F8600FCED39 /* WebServiceSessionSource.h */; };
+		FDEFA8DE161F8F8600FCED39 /* WebServiceSessionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8DC161F8F8600FCED39 /* WebServiceSessionSource.m */; };
+		FDEFA8E2161F916D00FCED39 /* WebServiceSessionSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8E1161F916D00FCED39 /* WebServiceSessionSourceTest.m */; };
+		FDEFA8F0161F974F00FCED39 /* InMemorySessionStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEFA8EE161F974F00FCED39 /* InMemorySessionStorage.h */; };
+		FDEFA8F1161F974F00FCED39 /* InMemorySessionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8EF161F974F00FCED39 /* InMemorySessionStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,8 @@
 		FD31CF8E1570090000905B59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FD31CF961570090000905B59 /* friend-bearing-client-ios-libTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-libTests-Info.plist"; sourceTree = "<group>"; };
 		FD31CF981570090000905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD5D883C16260BA2006B8779 /* TestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtils.h; sourceTree = "<group>"; };
+		FD5D883D16260BA2006B8779 /* TestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtils.m; sourceTree = "<group>"; };
 		FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorPresenter.h; sourceTree = "<group>"; };
 		FD63D37B1587AC7C00308336 /* FriendLocatorPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendLocatorPresenter.m; sourceTree = "<group>"; };
 		FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendPresenter.h; sourceTree = "<group>"; };
@@ -90,6 +98,13 @@
 		FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeFriendLocatorPresenterFactory.m; sourceTree = "<group>"; };
 		FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorPresenterFactory.h; sourceTree = "<group>"; };
 		FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendLocatorPresenterFactory.m; sourceTree = "<group>"; };
+		FDEFA8DB161F8F8600FCED39 /* WebServiceSessionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceSessionSource.h; sourceTree = "<group>"; };
+		FDEFA8DC161F8F8600FCED39 /* WebServiceSessionSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceSessionSource.m; sourceTree = "<group>"; };
+		FDEFA8E0161F916D00FCED39 /* WebServiceSessionSourceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceSessionSourceTest.h; sourceTree = "<group>"; };
+		FDEFA8E1161F916D00FCED39 /* WebServiceSessionSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceSessionSourceTest.m; sourceTree = "<group>"; };
+		FDEFA8E3161F947E00FCED39 /* SessionStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionStorage.h; sourceTree = "<group>"; };
+		FDEFA8EE161F974F00FCED39 /* InMemorySessionStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMemorySessionStorage.h; sourceTree = "<group>"; };
+		FDEFA8EF161F974F00FCED39 /* InMemorySessionStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMemorySessionStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +193,7 @@
 			children = (
 				FD31CFF215700C4C00905B59 /* Use Cases */,
 				FD08AB6C15AB752D00B5A2AC /* Models */,
+				FDEFA8DF161F914C00FCED39 /* Services */,
 				FD31CF951570090000905B59 /* Supporting Files */,
 			);
 			path = "friend-bearing-client-ios-libTests";
@@ -188,6 +204,8 @@
 			children = (
 				FD31CF961570090000905B59 /* friend-bearing-client-ios-libTests-Info.plist */,
 				FD31CF971570090000905B59 /* InfoPlist.strings */,
+				FD5D883C16260BA2006B8779 /* TestUtils.h */,
+				FD5D883D16260BA2006B8779 /* TestUtils.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -213,7 +231,7 @@
 		FD31CFFE1570103700905B59 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FDAE22EE15702A5D006B3353 /* SessionSource.h */,
+				FDEFA8E4161F94F300FCED39 /* Session */,
 				FD18145815B9D501004ADD09 /* FriendHeadingSource.h */,
 				FD18145E15BB50A5004ADD09 /* DeviceHeadingSupplier.h */,
 				FD18146215BB5114004ADD09 /* DeviceHeadingReceiver.h */,
@@ -307,6 +325,44 @@
 			name = Factories;
 			sourceTree = "<group>";
 		};
+		FDEFA8DF161F914C00FCED39 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFA8E5161F94FE00FCED39 /* Session */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		FDEFA8E4161F94F300FCED39 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE22EE15702A5D006B3353 /* SessionSource.h */,
+				FDEFA8DB161F8F8600FCED39 /* WebServiceSessionSource.h */,
+				FDEFA8DC161F8F8600FCED39 /* WebServiceSessionSource.m */,
+				FDEFA8ED161F973700FCED39 /* Storage */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
+		FDEFA8E5161F94FE00FCED39 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFA8E0161F916D00FCED39 /* WebServiceSessionSourceTest.h */,
+				FDEFA8E1161F916D00FCED39 /* WebServiceSessionSourceTest.m */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
+		FDEFA8ED161F973700FCED39 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFA8E3161F947E00FCED39 /* SessionStorage.h */,
+				FDEFA8EE161F974F00FCED39 /* InMemorySessionStorage.h */,
+				FDEFA8EF161F974F00FCED39 /* InMemorySessionStorage.m */,
+			);
+			name = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -322,6 +378,8 @@
 				FD08AB7715AB75CA00B5A2AC /* Compass.h in Headers */,
 				FD18145915B9D501004ADD09 /* FriendHeadingSource.h in Headers */,
 				FDEFA8C7161F094800FCED39 /* FriendLocatorPresenterFactory.h in Headers */,
+				FDEFA8DD161F8F8600FCED39 /* WebServiceSessionSource.h in Headers */,
+				FDEFA8F0161F974F00FCED39 /* InMemorySessionStorage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +486,8 @@
 				FD63D37D1587AC7C00308336 /* FriendLocatorPresenter.m in Sources */,
 				FD08AB7815AB75CA00B5A2AC /* Compass.m in Sources */,
 				FDEFA8C8161F094800FCED39 /* FriendLocatorPresenterFactory.m in Sources */,
+				FDEFA8DE161F8F8600FCED39 /* WebServiceSessionSource.m in Sources */,
+				FDEFA8F1161F974F00FCED39 /* InMemorySessionStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +504,8 @@
 				FD18145D15B9D516004ADD09 /* FakedFriendHeadingSource.m in Sources */,
 				FD18146115BB50C6004ADD09 /* FakedDeviceHeadingSupplier.m in Sources */,
 				FDEFA8C0161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m in Sources */,
+				FDEFA8E2161F916D00FCED39 /* WebServiceSessionSourceTest.m in Sources */,
+				FD5D883E16260BA2006B8779 /* TestUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
