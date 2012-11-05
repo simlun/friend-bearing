@@ -15,6 +15,7 @@
     if (self.sessionStorage.session != nil) {
         succeed(self.sessionStorage.session);
     } else {
+        // TODO: Do not hard code the URL
         NSURL *url = [NSURL URLWithString:@"http://localhost:3000/session"];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         request.HTTPMethod = @"POST";
@@ -26,13 +27,16 @@
                                            NSLog(@">>> Response: %@", response);
                                            NSLog(@">>> Data: %@", data);
                                            NSLog(@">>> Error: %@", error);
-                                           Session *s = [Session new];
+                                           
+                                           if (error) {
+                                               fail(nil);
+                                               return;
+                                           }
 
-                                           // TODO: Verify the NSError instance
-
-                                           // TODO: Verify the NSURLResponse instance
                                            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
                                            int httpStatus = httpResponse.statusCode;
+                                           
+                                           // TODO: Verify the HTTP status code
                                            NSLog(@">>> HTTP Status Code: %i", httpStatus);
 
                                            NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -45,6 +49,7 @@
                                            NSLog(@">>> JSON instance: %@", json);
                                            NSLog(@">>> JSON response user-id: %@", [json valueForKey:@"user-id"]);
 
+                                           Session *s = [Session new];
                                            s.userID = [json valueForKey:@"user-id"];
 
                                            succeed(s);

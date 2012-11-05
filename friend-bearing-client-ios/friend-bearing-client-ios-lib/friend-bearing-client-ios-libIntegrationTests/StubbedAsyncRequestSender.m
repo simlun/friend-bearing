@@ -14,7 +14,7 @@
                           queue:(NSOperationQueue*)queue
               completionHandler:(void (^)(NSURLResponse*, NSData*, NSError*))handler
 {
-    handler(nil, nil, nil);
+    handler(self.urlResponse, self.data, self.error);
 }
 
 @end

@@ -10,8 +10,9 @@
 
 @implementation TestUtils
 
-+ (BOOL)didWaitForMoreThan:(NSTimeInterval)seconds secondsForTruth:(BOOL*)completed
++ (BOOL)didWaitAnUnreasonableTimeForTruth:(BOOL*)completed
 {
+    int seconds = 15;
     for (int i = 0; !*completed; i++) {
         if (i > seconds * 1000) {
             return YES;

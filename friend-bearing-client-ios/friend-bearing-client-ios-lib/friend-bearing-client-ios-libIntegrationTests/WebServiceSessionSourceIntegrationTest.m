@@ -11,29 +11,9 @@
 #import "InMemorySessionStorage.h"
 #import "TestUtils.h"
 #import "AsyncRequestSender.h"
-#import "StubbedAsyncRequestSender.h"
-
-// TODO: Remove
 #import "NSURLConnectionAsyncRequestSender.h"
 
 @implementation WebServiceSessionSourceIntegrationTest
-
-- (void)test_itReturnsTheSession_ifFoundInStorage
-{
-    WebServiceSessionSource *ws = [WebServiceSessionSource new];
-    InMemorySessionStorage *sessionStorage = [InMemorySessionStorage new];
-    Session *session = [Session new];
-    session.userID = @"17";
-    sessionStorage.session = session;
-    ws.sessionStorage = sessionStorage;
-    
-    __block NSString *userID = nil;
-    [ws getCurrentSessionAndSucceed:^(Session *s) {
-        userID = s.userID;
-    } orFail:nil];
-    
-    STAssertEqualObjects(userID, @"17", nil);
-}
 
 - (void)test_itGetsANewSession_viaTheWebService_ifNotFoundInStorage
 {
@@ -42,7 +22,6 @@
     sessionStorage.session = nil;
     ws.sessionStorage = sessionStorage;
     ws.queue = [NSOperationQueue new];
-    //TODO: Use this instead: ws.asyncRequestSender = [StubbedAsyncRequestSender new];
     ws.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
     
     __block NSString *userID = nil;
@@ -52,7 +31,7 @@
         completed = YES;
     } orFail:nil];
     
-    STAssertFalse([TestUtils didWaitForMoreThan:5 secondsForTruth:&completed], nil);
+    STAssertFalse([TestUtils didWaitAnUnreasonableTimeForTruth:&completed], nil);
     STAssertEqualObjects(userID, @"123", nil);
 }
 

@@ -10,4 +10,9 @@
 #import "AsyncRequestSender.h"
 
 @interface StubbedAsyncRequestSender : NSObject <AsyncRequestSender>
+
+@property (nonatomic, strong) NSURLResponse* urlResponse;
+@property (nonatomic, strong) NSData* data;
+@property (nonatomic, strong) NSError* error;
+
 @end

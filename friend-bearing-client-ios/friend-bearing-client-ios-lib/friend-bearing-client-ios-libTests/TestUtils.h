@@ -10,6 +10,6 @@
 
 @interface TestUtils : NSObject
 
-+ (BOOL)didWaitForMoreThan:(NSTimeInterval)seconds secondsForTruth:(BOOL*)completed;
++ (BOOL)didWaitAnUnreasonableTimeForTruth:(BOOL*)completed;
 
 @end
