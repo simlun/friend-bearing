@@ -16,44 +16,21 @@
         succeed(self.sessionStorage.session);
     } else {
         // TODO: Do not hard code the URL
-        NSURL *url = [NSURL URLWithString:@"http://localhost:3000/session"];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        request.HTTPMethod = @"POST";
+        NSString *urlString = @"http://localhost:3000/session";
         
-        NSLog(@"Contacting web service...");
-        [self.asyncRequestSender sendAsynchronousRequest:request
-                                                   queue:self.queue
-                                       completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                                           NSLog(@">>> Response: %@", response);
-                                           NSLog(@">>> Data: %@", data);
-                                           NSLog(@">>> Error: %@", error);
-                                           
-                                           if (error) {
-                                               fail(nil);
-                                               return;
-                                           }
+        OnSuccessBlock_t onSuccess = ^(NSDictionary *json) {
+            Session *s = [Session new];
+            s.userID = [json valueForKey:@"user-id"];
+            // TODO: Verify that the json dictionary really contained a user-id
+            succeed(s);
+        };
+        
+        OnFailureBlock_t onFailure = ^(NSString *message) {
+            fail(message);
+        };
 
-                                           NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-                                           int httpStatus = httpResponse.statusCode;
-                                           
-                                           // TODO: Verify the HTTP status code
-                                           NSLog(@">>> HTTP Status Code: %i", httpStatus);
-
-                                           NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                           NSLog(@">>> JSON string: %@", jsonString);
-
-                                           NSError *jsonError = nil;
-                                           NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-
-                                           NSLog(@">>> JSON error instance: %@", jsonError);
-                                           NSLog(@">>> JSON instance: %@", json);
-                                           NSLog(@">>> JSON response user-id: %@", [json valueForKey:@"user-id"]);
-
-                                           Session *s = [Session new];
-                                           s.userID = [json valueForKey:@"user-id"];
-
-                                           succeed(s);
-        }];
+        // TODO: Pass in a real expected response status
+        [self.httpClient doPostRequestWithURL:urlString andSucceed:onSuccess orFail:onFailure expectingResponseStatus:-1];
     }
 }
 

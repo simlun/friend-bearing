@@ -9,14 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "SessionSource.h"
 #import "SessionStorage.h"
-#import "AsyncRequestSender.h"
+#import "HttpClient.h"
 
 @interface WebServiceSessionSource : NSObject <SessionSource>
 
 #pragma mark - Dependencies
 
 @property (nonatomic, strong) id<SessionStorage> sessionStorage;
-@property (nonatomic, strong) NSOperationQueue *queue;
-@property (nonatomic, strong) id<AsyncRequestSender> asyncRequestSender;
+@property (nonatomic, strong) id<HttpClient> httpClient;
 
 @end

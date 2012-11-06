@@ -12,17 +12,35 @@
 #import "TestUtils.h"
 #import "AsyncRequestSender.h"
 #import "NSURLConnectionAsyncRequestSender.h"
+#import "NSURLHttpClient.h"
 
 @implementation WebServiceSessionSourceIntegrationTest
+
+#pragma mark - Factory methods
+
+- (id<SessionStorage>)createEmptyStubbedSessionStorage
+{
+    InMemorySessionStorage *sessionStorage = [InMemorySessionStorage new];
+    sessionStorage.session = nil;
+    return sessionStorage;
+}
+
+- (id<HttpClient>)createHttpClient
+{
+    NSURLHttpClient *httpClient = [NSURLHttpClient new];
+    httpClient.queue = [NSOperationQueue new];
+    httpClient.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
+    return httpClient;
+}
+
+
+#pragma mark - Tests
 
 - (void)test_itGetsANewSession_viaTheWebService_ifNotFoundInStorage
 {
     WebServiceSessionSource *ws = [WebServiceSessionSource new];
-    InMemorySessionStorage *sessionStorage = [InMemorySessionStorage new];
-    sessionStorage.session = nil;
-    ws.sessionStorage = sessionStorage;
-    ws.queue = [NSOperationQueue new];
-    ws.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
+    ws.sessionStorage = [self createEmptyStubbedSessionStorage];
+    ws.httpClient = [self createHttpClient];
     
     __block NSString *userID = nil;
     __block BOOL completed = NO;
