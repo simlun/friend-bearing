@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HttpClient.h"
+#import "HTTPClient.h"
 
-@interface NSURLHttpClient : NSObject <HttpClient>
+@interface NSURLHTTPClient : NSObject <HTTPClient>
 @end

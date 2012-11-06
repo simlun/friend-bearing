@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AsyncRequestSender.h"
 
-@protocol HttpClient <NSObject>
+@protocol HTTPClient <NSObject>
 
 #pragma mark - Dependencies
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Simon Lundmark. All rights reserved.
 //
 
-#import "NSURLHttpClient.h"
+#import "NSURLHTTPClient.h"
 
-@implementation NSURLHttpClient
+@implementation NSURLHTTPClient
 
 @synthesize queue = _queue;
 @synthesize asyncRequestSender = _asyncRequestSender;

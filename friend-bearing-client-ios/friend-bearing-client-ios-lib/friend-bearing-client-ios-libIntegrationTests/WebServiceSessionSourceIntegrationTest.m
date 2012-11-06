@@ -12,7 +12,7 @@
 #import "TestUtils.h"
 #import "AsyncRequestSender.h"
 #import "NSURLConnectionAsyncRequestSender.h"
-#import "NSURLHttpClient.h"
+#import "NSURLHTTPClient.h"
 
 @implementation WebServiceSessionSourceIntegrationTest
 
@@ -25,9 +25,9 @@
     return sessionStorage;
 }
 
-- (id<HttpClient>)createHttpClient
+- (id<HTTPClient>)createHTTPClient
 {
-    NSURLHttpClient *httpClient = [NSURLHttpClient new];
+    NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
     httpClient.queue = [NSOperationQueue new];
     httpClient.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
     return httpClient;
@@ -40,7 +40,7 @@
 {
     WebServiceSessionSource *ws = [WebServiceSessionSource new];
     ws.sessionStorage = [self createEmptyStubbedSessionStorage];
-    ws.httpClient = [self createHttpClient];
+    ws.httpClient = [self createHTTPClient];
     
     __block NSString *userID = nil;
     __block BOOL completed = NO;
