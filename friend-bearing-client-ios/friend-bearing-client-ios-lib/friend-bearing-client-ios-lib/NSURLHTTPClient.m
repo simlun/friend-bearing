@@ -21,6 +21,7 @@
     [self.asyncRequestSender sendAsynchronousRequest:request
                                                queue:self.queue
                                    completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                       // TODO: Force this error to occure
                                        if (error) {
                                            onFailure(nil);
                                            return;

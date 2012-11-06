@@ -11,6 +11,7 @@
 #import "InMemorySessionStorage.h"
 #import "StubbedAsyncRequestSender.h"
 #import "NSURLHTTPClient.h"
+#import "StubbedFailingHTTPClient.h"
 
 @implementation WebServiceSessionSourceTest
 
@@ -42,19 +43,10 @@
 
 #pragma mark - Sad Path
 
-- (id<HTTPClient>)createStubbedHTTPClient
-{
-    NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    StubbedAsyncRequestSender *requestSender = [StubbedAsyncRequestSender new];
-    requestSender.error = [NSError errorWithDomain:@"se.simlun" code:0 userInfo:nil];
-    httpClient.asyncRequestSender = requestSender;
-    return httpClient;
-}
-
-- (void)test_itFails_cleanly_onNSError
+- (void)test_itFails_cleanly
 {
     WebServiceSessionSource *ws = [WebServiceSessionSource new];
-    ws.httpClient = [self createStubbedHTTPClient];
+    ws.httpClient = [StubbedFailingHTTPClient new];
     
     __block BOOL didFail = NO;
     [ws getCurrentSessionAndSucceed:nil orFail:^(NSString *errorMessage) {
