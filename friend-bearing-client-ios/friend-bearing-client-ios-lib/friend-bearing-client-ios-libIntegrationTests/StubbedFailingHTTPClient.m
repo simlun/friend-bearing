@@ -10,7 +10,7 @@
 
 @implementation StubbedFailingHTTPClient
 
-@synthesize queue, asyncRequestSender;
+@synthesize queue, asyncRequestSender, jsonDeserializer;
 
 - (void)doPostRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
 {
