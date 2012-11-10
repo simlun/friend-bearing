@@ -21,19 +21,20 @@
     [self.asyncRequestSender sendAsynchronousRequest:request
                                                queue:self.queue
                                    completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                                       // TODO: Force this error to occure
                                        if (error) {
-                                           onFailure(nil);
+                                           onFailure(@"ASYNC_REQUEST_NSERROR");
                                            return;
                                        }
                                        
                                        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-                                       int httpStatus = httpResponse.statusCode;
-                                       // TODO: Verify the HTTP status code
-                                       NSLog(@">>> HTTP Status Code: %i", httpStatus);
+                                       if (httpResponse.statusCode != expectedStatus) {
+                                           onFailure(@"UNEXPECTED_HTTP_RESPONSE_STATUS");
+                                           return;
+                                       }
                                        
                                        NSError *jsonError = nil;
-                                       NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
+                                       NSDictionary *json = [NSDictionary dictionary];
+                                       json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
                                        // TODO: Verify possible jsonError
                                        
                                        onSucceed(json);

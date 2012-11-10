@@ -30,7 +30,7 @@
         };
 
         // TODO: Pass in a real expected response status
-        [self.httpClient doPostRequestWithURL:urlString andSucceed:onSuccess orFail:onFailure expectingResponseStatus:-1];
+        [self.httpClient doPostRequestWithURL:urlString andSucceed:onSuccess orFail:onFailure expectingResponseStatus:201];
     }
 }
 
