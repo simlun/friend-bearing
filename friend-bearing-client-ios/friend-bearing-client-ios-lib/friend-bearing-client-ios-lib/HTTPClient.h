@@ -21,8 +21,8 @@
 
 #pragma mark -
 
-typedef void (^OnSuccessBlock_t)(NSDictionary *);
-typedef void (^OnFailureBlock_t)(NSString *);
+typedef void (^OnSuccessBlock_t)(NSDictionary *response);
+typedef void (^OnFailureBlock_t)(NSString *errorMessage);
 
 - (void)doPostRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus;
 

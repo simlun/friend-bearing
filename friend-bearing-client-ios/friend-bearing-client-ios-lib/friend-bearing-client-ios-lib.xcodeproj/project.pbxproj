@@ -51,6 +51,7 @@
 		FDEA1B5A164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA1B57164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h */; };
 		FDEA1B5B164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA1B58164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m */; };
 		FDEA1B5E164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA1B5D164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m */; };
+		FDEA1B61164EF859005A8C27 /* StubbedSucceedingHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA1B60164EF859005A8C27 /* StubbedSucceedingHTTPClient.m */; };
 		FDEFA8C0161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */; };
 		FDEFA8C7161F094800FCED39 /* FriendLocatorPresenterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */; };
 		FDEFA8C8161F094800FCED39 /* FriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */; };
@@ -142,6 +143,8 @@
 		FDEA1B58164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSJSONSerializationJSONDeserializer.m; sourceTree = "<group>"; };
 		FDEA1B5C164EEA55005A8C27 /* StubbedFailingJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubbedFailingJSONDeserializer.h; sourceTree = "<group>"; };
 		FDEA1B5D164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedFailingJSONDeserializer.m; sourceTree = "<group>"; };
+		FDEA1B5F164EF859005A8C27 /* StubbedSucceedingHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubbedSucceedingHTTPClient.h; sourceTree = "<group>"; };
+		FDEA1B60164EF859005A8C27 /* StubbedSucceedingHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedSucceedingHTTPClient.m; sourceTree = "<group>"; };
 		FDEFA8BE161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeFriendLocatorPresenterFactory.h; sourceTree = "<group>"; };
 		FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeFriendLocatorPresenterFactory.m; sourceTree = "<group>"; };
 		FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorPresenterFactory.h; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 			children = (
 				FDC63EA51649CA510010B478 /* StubbedFailingHTTPClient.h */,
 				FDC63EA61649CA510010B478 /* StubbedFailingHTTPClient.m */,
+				FDEA1B5F164EF859005A8C27 /* StubbedSucceedingHTTPClient.h */,
+				FDEA1B60164EF859005A8C27 /* StubbedSucceedingHTTPClient.m */,
 			);
 			name = "Test Doubles";
 			path = "../friend-bearing-client-ios-libIntegrationTests";
@@ -714,6 +719,7 @@
 				FDC63EA71649CA510010B478 /* StubbedFailingHTTPClient.m in Sources */,
 				FDC63EAB1649CC690010B478 /* NSURLHTTPClientTest.m in Sources */,
 				FDEA1B5E164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m in Sources */,
+				FDEA1B61164EF859005A8C27 /* StubbedSucceedingHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

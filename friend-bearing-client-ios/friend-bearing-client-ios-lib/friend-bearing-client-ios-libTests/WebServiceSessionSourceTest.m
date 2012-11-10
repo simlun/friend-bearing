@@ -12,6 +12,7 @@
 #import "StubbedAsyncRequestSender.h"
 #import "NSURLHTTPClient.h"
 #import "StubbedFailingHTTPClient.h"
+#import "StubbedSucceedingHTTPClient.h"
 
 @implementation WebServiceSessionSourceTest
 
@@ -49,11 +50,30 @@
     ws.httpClient = [StubbedFailingHTTPClient new];
     
     __block BOOL didFail = NO;
+    __block NSString *actualMessage;
     [ws getCurrentSessionAndSucceed:nil orFail:^(NSString *errorMessage) {
         didFail = YES;
+        actualMessage = errorMessage;
     }];
     
     STAssertTrue(didFail, nil);
+    STAssertEqualObjects(actualMessage, @"STUBBED_FAILURE", nil);
+}
+
+- (void)test_itFails_onSucceededHTTPClient_butUnexpectedResponse
+{
+    WebServiceSessionSource *ws = [WebServiceSessionSource new];
+    ws.httpClient = [StubbedSucceedingHTTPClient new];
+    
+    __block BOOL didFail = NO;
+    __block NSString *actualMessage;
+    [ws getCurrentSessionAndSucceed:nil orFail:^(NSString *errorMessage) {
+        didFail = YES;
+        actualMessage = errorMessage;
+    }];
+    
+    STAssertTrue(didFail, nil);
+    STAssertEqualObjects(actualMessage, @"INCOMPLETE_WEB_SERVICE_RESPONSE", nil);
 }
 
 

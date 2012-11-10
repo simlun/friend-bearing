@@ -18,18 +18,20 @@
         // TODO: Do not hard code the URL
         NSString *urlString = @"http://localhost:3000/session";
         
-        OnSuccessBlock_t onSuccess = ^(NSDictionary *json) {
+        OnSuccessBlock_t onSuccess = ^(NSDictionary *response) {
             Session *s = [Session new];
-            s.userID = [json valueForKey:@"user-id"];
-            // TODO: Verify that the json dictionary really contained a user-id
+            s.userID = [response valueForKey:@"user-id"];
+            if (s.userID == nil) {
+                fail(@"INCOMPLETE_WEB_SERVICE_RESPONSE");
+                return;
+            }
             succeed(s);
         };
         
-        OnFailureBlock_t onFailure = ^(NSString *message) {
-            fail(message);
+        OnFailureBlock_t onFailure = ^(NSString *errorMessage) {
+            fail(errorMessage);
         };
 
-        // TODO: Pass in a real expected response status
         [self.httpClient doPostRequestWithURL:urlString andSucceed:onSuccess orFail:onFailure expectingResponseStatus:201];
     }
 }

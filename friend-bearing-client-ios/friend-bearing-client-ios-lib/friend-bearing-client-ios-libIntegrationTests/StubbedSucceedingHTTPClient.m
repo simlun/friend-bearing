@@ -1,20 +1,20 @@
 //
-//  StubbedHTTPClient.m
+//  StubbedSucceedingHTTPClient.m
 //  friend-bearing-client-ios-lib
 //
-//  Created by simlun on 2012-11-06.
+//  Created by simlun on 2012-11-10.
 //  Copyright (c) 2012 Simon Lundmark. All rights reserved.
 //
 
-#import "StubbedFailingHTTPClient.h"
+#import "StubbedSucceedingHTTPClient.h"
 
-@implementation StubbedFailingHTTPClient
+@implementation StubbedSucceedingHTTPClient
 
 @synthesize queue, asyncRequestSender, jsonDeserializer;
 
 - (void)doPostRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
 {
-    onFailure(@"STUBBED_FAILURE");
+    onSucceed([NSDictionary dictionaryWithObject:@"bar" forKey:@"foo"]);
 }
 
 @end
