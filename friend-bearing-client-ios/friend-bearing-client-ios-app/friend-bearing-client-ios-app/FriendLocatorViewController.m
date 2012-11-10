@@ -21,7 +21,7 @@
 @synthesize isFriendHeadingLoaded = _isFriendHeadingLoaded;
 - (void)setIsFriendHeadingLoaded:(BOOL)isFriendHeadingLoaded
 {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!isFriendHeadingLoaded];
+    // TODO: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!isFriendHeadingLoaded];
     _isFriendHeadingLoaded = isFriendHeadingLoaded;
 }
 
@@ -61,7 +61,7 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     NSLog(@"FriendLocatorViewController.viewDidDisappear");
-    //[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    // TODO: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 - (void)viewDidUnload
