@@ -7,6 +7,7 @@
 //
 
 #import "NSURLHTTPClient.h"
+#import "NSJSONSerializationJSONDeserializer.h"
 
 @implementation NSURLHTTPClient
 
@@ -22,20 +23,24 @@
                                                queue:self.queue
                                    completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                        if (error) {
-                                           onFailure(@"ASYNC_REQUEST_NSERROR");
+                                           onFailure(@"ASYNC_REQUEST_ERROR");
                                            return;
                                        }
                                        
-                                       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-                                       if (httpResponse.statusCode != expectedStatus) {
-                                           onFailure(@"UNEXPECTED_HTTP_RESPONSE_STATUS");
-                                           return;
+                                       if (expectedStatus != 0) {
+                                           NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+                                           if (httpResponse.statusCode != expectedStatus) {
+                                               onFailure(@"UNEXPECTED_HTTP_RESPONSE_STATUS");
+                                               return;
+                                           }
                                        }
                                        
                                        NSError *jsonError = nil;
-                                       NSDictionary *json = [NSDictionary dictionary];
-                                       json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-                                       // TODO: Verify possible jsonError
+                                       NSDictionary *json = [self.jsonDeserializer getDictionaryFromJSONData:data error:&jsonError];
+                                       if (jsonError) {
+                                           onFailure(@"JSON_ERROR");
+                                           return;
+                                       }
                                        
                                        onSucceed(json);
                                    }];

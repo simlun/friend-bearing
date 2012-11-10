@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "HTTPClient.h"
+#import "JSONDeserializer.h"
 
 @interface NSURLHTTPClient : NSObject <HTTPClient>
+
+@property (nonatomic, strong) id<JSONDeserializer> jsonDeserializer;
 
 @end

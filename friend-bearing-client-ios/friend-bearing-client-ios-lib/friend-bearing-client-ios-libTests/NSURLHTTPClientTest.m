@@ -9,6 +9,7 @@
 #import "NSURLHTTPClientTest.h"
 #import "NSURLHTTPClient.h"
 #import "StubbedAsyncRequestSender.h"
+#import "StubbedFailingJSONDeserializer.h"
 
 @implementation NSURLHTTPClientTest
 
@@ -19,7 +20,7 @@
     return requestSender;
 }
 
-- (void)test_itFailsCleanly_onNSErrorFromRequestSender
+- (void)test_itFailsCleanly_onNSError_fromRequestSender
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
     httpClient.asyncRequestSender = [self createFailingAsyncRequestSender];
@@ -29,11 +30,12 @@
     [httpClient doPostRequestWithURL:nil andSucceed:nil orFail:^(NSString *message) {
         didFail = YES;
         actualMessage = message;
-    } expectingResponseStatus:-1];
+    } expectingResponseStatus:0];
     
     STAssertTrue(didFail, nil);
-    STAssertEqualObjects(actualMessage, @"ASYNC_REQUEST_NSERROR", nil);
+    STAssertEqualObjects(actualMessage, @"ASYNC_REQUEST_ERROR", nil);
 }
+
 
 - (id<AsyncRequestSender>)createStatusCodeFailingAsyncRequestSender
 {
@@ -57,6 +59,42 @@
     
     STAssertTrue(didFail, nil);
     STAssertEqualObjects(actualMessage, @"UNEXPECTED_HTTP_RESPONSE_STATUS", nil);
+}
+
+
+- (void)test_itDoesNotCareAboutResponseStatusZero
+{
+    NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
+    httpClient.asyncRequestSender = [self createStatusCodeFailingAsyncRequestSender];
+    
+    __block BOOL didSucceed = NO;
+    __block BOOL didFail = NO;
+    [httpClient doPostRequestWithURL:nil andSucceed:^(NSDictionary *json){
+        didSucceed = YES;
+    } orFail:^(NSString *message) {
+        didFail = YES;
+    } expectingResponseStatus:0];
+    
+    STAssertTrue(didSucceed, nil);
+    STAssertFalse(didFail, nil);
+}
+
+
+- (void)test_itFailsCleanly_onNSError_fromJSONDeserializer
+{
+    NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
+    httpClient.asyncRequestSender = [StubbedAsyncRequestSender new];
+    httpClient.jsonDeserializer = [StubbedFailingJSONDeserializer new];
+    
+    __block BOOL didFail = NO;
+    __block NSString *actualMessage;
+    [httpClient doPostRequestWithURL:nil andSucceed:nil orFail:^(NSString *message) {
+        didFail = YES;
+        actualMessage = message;
+    } expectingResponseStatus:0];
+    
+    STAssertTrue(didFail, nil);
+    STAssertEqualObjects(actualMessage, @"JSON_ERROR", nil);
 }
 
 @end

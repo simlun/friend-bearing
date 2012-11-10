@@ -47,6 +47,10 @@
 		FDC63EA41649B6DC0010B478 /* NSURLHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EA21649B6DC0010B478 /* NSURLHTTPClient.m */; };
 		FDC63EA71649CA510010B478 /* StubbedFailingHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EA61649CA510010B478 /* StubbedFailingHTTPClient.m */; };
 		FDC63EAB1649CC690010B478 /* NSURLHTTPClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EAA1649CC690010B478 /* NSURLHTTPClientTest.m */; };
+		FDEA1B59164EE7C8005A8C27 /* JSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA1B56164EE7C8005A8C27 /* JSONDeserializer.h */; };
+		FDEA1B5A164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA1B57164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h */; };
+		FDEA1B5B164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA1B58164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m */; };
+		FDEA1B5E164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA1B5D164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m */; };
 		FDEFA8C0161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */; };
 		FDEFA8C7161F094800FCED39 /* FriendLocatorPresenterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */; };
 		FDEFA8C8161F094800FCED39 /* FriendLocatorPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */; };
@@ -133,6 +137,11 @@
 		FDC63EA61649CA510010B478 /* StubbedFailingHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedFailingHTTPClient.m; sourceTree = "<group>"; };
 		FDC63EA91649CC690010B478 /* NSURLHTTPClientTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLHTTPClientTest.h; sourceTree = "<group>"; };
 		FDC63EAA1649CC690010B478 /* NSURLHTTPClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLHTTPClientTest.m; sourceTree = "<group>"; };
+		FDEA1B56164EE7C8005A8C27 /* JSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDeserializer.h; sourceTree = "<group>"; };
+		FDEA1B57164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSJSONSerializationJSONDeserializer.h; sourceTree = "<group>"; };
+		FDEA1B58164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSJSONSerializationJSONDeserializer.m; sourceTree = "<group>"; };
+		FDEA1B5C164EEA55005A8C27 /* StubbedFailingJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubbedFailingJSONDeserializer.h; sourceTree = "<group>"; };
+		FDEA1B5D164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedFailingJSONDeserializer.m; sourceTree = "<group>"; };
 		FDEFA8BE161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeFriendLocatorPresenterFactory.h; sourceTree = "<group>"; };
 		FDEFA8BF161F03B900FCED39 /* FakeFriendLocatorPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeFriendLocatorPresenterFactory.m; sourceTree = "<group>"; };
 		FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorPresenterFactory.h; sourceTree = "<group>"; };
@@ -231,6 +240,9 @@
 				FD1BCE95162619370036E3E8 /* AsyncRequestSender.h */,
 				FD1BCE96162619770036E3E8 /* NSURLConnectionAsyncRequestSender.h */,
 				FD1BCE97162619770036E3E8 /* NSURLConnectionAsyncRequestSender.m */,
+				FDEA1B56164EE7C8005A8C27 /* JSONDeserializer.h */,
+				FDEA1B57164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h */,
+				FDEA1B58164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m */,
 				FDC63E9F1649B6830010B478 /* HTTPClient.h */,
 				FDC63EA11649B6DC0010B478 /* NSURLHTTPClient.h */,
 				FDC63EA21649B6DC0010B478 /* NSURLHTTPClient.m */,
@@ -443,6 +455,8 @@
 			children = (
 				FD1BCE9B16261BB90036E3E8 /* StubbedAsyncRequestSender.h */,
 				FD1BCE9C16261BB90036E3E8 /* StubbedAsyncRequestSender.m */,
+				FDEA1B5C164EEA55005A8C27 /* StubbedFailingJSONDeserializer.h */,
+				FDEA1B5D164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m */,
 			);
 			name = "Test Doubles";
 			sourceTree = "<group>";
@@ -515,6 +529,8 @@
 				FDEFA8F0161F974F00FCED39 /* InMemorySessionStorage.h in Headers */,
 				FD1BCE98162619770036E3E8 /* NSURLConnectionAsyncRequestSender.h in Headers */,
 				FDC63EA31649B6DC0010B478 /* NSURLHTTPClient.h in Headers */,
+				FDEA1B59164EE7C8005A8C27 /* JSONDeserializer.h in Headers */,
+				FDEA1B5A164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +691,7 @@
 				FDEFA8F1161F974F00FCED39 /* InMemorySessionStorage.m in Sources */,
 				FD1BCE99162619770036E3E8 /* NSURLConnectionAsyncRequestSender.m in Sources */,
 				FDC63EA41649B6DC0010B478 /* NSURLHTTPClient.m in Sources */,
+				FDEA1B5B164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +713,7 @@
 				FD0D89D0163C338700EB355A /* StubbedAsyncRequestSender.m in Sources */,
 				FDC63EA71649CA510010B478 /* StubbedFailingHTTPClient.m in Sources */,
 				FDC63EAB1649CC690010B478 /* NSURLHTTPClientTest.m in Sources */,
+				FDEA1B5E164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

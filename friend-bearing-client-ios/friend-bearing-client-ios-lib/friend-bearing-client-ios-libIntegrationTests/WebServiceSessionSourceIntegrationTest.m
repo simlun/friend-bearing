@@ -13,6 +13,7 @@
 #import "AsyncRequestSender.h"
 #import "NSURLConnectionAsyncRequestSender.h"
 #import "NSURLHTTPClient.h"
+#import "NSJSONSerializationJSONDeserializer.h"
 
 @implementation WebServiceSessionSourceIntegrationTest
 
@@ -30,6 +31,7 @@
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
     httpClient.queue = [NSOperationQueue new];
     httpClient.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
+    httpClient.jsonDeserializer = [NSJSONSerializationJSONDeserializer new];
     return httpClient;
 }
 
