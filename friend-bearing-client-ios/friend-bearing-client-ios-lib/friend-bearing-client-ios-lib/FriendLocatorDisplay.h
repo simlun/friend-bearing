@@ -18,6 +18,6 @@
 @property (nonatomic, strong) FriendLocatorPresenter *presenter;
 
 @property (nonatomic) BOOL deviceIsPointingAtFriend;
-@property (nonatomic) BOOL isFriendHeadingLoaded;
+@property (nonatomic) BOOL isFriendBearingLoaded;
 
 @end

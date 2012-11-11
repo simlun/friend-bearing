@@ -18,11 +18,11 @@
 
 // TODO: Implement displaying these Display properties
 @synthesize deviceIsPointingAtFriend;
-@synthesize isFriendHeadingLoaded = _isFriendHeadingLoaded;
-- (void)setIsFriendHeadingLoaded:(BOOL)isFriendHeadingLoaded
+@synthesize isFriendBearingLoaded = _isFriendBearingLoaded;
+- (void)setIsFriendBearingLoaded:(BOOL)isFriendBearingLoaded
 {
-    // TODO: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!isFriendHeadingLoaded];
-    _isFriendHeadingLoaded = isFriendHeadingLoaded;
+    // TODO: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!isFriendBearingLoaded];
+    _isFriendBearingLoaded = isFriendBearingLoaded;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,7 +37,7 @@
 
 - (void)setInitialState
 {
-    self.isFriendHeadingLoaded = self.isFriendHeadingLoaded;
+    self.isFriendBearingLoaded = self.isFriendBearingLoaded;
 }
 
 - (void)viewDidLoad

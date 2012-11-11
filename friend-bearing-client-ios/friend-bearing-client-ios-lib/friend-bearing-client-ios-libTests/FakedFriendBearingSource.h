@@ -1,5 +1,5 @@
 //
-//  FakedFriendHeadingSource.h
+//  FakedFriendBearingSource.h
 //  friend-bearing-client-ios-lib
 //
 //  Created by Simon Lundmark on 2012-07-20.
@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FriendHeadingSource.h"
+#import "FriendBearingSource.h"
 
-@interface FakedFriendHeadingSource : NSObject <FriendHeadingSource>
+@interface FakedFriendBearingSource : NSObject <FriendBearingSource>
 
 @property NSString *wasCalledWithFriendID;
 

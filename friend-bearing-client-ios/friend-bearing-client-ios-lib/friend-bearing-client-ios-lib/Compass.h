@@ -10,7 +10,7 @@
 
 @interface Compass : NSObject
 
-@property (nonatomic) double friendHeading;
+@property (nonatomic) double friendBearing;
 @property (nonatomic) double deviceHeading;
 
 @property (nonatomic, readonly) BOOL isPointingAtFriend;

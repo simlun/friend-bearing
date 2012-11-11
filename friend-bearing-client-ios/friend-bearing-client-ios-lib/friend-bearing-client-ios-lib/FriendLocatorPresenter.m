@@ -24,14 +24,14 @@
 #pragma mark - Dependencies
 
 @synthesize display = _display;
-@synthesize friendHeadingSource = _friendHeadingSource;
+@synthesize friendBearingSource = _friendBearingSource;
 @synthesize deviceHeadingSupplier = _deviceHeadingSupplier;
 
 
 #pragma mark - Data
 
 @synthesize friendID = _friendID;
-@synthesize friendHeading = _friendHeading;
+@synthesize friendBearing = _friendBearing;
 @synthesize deviceHeading = _deviceHeading;
 
 
@@ -48,18 +48,18 @@
 
 #pragma mark - Private Helpers
 
-- (void)updateFriendHeading
+- (void)updateFriendBearing
 {
-    SuccessfulFriendHeadingSourceBlock_t success = ^(double heading) {
-        self.friendHeading = heading;
+    SuccessfulFriendBearingSourceBlock_t success = ^(double bearing) {
+        self.friendBearing = bearing;
     };
-    [self.friendHeadingSource getHeadingOf:self.friendID andSucceed:success orFail:nil];
+    [self.friendBearingSource getBearingOf:self.friendID andSucceed:success orFail:nil];
 }
 
 - (void)recalculateHeading
 {
     self.compass.deviceHeading = self.deviceHeading;
-    self.compass.friendHeading = self.friendHeading;
+    self.compass.friendBearing = self.friendBearing;
     self.display.deviceIsPointingAtFriend = self.compass.isPointingAtFriend;
 }
 
@@ -68,13 +68,13 @@
 - (void)setFriendID:(NSString *)friendID
 {
     _friendID = friendID;
-    [self updateFriendHeading];
+    [self updateFriendBearing];
 }
 
-- (void)setFriendHeading:(double)friendHeading
+- (void)setFriendBearing:(double)friendBearing
 {
-    _friendHeading = friendHeading;
-    self.display.isFriendHeadingLoaded = true;
+    _friendBearing = friendBearing;
+    self.display.isFriendBearingLoaded = true;
     [self recalculateHeading];
 }
 

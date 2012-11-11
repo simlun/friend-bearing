@@ -12,12 +12,12 @@
 
 #define PRECISION 10.0
 
-@synthesize friendHeading = _friendHeading;
+@synthesize friendBearing = _friendBearing;
 @synthesize deviceHeading = _deviceHeading;
 
 - (BOOL)areHeadingsCloseEnough
 {
-    double friend = self.friendHeading;
+    double friend = self.friendBearing;
     double device = self.deviceHeading;
     
     // Adjust the fourth quadrant

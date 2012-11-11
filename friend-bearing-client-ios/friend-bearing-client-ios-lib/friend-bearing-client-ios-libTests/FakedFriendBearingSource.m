@@ -1,18 +1,18 @@
 //
-//  FakedFriendHeadingSource.m
+//  FakedFriendBearingSource.m
 //  friend-bearing-client-ios-lib
 //
 //  Created by Simon Lundmark on 2012-07-20.
 //  Copyright (c) 2012 Simon Lundmark. All rights reserved.
 //
 
-#import "FakedFriendHeadingSource.h"
+#import "FakedFriendBearingSource.h"
 
-@implementation FakedFriendHeadingSource
+@implementation FakedFriendBearingSource
 
 @synthesize wasCalledWithFriendID = _wasCalledWithFriendID;
 
-- (void)getHeadingOf:(NSString*)friendID andSucceed:(SuccessfulFriendHeadingSourceBlock_t)succeed orFail:(FailedFriendHeadingSourceBlock_t)fail
+- (void)getBearingOf:(NSString*)friendID andSucceed:(SuccessfulFriendBearingSourceBlock_t)succeed orFail:(FailedFriendBearingSourceBlock_t)fail
 {
     self.wasCalledWithFriendID = friendID;
     succeed(45.0);

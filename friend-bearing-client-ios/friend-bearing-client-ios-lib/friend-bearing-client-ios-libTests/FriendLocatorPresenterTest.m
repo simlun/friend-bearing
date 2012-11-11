@@ -9,13 +9,13 @@
 #import "FriendLocatorPresenterTest.h"
 #import "FriendLocatorPresenter.h"
 #import "FakedFriendLocatorDisplay.h"
-#import "FakedFriendHeadingSource.h"
+#import "FakedFriendBearingSource.h"
 #import "FakedDeviceHeadingSupplier.h"
 
 @implementation FriendLocatorPresenterTest
 
 
-#pragma mark - Starting and loading friend heading
+#pragma mark - Starting and loading friend bearing
 
 - (void)test_theDisplay_isNot_pointingAtFriend_whenStarted
 {
@@ -25,66 +25,66 @@
     STAssertFalse(p.display.deviceIsPointingAtFriend, nil);
 }
 
-- (void)test_theDisplay_showsThatFriendHeading_hasNotLoaded_whenStarted
+- (void)test_theDisplay_showsThatFriendBearing_hasNotLoaded_whenStarted
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     p.display = [FakedFriendLocatorDisplay new];
     
-    STAssertFalse(p.display.isFriendHeadingLoaded, nil);
+    STAssertFalse(p.display.isFriendBearingLoaded, nil);
 }
 
-- (void)test_itCallsTheFriendHeadingSource_withTheSuppliedFriendId_whenFriendId_isSet
+- (void)test_itCallsTheFriendBearingSource_withTheSuppliedFriendId_whenFriendId_isSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
-    FakedFriendHeadingSource *fakedSource = [FakedFriendHeadingSource new];
-    p.friendHeadingSource = fakedSource;
+    FakedFriendBearingSource *fakedSource = [FakedFriendBearingSource new];
+    p.friendBearingSource = fakedSource;
     
     p.friendID = @"4711";
     
     STAssertEqualObjects(fakedSource.wasCalledWithFriendID, @"4711", nil);
 }
 
-- (void)test_itGetsAFriendHeading_whenFriendId_isSet
+- (void)test_itGetsAFriendBearing_whenFriendId_isSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
-    p.friendHeadingSource = [FakedFriendHeadingSource new];
+    p.friendBearingSource = [FakedFriendBearingSource new];
     
-    double before = p.friendHeading;
+    double before = p.friendBearing;
     p.friendID = @"4711";
-    double after = p.friendHeading;
+    double after = p.friendBearing;
     
     STAssertTrue(before != after, nil);
-    STAssertEqualsWithAccuracy(p.friendHeading, 45.0, 0.1, nil);
+    STAssertEqualsWithAccuracy(p.friendBearing, 45.0, 0.1, nil);
 }
 
-- (void)test_theDisplay_showsThatFriendHeading_hasLoaded_whenItIsSet
+- (void)test_theDisplay_showsThatFriendBearing_hasLoaded_whenItIsSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     p.display = [FakedFriendLocatorDisplay new];
     
-    p.friendHeading = 17.0;
+    p.friendBearing = 17.0;
     
-    STAssertTrue(p.display.isFriendHeadingLoaded, nil);
+    STAssertTrue(p.display.isFriendBearingLoaded, nil);
 }
 
-- (void)test_theDisplay_showsThatDeviceIsPointing_inTheSameHeading_asFriendHeading
+- (void)test_theDisplay_showsThatDeviceIsPointing_inTheSameHeading_asFriendBearing
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     p.display = [FakedFriendLocatorDisplay new];
     
-    p.friendHeading = 90.0;
+    p.friendBearing = 90.0;
     p.deviceHeading = 90.0;
     
     STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
 }
 
-- (void)test_itDoesNotMatter_inWhichOrder_theFriendOrDeviceHeading_getsSet
+- (void)test_itDoesNotMatter_inWhichOrder_theFriendBearingOrDeviceHeading_getsSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     p.display = [FakedFriendLocatorDisplay new];
 
     p.deviceHeading = 90.0;
-    p.friendHeading = 90.0;
+    p.friendBearing = 90.0;
 
     STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
 }
@@ -104,7 +104,7 @@
     STAssertTrue(before != after, nil);
 }
 
-// TODO: What happens when it's unable to get the friend heading?
+// TODO: What happens when it's unable to get the friend bearing?
 // TODO: What happens when it's unable to get the device heading?
 
 

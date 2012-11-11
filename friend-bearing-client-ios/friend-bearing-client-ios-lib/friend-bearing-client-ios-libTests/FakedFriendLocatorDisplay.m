@@ -13,6 +13,6 @@
 @synthesize presenter;
 
 @synthesize deviceIsPointingAtFriend;
-@synthesize isFriendHeadingLoaded;
+@synthesize isFriendBearingLoaded;
 
 @end
