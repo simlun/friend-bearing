@@ -9,7 +9,7 @@
        "Hello World")
   (POST "/session" [] 
         {:status 201
-         :body (json/write-str {:user-id 123, :session-key "a1b2c3d4"})})
+         :body (json/write-str {:user-id "123", :session-key "a1b2c3d4"})})
   (GET "/bearing/:user-id" [user-id]
        {:status 200
         :body (json/write-str {:magnetic-bearing 47})})
