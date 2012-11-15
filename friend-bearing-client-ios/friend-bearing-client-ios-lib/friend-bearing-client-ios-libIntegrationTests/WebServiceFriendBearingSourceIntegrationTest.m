@@ -12,6 +12,7 @@
 #import "NSURLConnectionAsyncRequestSender.h"
 #import "NSJSONSerializationJSONDeserializer.h"
 #import "IntegrationTestURLFactory.h"
+#import "NotFoundURLFactory.h"
 #import "TestUtils.h"
 
 @implementation WebServiceFriendBearingSourceIntegrationTest
@@ -57,11 +58,11 @@
     httpClient.jsonDeserializer = [NSJSONSerializationJSONDeserializer new];
     ws.httpClient = httpClient;
     
-    ws.urlFactory = [IntegrationTestURLFactory new];
+    ws.urlFactory = [NotFoundURLFactory new];
     
     __block BOOL completed = NO;
     __block NSString *actualMessage = nil;
-    [ws getBearingOf:@"SHOULD_PRODUCE_HTTP_404_WHICH_IS_NOT_EXPECTED" andSucceed:nil orFail:^(NSString *errorMessage) {
+    [ws getBearingOf:nil andSucceed:nil orFail:^(NSString *errorMessage) {
         actualMessage = errorMessage;
         completed = YES;
     }];

@@ -10,6 +10,7 @@
 #import "SessionSource.h"
 #import "SessionStorage.h"
 #import "HTTPClient.h"
+#import "URLFactory.h"
 
 @interface WebServiceSessionSource : NSObject <SessionSource>
 
@@ -17,5 +18,7 @@
 
 @property (nonatomic, strong) id<SessionStorage> sessionStorage;
 @property (nonatomic, strong) id<HTTPClient> httpClient;
+@property (nonatomic, strong) id<URLFactory> urlFactory;
+
 
 @end

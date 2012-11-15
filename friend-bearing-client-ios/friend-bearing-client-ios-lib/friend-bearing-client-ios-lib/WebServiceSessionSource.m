@@ -15,8 +15,7 @@
     if (self.sessionStorage.session != nil) {
         succeed(self.sessionStorage.session);
     } else {
-        // TODO: Do not hard code the URL
-        NSString *urlString = @"http://localhost:3000/session";
+        NSString *urlString = [self.urlFactory createURLForCreatingANewSession];
         
         OnSuccessBlock_t onSuccess = ^(NSDictionary *response) {
             Session *s = [Session new];

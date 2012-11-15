@@ -85,23 +85,4 @@
     STAssertEqualObjects(actualMessage, @"INCOMPLETE_WEB_SERVICE_RESPONSE", nil);
 }
 
-- (void)test_itFails_onUnexpectedHTTPResponseCode
-{
-    WebServiceSessionSource *ws = [WebServiceSessionSource new];
-    NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [StubbedAsyncRequestSender createAsyncRequestSenderFailingWithStatusCode500];
-    ws.httpClient = httpClient;
-    
-    __block BOOL didFail = NO;
-    __block NSString *actualMessage;
-    [ws getCurrentSessionAndSucceed:nil orFail:^(NSString *errorMessage) {
-        didFail = YES;
-        actualMessage = errorMessage;
-    }];
-    
-    STAssertTrue(didFail, nil);
-    STAssertEqualObjects(actualMessage, @"UNEXPECTED_HTTP_RESPONSE_STATUS", nil);
-}
-
-
 @end

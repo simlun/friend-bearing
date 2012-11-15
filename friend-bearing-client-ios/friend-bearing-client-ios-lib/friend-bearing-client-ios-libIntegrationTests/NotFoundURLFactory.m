@@ -1,23 +1,23 @@
 //
-//  IntegrationTestURLFactory.m
+//  NotFoundURLFactory.m
 //  friend-bearing-client-ios-lib
 //
 //  Created by simlun on 2012-11-15.
 //  Copyright (c) 2012 Simon Lundmark. All rights reserved.
 //
 
-#import "IntegrationTestURLFactory.h"
+#import "NotFoundURLFactory.h"
 
-@implementation IntegrationTestURLFactory
+@implementation NotFoundURLFactory
 
 - (NSString *)createURLForCreatingANewSession
 {
-    return @"http://localhost:3000/session";
+    return @"http://localhost:3000/SHOULD_BE_404_NOT_FOUND";
 }
 
 - (NSString *)createURLForGettingFriendBearingFor:(NSString *)friendID
 {
-    return [NSString stringWithFormat:@"http://localhost:3000/bearing/%@", friendID];
+    return @"http://localhost:3000/SHOULD_BE_404_NOT_FOUND";
 }
 
 @end

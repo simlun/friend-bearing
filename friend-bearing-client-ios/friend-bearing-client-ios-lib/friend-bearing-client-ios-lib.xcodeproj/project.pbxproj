@@ -10,6 +10,7 @@
 		FD0815411655939400F60A0B /* URLFactorySpy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815401655939400F60A0B /* URLFactorySpy.m */; };
 		FD0815451655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815441655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m */; };
 		FD0815491655959D00F60A0B /* IntegrationTestURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */; };
+		FD08154C1655A54E00F60A0B /* NotFoundURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08154B1655A54E00F60A0B /* NotFoundURLFactory.m */; };
 		FD08AB7715AB75CA00B5A2AC /* Compass.h in Headers */ = {isa = PBXBuildFile; fileRef = FD08AB7515AB75CA00B5A2AC /* Compass.h */; };
 		FD08AB7815AB75CA00B5A2AC /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08AB7615AB75CA00B5A2AC /* Compass.m */; };
 		FD08AB7B15AB75E900B5A2AC /* CompassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08AB7A15AB75E900B5A2AC /* CompassTest.m */; };
@@ -93,6 +94,8 @@
 		FD0815441655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceFriendBearingSourceIntegrationTest.m; sourceTree = "<group>"; };
 		FD0815471655959D00F60A0B /* IntegrationTestURLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestURLFactory.h; sourceTree = "<group>"; };
 		FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestURLFactory.m; sourceTree = "<group>"; };
+		FD08154A1655A54E00F60A0B /* NotFoundURLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotFoundURLFactory.h; sourceTree = "<group>"; };
+		FD08154B1655A54E00F60A0B /* NotFoundURLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotFoundURLFactory.m; sourceTree = "<group>"; };
 		FD08AB7515AB75CA00B5A2AC /* Compass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compass.h; sourceTree = "<group>"; };
 		FD08AB7615AB75CA00B5A2AC /* Compass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compass.m; sourceTree = "<group>"; };
 		FD08AB7915AB75E900B5A2AC /* CompassTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassTest.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 			children = (
 				FD0815471655959D00F60A0B /* IntegrationTestURLFactory.h */,
 				FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */,
+				FD08154A1655A54E00F60A0B /* NotFoundURLFactory.h */,
+				FD08154B1655A54E00F60A0B /* NotFoundURLFactory.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -759,6 +764,7 @@
 				FD1BCE93162613700036E3E8 /* TestUtils.m in Sources */,
 				FD0815451655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m in Sources */,
 				FD0815491655959D00F60A0B /* IntegrationTestURLFactory.m in Sources */,
+				FD08154C1655A54E00F60A0B /* NotFoundURLFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

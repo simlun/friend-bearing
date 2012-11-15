@@ -92,23 +92,5 @@
     STAssertEqualObjects(actualMessage, @"STUBBED_FAILURE", nil);
 }
 
-- (void)test_itFails_onUnexpectedHTTPResponseCode
-{
-    WebServiceFriendBearingSource *ws = [WebServiceFriendBearingSource new];
-    NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [StubbedAsyncRequestSender createAsyncRequestSenderFailingWithStatusCode500];
-    ws.httpClient = httpClient;
-    
-    __block BOOL didFail = NO;
-    __block NSString *actualMessage;
-    [ws getBearingOf:nil andSucceed:nil orFail:^(NSString *errorMessage) {
-        didFail = YES;
-        actualMessage = errorMessage;
-    }];
-    
-    STAssertTrue(didFail, nil);
-    STAssertEqualObjects(actualMessage, @"UNEXPECTED_HTTP_RESPONSE_STATUS", nil);
-}
-
 
 @end

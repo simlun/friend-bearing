@@ -1,5 +1,5 @@
 //
-//  URLFactory.h
+//  NotFoundURLFactory.h
 //  friend-bearing-client-ios-lib
 //
 //  Created by simlun on 2012-11-15.
@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "URLFactory.h"
 
-@protocol URLFactory <NSObject>
-
-- (NSString *)createURLForCreatingANewSession;
-- (NSString *)createURLForGettingFriendBearingFor:(NSString *)friendID;
-
+@interface NotFoundURLFactory : NSObject <URLFactory>
 @end
