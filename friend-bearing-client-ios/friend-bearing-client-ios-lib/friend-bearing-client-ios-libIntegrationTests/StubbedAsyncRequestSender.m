@@ -10,6 +10,14 @@
 
 @implementation StubbedAsyncRequestSender
 
++ (id<AsyncRequestSender>)createAsyncRequestSenderFailingWithStatusCode500
+{
+    StubbedAsyncRequestSender *requestSender = [StubbedAsyncRequestSender new];
+    NSHTTPURLResponse *urlResponse = [[NSHTTPURLResponse alloc] initWithURL:nil statusCode:500 HTTPVersion:nil headerFields:nil];
+    requestSender.urlResponse = urlResponse;
+    return requestSender;
+}
+
 - (void)sendAsynchronousRequest:(NSURLRequest *)request
                           queue:(NSOperationQueue*)queue
               completionHandler:(void (^)(NSURLResponse*, NSData*, NSError*))handler

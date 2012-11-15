@@ -16,6 +16,3 @@ typedef void (^FailedFriendBearingSourceBlock_t)(NSString *);
 - (void)getBearingOf:(NSString*)friendID andSucceed:(SuccessfulFriendBearingSourceBlock_t)succeed orFail:(FailedFriendBearingSourceBlock_t)fail;
 
 @end
-
-
-// TODO: Implement a real WebServiceFriendBearingSource

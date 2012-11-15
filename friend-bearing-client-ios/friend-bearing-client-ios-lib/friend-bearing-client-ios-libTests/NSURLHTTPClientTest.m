@@ -33,22 +33,13 @@
     } expectingResponseStatus:0];
     
     STAssertTrue(didFail, nil);
-    STAssertEqualObjects(actualMessage, @"ASYNC_REQUEST_ERROR", nil);
-}
-
-
-- (id<AsyncRequestSender>)createStatusCodeFailingAsyncRequestSender
-{
-    StubbedAsyncRequestSender *requestSender = [StubbedAsyncRequestSender new];
-    NSHTTPURLResponse *urlResponse = [[NSHTTPURLResponse alloc] initWithURL:nil statusCode:500 HTTPVersion:nil headerFields:nil];
-    requestSender.urlResponse = urlResponse;
-    return requestSender;
+    STAssertEqualObjects(actualMessage, @"HTTP_REQUEST_ERROR", nil);
 }
 
 - (void)test_itFailsCleanly_onUnexpectedStatusCode
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [self createStatusCodeFailingAsyncRequestSender];
+    httpClient.asyncRequestSender = [StubbedAsyncRequestSender createAsyncRequestSenderFailingWithStatusCode500];
     
     __block BOOL didFail = NO;
     __block NSString *actualMessage;
@@ -65,7 +56,7 @@
 - (void)test_itDoesNotCareAboutResponseStatusZero
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [self createStatusCodeFailingAsyncRequestSender];
+    httpClient.asyncRequestSender = [StubbedAsyncRequestSender createAsyncRequestSenderFailingWithStatusCode500];
     
     __block BOOL didSucceed = NO;
     __block BOOL didFail = NO;

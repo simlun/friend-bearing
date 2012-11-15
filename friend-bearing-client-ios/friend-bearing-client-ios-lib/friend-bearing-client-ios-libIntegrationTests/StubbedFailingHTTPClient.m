@@ -12,6 +12,11 @@
 
 @synthesize queue, asyncRequestSender, jsonDeserializer;
 
+- (void)doGetRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
+{
+    onFailure(@"STUBBED_FAILURE");
+}
+
 - (void)doPostRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
 {
     onFailure(@"STUBBED_FAILURE");

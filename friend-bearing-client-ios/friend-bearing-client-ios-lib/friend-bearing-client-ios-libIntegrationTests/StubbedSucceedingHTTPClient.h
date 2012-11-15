@@ -10,4 +10,7 @@
 #import "HTTPClient.h"
 
 @interface StubbedSucceedingHTTPClient : NSObject <HTTPClient>
+
+@property (nonatomic, strong) NSDictionary *stubbedResponse;
+
 @end

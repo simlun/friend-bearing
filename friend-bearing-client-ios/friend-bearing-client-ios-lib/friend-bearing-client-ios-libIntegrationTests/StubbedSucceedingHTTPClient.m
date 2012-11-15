@@ -12,9 +12,14 @@
 
 @synthesize queue, asyncRequestSender, jsonDeserializer;
 
+- (void)doGetRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
+{
+    onSucceed(self.stubbedResponse);
+}
+
 - (void)doPostRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
 {
-    onSucceed([NSDictionary dictionaryWithObject:@"bar" forKey:@"foo"]);
+    onSucceed(self.stubbedResponse);
 }
 
 @end

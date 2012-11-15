@@ -31,8 +31,10 @@
         OnFailureBlock_t onFailure = ^(NSString *errorMessage) {
             fail(errorMessage);
         };
+        
+        int expectedStatus = 201;
 
-        [self.httpClient doPostRequestWithURL:urlString andSucceed:onSuccess orFail:onFailure expectingResponseStatus:201];
+        [self.httpClient doPostRequestWithURL:urlString andSucceed:onSuccess orFail:onFailure expectingResponseStatus:expectedStatus];
     }
 }
 

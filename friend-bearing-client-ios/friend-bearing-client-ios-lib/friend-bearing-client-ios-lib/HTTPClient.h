@@ -14,6 +14,8 @@
 
 #pragma mark - Dependencies
 
+// TODO: Find out why I have declared these dependencies in this protocol instead of in NSURLHTTPClient.h
+
 @property (nonatomic, strong) NSOperationQueue *queue;
 @property (nonatomic, strong) id<AsyncRequestSender> asyncRequestSender;
 @property (nonatomic, strong) id<JSONDeserializer> jsonDeserializer;
@@ -23,6 +25,8 @@
 
 typedef void (^OnSuccessBlock_t)(NSDictionary *response);
 typedef void (^OnFailureBlock_t)(NSString *errorMessage);
+
+- (void)doGetRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus;
 
 - (void)doPostRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus;
 

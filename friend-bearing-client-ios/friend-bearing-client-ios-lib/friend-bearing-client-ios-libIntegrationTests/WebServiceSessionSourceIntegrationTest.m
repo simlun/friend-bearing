@@ -36,7 +36,7 @@
 }
 
 
-#pragma mark - Tests
+#pragma mark - Happy Path
 
 - (void)test_itGetsANewSession_viaTheWebService_ifNotFoundInStorage
 {

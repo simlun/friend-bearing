@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSData* data;
 @property (nonatomic, strong) NSError* error;
 
++ (id<AsyncRequestSender>)createAsyncRequestSenderFailingWithStatusCode500;
+
 @end

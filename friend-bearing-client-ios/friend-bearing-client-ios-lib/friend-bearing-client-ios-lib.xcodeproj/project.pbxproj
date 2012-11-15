@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0815411655939400F60A0B /* URLFactorySpy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815401655939400F60A0B /* URLFactorySpy.m */; };
+		FD0815451655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815441655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m */; };
+		FD0815491655959D00F60A0B /* IntegrationTestURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */; };
 		FD08AB7715AB75CA00B5A2AC /* Compass.h in Headers */ = {isa = PBXBuildFile; fileRef = FD08AB7515AB75CA00B5A2AC /* Compass.h */; };
 		FD08AB7815AB75CA00B5A2AC /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08AB7615AB75CA00B5A2AC /* Compass.m */; };
 		FD08AB7B15AB75E900B5A2AC /* CompassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08AB7A15AB75E900B5A2AC /* CompassTest.m */; };
@@ -30,6 +33,9 @@
 		FD31CF901570090000905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7E1570090000905B59 /* Foundation.framework */; };
 		FD31CF931570090000905B59 /* libfriend-bearing-client-ios-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CF7B1570090000905B59 /* libfriend-bearing-client-ios-lib.a */; };
 		FD31CF991570090000905B59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD31CF971570090000905B59 /* InfoPlist.strings */; };
+		FD4D5300164FE42C00AA0F71 /* WebServiceFriendBearingSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4D52FF164FE42C00AA0F71 /* WebServiceFriendBearingSourceTest.m */; };
+		FD4D5303164FE45D00AA0F71 /* WebServiceFriendBearingSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FD4D5301164FE45D00AA0F71 /* WebServiceFriendBearingSource.h */; };
+		FD4D5304164FE45D00AA0F71 /* WebServiceFriendBearingSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4D5302164FE45D00AA0F71 /* WebServiceFriendBearingSource.m */; };
 		FD5D883E16260BA2006B8779 /* TestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D883D16260BA2006B8779 /* TestUtils.m */; };
 		FD63D37C1587AC7C00308336 /* FriendLocatorPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */; };
 		FD63D37D1587AC7C00308336 /* FriendLocatorPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63D37B1587AC7C00308336 /* FriendLocatorPresenter.m */; };
@@ -80,6 +86,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD08153E1655923B00F60A0B /* URLFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLFactory.h; sourceTree = "<group>"; };
+		FD08153F1655939400F60A0B /* URLFactorySpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLFactorySpy.h; sourceTree = "<group>"; };
+		FD0815401655939400F60A0B /* URLFactorySpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLFactorySpy.m; sourceTree = "<group>"; };
+		FD0815431655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceFriendBearingSourceIntegrationTest.h; sourceTree = "<group>"; };
+		FD0815441655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceFriendBearingSourceIntegrationTest.m; sourceTree = "<group>"; };
+		FD0815471655959D00F60A0B /* IntegrationTestURLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestURLFactory.h; sourceTree = "<group>"; };
+		FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestURLFactory.m; sourceTree = "<group>"; };
 		FD08AB7515AB75CA00B5A2AC /* Compass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compass.h; sourceTree = "<group>"; };
 		FD08AB7615AB75CA00B5A2AC /* Compass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compass.m; sourceTree = "<group>"; };
 		FD08AB7915AB75E900B5A2AC /* CompassTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassTest.h; sourceTree = "<group>"; };
@@ -111,6 +124,10 @@
 		FD31CF8E1570090000905B59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		FD31CF961570090000905B59 /* friend-bearing-client-ios-libTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "friend-bearing-client-ios-libTests-Info.plist"; sourceTree = "<group>"; };
 		FD31CF981570090000905B59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FD4D52FE164FE42C00AA0F71 /* WebServiceFriendBearingSourceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceFriendBearingSourceTest.h; sourceTree = "<group>"; };
+		FD4D52FF164FE42C00AA0F71 /* WebServiceFriendBearingSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceFriendBearingSourceTest.m; sourceTree = "<group>"; };
+		FD4D5301164FE45D00AA0F71 /* WebServiceFriendBearingSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceFriendBearingSource.h; sourceTree = "<group>"; };
+		FD4D5302164FE45D00AA0F71 /* WebServiceFriendBearingSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceFriendBearingSource.m; sourceTree = "<group>"; };
 		FD5D883C16260BA2006B8779 /* TestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtils.h; sourceTree = "<group>"; };
 		FD5D883D16260BA2006B8779 /* TestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtils.m; sourceTree = "<group>"; };
 		FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorPresenter.h; sourceTree = "<group>"; };
@@ -192,6 +209,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD08153C1655921200F60A0B /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				FD08153F1655939400F60A0B /* URLFactorySpy.h */,
+				FD0815401655939400F60A0B /* URLFactorySpy.m */,
+			);
+			name = "Test Doubles";
+			sourceTree = "<group>";
+		};
+		FD0815421655951900F60A0B /* FriendBearing */ = {
+			isa = PBXGroup;
+			children = (
+				FD0815431655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.h */,
+				FD0815441655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m */,
+			);
+			name = FriendBearing;
+			sourceTree = "<group>";
+		};
+		FD0815461655958600F60A0B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FD0815471655959D00F60A0B /* IntegrationTestURLFactory.h */,
+				FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		FD08AB6C15AB752D00B5A2AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +267,9 @@
 		FD1BCE8A162611720036E3E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FD0815461655958600F60A0B /* Networking */,
 				FD1BCE8B1626117B0036E3E8 /* Session */,
+				FD0815421655951900F60A0B /* FriendBearing */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -249,11 +295,12 @@
 				FDC63E9F1649B6830010B478 /* HTTPClient.h */,
 				FDC63EA11649B6DC0010B478 /* NSURLHTTPClient.h */,
 				FDC63EA21649B6DC0010B478 /* NSURLHTTPClient.m */,
+				FD08153E1655923B00F60A0B /* URLFactory.h */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
 		};
-		FD1BCE9A16261B490036E3E8 /* Test Doubles */ = {
+		FD1BCE9A16261B490036E3E8 /* HTTPClient Test Doubles */ = {
 			isa = PBXGroup;
 			children = (
 				FDC63EA51649CA510010B478 /* StubbedFailingHTTPClient.h */,
@@ -261,7 +308,7 @@
 				FDEA1B5F164EF859005A8C27 /* StubbedSucceedingHTTPClient.h */,
 				FDEA1B60164EF859005A8C27 /* StubbedSucceedingHTTPClient.m */,
 			);
-			name = "Test Doubles";
+			name = "HTTPClient Test Doubles";
 			path = "../friend-bearing-client-ios-libIntegrationTests";
 			sourceTree = "<group>";
 		};
@@ -361,9 +408,8 @@
 			children = (
 				FD1BCE941626191C0036E3E8 /* Networking */,
 				FDEFA8E4161F94F300FCED39 /* Session */,
-				FD18145815B9D501004ADD09 /* FriendBearingSource.h */,
-				FD18145E15BB50A5004ADD09 /* DeviceHeadingSupplier.h */,
-				FD18146215BB5114004ADD09 /* DeviceHeadingReceiver.h */,
+				FD4D52FA164FE3BC00AA0F71 /* FriendBearing */,
+				FD4D52FC164FE3CC00AA0F71 /* DeviceHeading */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -397,6 +443,35 @@
 				FDB86F4915D722BE00668922 /* Fakes */,
 			);
 			name = "Choose Friend";
+			sourceTree = "<group>";
+		};
+		FD4D52FA164FE3BC00AA0F71 /* FriendBearing */ = {
+			isa = PBXGroup;
+			children = (
+				FD18145815B9D501004ADD09 /* FriendBearingSource.h */,
+				FD4D5301164FE45D00AA0F71 /* WebServiceFriendBearingSource.h */,
+				FD4D5302164FE45D00AA0F71 /* WebServiceFriendBearingSource.m */,
+			);
+			name = FriendBearing;
+			sourceTree = "<group>";
+		};
+		FD4D52FC164FE3CC00AA0F71 /* DeviceHeading */ = {
+			isa = PBXGroup;
+			children = (
+				FD18145E15BB50A5004ADD09 /* DeviceHeadingSupplier.h */,
+				FD18146215BB5114004ADD09 /* DeviceHeadingReceiver.h */,
+			);
+			name = DeviceHeading;
+			sourceTree = "<group>";
+		};
+		FD4D52FD164FE3E000AA0F71 /* FriendBearing */ = {
+			isa = PBXGroup;
+			children = (
+				FD4D52FE164FE42C00AA0F71 /* WebServiceFriendBearingSourceTest.h */,
+				FD4D52FF164FE42C00AA0F71 /* WebServiceFriendBearingSourceTest.m */,
+				FD08153C1655921200F60A0B /* Test Doubles */,
+			);
+			name = FriendBearing;
 			sourceTree = "<group>";
 		};
 		FD63D3791587AC6400308336 /* Friend Locator */ = {
@@ -462,6 +537,7 @@
 				FD1BCE9C16261BB90036E3E8 /* StubbedAsyncRequestSender.m */,
 				FDEA1B5C164EEA55005A8C27 /* StubbedFailingJSONDeserializer.h */,
 				FDEA1B5D164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m */,
+				FD1BCE9A16261B490036E3E8 /* HTTPClient Test Doubles */,
 			);
 			name = "Test Doubles";
 			sourceTree = "<group>";
@@ -480,6 +556,7 @@
 			children = (
 				FDC63EA81649CC580010B478 /* Networking */,
 				FDEFA8E5161F94FE00FCED39 /* Session */,
+				FD4D52FD164FE3E000AA0F71 /* FriendBearing */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -500,7 +577,6 @@
 			children = (
 				FDEFA8E0161F916D00FCED39 /* WebServiceSessionSourceTest.h */,
 				FDEFA8E1161F916D00FCED39 /* WebServiceSessionSourceTest.m */,
-				FD1BCE9A16261B490036E3E8 /* Test Doubles */,
 			);
 			name = Session;
 			sourceTree = "<group>";
@@ -536,6 +612,7 @@
 				FDC63EA31649B6DC0010B478 /* NSURLHTTPClient.h in Headers */,
 				FDEA1B59164EE7C8005A8C27 /* JSONDeserializer.h in Headers */,
 				FDEA1B5A164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h in Headers */,
+				FD4D5303164FE45D00AA0F71 /* WebServiceFriendBearingSource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +757,8 @@
 			files = (
 				FD1BCE8E162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.m in Sources */,
 				FD1BCE93162613700036E3E8 /* TestUtils.m in Sources */,
+				FD0815451655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m in Sources */,
+				FD0815491655959D00F60A0B /* IntegrationTestURLFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +776,7 @@
 				FD1BCE99162619770036E3E8 /* NSURLConnectionAsyncRequestSender.m in Sources */,
 				FDC63EA41649B6DC0010B478 /* NSURLHTTPClient.m in Sources */,
 				FDEA1B5B164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m in Sources */,
+				FD4D5304164FE45D00AA0F71 /* WebServiceFriendBearingSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +800,8 @@
 				FDC63EAB1649CC690010B478 /* NSURLHTTPClientTest.m in Sources */,
 				FDEA1B5E164EEA55005A8C27 /* StubbedFailingJSONDeserializer.m in Sources */,
 				FDEA1B61164EF859005A8C27 /* StubbedSucceedingHTTPClient.m in Sources */,
+				FD4D5300164FE42C00AA0F71 /* WebServiceFriendBearingSourceTest.m in Sources */,
+				FD0815411655939400F60A0B /* URLFactorySpy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
