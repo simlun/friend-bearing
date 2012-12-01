@@ -53,6 +53,7 @@
 		FDC63EA41649B6DC0010B478 /* NSURLHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EA21649B6DC0010B478 /* NSURLHTTPClient.m */; };
 		FDC63EA71649CA510010B478 /* StubbedFailingHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EA61649CA510010B478 /* StubbedFailingHTTPClient.m */; };
 		FDC63EAB1649CC690010B478 /* NSURLHTTPClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EAA1649CC690010B478 /* NSURLHTTPClientTest.m */; };
+		FDC71BCF166ABF22001C766D /* SessionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22EE15702A5D006B3353 /* SessionSource.h */; };
 		FDDA9EE31659853A00169B51 /* IntegrationTestURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDA9EE11659853A00169B51 /* IntegrationTestURLFactory.m */; };
 		FDDA9EE41659853A00169B51 /* IntegrationTestURLFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FDDA9EE21659853A00169B51 /* IntegrationTestURLFactory.h */; };
 		FDEA1B59164EE7C8005A8C27 /* JSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA1B56164EE7C8005A8C27 /* JSONDeserializer.h */; };
@@ -620,6 +621,7 @@
 				FDEA1B5A164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h in Headers */,
 				FD4D5303164FE45D00AA0F71 /* WebServiceFriendBearingSource.h in Headers */,
 				FDDA9EE41659853A00169B51 /* IntegrationTestURLFactory.h in Headers */,
+				FDC71BCF166ABF22001C766D /* SessionSource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
