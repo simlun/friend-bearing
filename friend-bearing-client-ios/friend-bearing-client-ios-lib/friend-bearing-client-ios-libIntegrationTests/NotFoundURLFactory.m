@@ -10,12 +10,12 @@
 
 @implementation NotFoundURLFactory
 
-- (NSString *)createURLForCreatingANewSession
+- (NSString *)buildURLForCreatingANewSession
 {
     return @"http://localhost:3000/SHOULD_BE_404_NOT_FOUND";
 }
 
-- (NSString *)createURLForGettingFriendBearingFor:(NSString *)friendID
+- (NSString *)buildURLForGettingFriendBearingFor:(NSString *)friendID
 {
     return @"http://localhost:3000/SHOULD_BE_404_NOT_FOUND";
 }

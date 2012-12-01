@@ -15,7 +15,7 @@
     if (self.sessionStorage.session != nil) {
         succeed(self.sessionStorage.session);
     } else {
-        NSString *urlString = [self.urlFactory createURLForCreatingANewSession];
+        NSString *urlString = [self.urlFactory buildURLForCreatingANewSession];
         
         OnSuccessBlock_t onSuccess = ^(NSDictionary *response) {
             Session *s = [Session new];

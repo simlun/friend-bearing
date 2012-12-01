@@ -10,12 +10,12 @@
 
 @implementation URLFactorySpy
 
-- (NSString *)createURLForCreatingANewSession
+- (NSString *)buildURLForCreatingANewSession
 {
     return nil;
 }
 
-- (NSString *)createURLForGettingFriendBearingFor:(NSString *)friendID
+- (NSString *)buildURLForGettingFriendBearingFor:(NSString *)friendID
 {
     self.friendID = friendID;
     return nil;

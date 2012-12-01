@@ -10,12 +10,12 @@
 
 @implementation IntegrationTestURLFactory
 
-- (NSString *)createURLForCreatingANewSession
+- (NSString *)buildURLForCreatingANewSession
 {
     return @"http://localhost:3000/session";
 }
 
-- (NSString *)createURLForGettingFriendBearingFor:(NSString *)friendID
+- (NSString *)buildURLForGettingFriendBearingFor:(NSString *)friendID
 {
     return [NSString stringWithFormat:@"http://localhost:3000/bearing/%@", friendID];
 }

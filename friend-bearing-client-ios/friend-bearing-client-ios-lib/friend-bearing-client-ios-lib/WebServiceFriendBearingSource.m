@@ -12,7 +12,7 @@
 
 - (void)getBearingOf:(NSString*)friendID andSucceed:(SuccessfulFriendBearingSourceBlock_t)succeed orFail:(FailedFriendBearingSourceBlock_t)fail
 {
-    NSString *urlString = [self.urlFactory createURLForGettingFriendBearingFor:friendID];
+    NSString *urlString = [self.urlFactory buildURLForGettingFriendBearingFor:friendID];
     
     OnSuccessBlock_t onSuccess = ^(NSDictionary *response) {
         NSNumber *bearingObject = [response valueForKey:@"magnetic-bearing"];

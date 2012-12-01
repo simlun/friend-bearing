@@ -10,7 +10,7 @@
 
 @protocol URLFactory <NSObject>
 
-- (NSString *)createURLForCreatingANewSession;
-- (NSString *)createURLForGettingFriendBearingFor:(NSString *)friendID;
+- (NSString *)buildURLForCreatingANewSession;
+- (NSString *)buildURLForGettingFriendBearingFor:(NSString *)friendID;
 
 @end
