@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FD0815411655939400F60A0B /* URLFactorySpy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815401655939400F60A0B /* URLFactorySpy.m */; };
 		FD0815451655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815441655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m */; };
-		FD0815491655959D00F60A0B /* IntegrationTestURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */; };
 		FD08154C1655A54E00F60A0B /* NotFoundURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08154B1655A54E00F60A0B /* NotFoundURLFactory.m */; };
 		FD08AB7715AB75CA00B5A2AC /* Compass.h in Headers */ = {isa = PBXBuildFile; fileRef = FD08AB7515AB75CA00B5A2AC /* Compass.h */; };
 		FD08AB7815AB75CA00B5A2AC /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08AB7615AB75CA00B5A2AC /* Compass.m */; };
@@ -54,6 +53,8 @@
 		FDC63EA41649B6DC0010B478 /* NSURLHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EA21649B6DC0010B478 /* NSURLHTTPClient.m */; };
 		FDC63EA71649CA510010B478 /* StubbedFailingHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EA61649CA510010B478 /* StubbedFailingHTTPClient.m */; };
 		FDC63EAB1649CC690010B478 /* NSURLHTTPClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC63EAA1649CC690010B478 /* NSURLHTTPClientTest.m */; };
+		FDDA9EE31659853A00169B51 /* IntegrationTestURLFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDA9EE11659853A00169B51 /* IntegrationTestURLFactory.m */; };
+		FDDA9EE41659853A00169B51 /* IntegrationTestURLFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FDDA9EE21659853A00169B51 /* IntegrationTestURLFactory.h */; };
 		FDEA1B59164EE7C8005A8C27 /* JSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA1B56164EE7C8005A8C27 /* JSONDeserializer.h */; };
 		FDEA1B5A164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEA1B57164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h */; };
 		FDEA1B5B164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEA1B58164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m */; };
@@ -92,8 +93,6 @@
 		FD0815401655939400F60A0B /* URLFactorySpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLFactorySpy.m; sourceTree = "<group>"; };
 		FD0815431655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceFriendBearingSourceIntegrationTest.h; sourceTree = "<group>"; };
 		FD0815441655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceFriendBearingSourceIntegrationTest.m; sourceTree = "<group>"; };
-		FD0815471655959D00F60A0B /* IntegrationTestURLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestURLFactory.h; sourceTree = "<group>"; };
-		FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestURLFactory.m; sourceTree = "<group>"; };
 		FD08154A1655A54E00F60A0B /* NotFoundURLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotFoundURLFactory.h; sourceTree = "<group>"; };
 		FD08154B1655A54E00F60A0B /* NotFoundURLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotFoundURLFactory.m; sourceTree = "<group>"; };
 		FD08AB7515AB75CA00B5A2AC /* Compass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compass.h; sourceTree = "<group>"; };
@@ -158,6 +157,8 @@
 		FDC63EA61649CA510010B478 /* StubbedFailingHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubbedFailingHTTPClient.m; sourceTree = "<group>"; };
 		FDC63EA91649CC690010B478 /* NSURLHTTPClientTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLHTTPClientTest.h; sourceTree = "<group>"; };
 		FDC63EAA1649CC690010B478 /* NSURLHTTPClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLHTTPClientTest.m; sourceTree = "<group>"; };
+		FDDA9EE11659853A00169B51 /* IntegrationTestURLFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTestURLFactory.m; sourceTree = "<group>"; };
+		FDDA9EE21659853A00169B51 /* IntegrationTestURLFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTestURLFactory.h; sourceTree = "<group>"; };
 		FDEA1B56164EE7C8005A8C27 /* JSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDeserializer.h; sourceTree = "<group>"; };
 		FDEA1B57164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSJSONSerializationJSONDeserializer.h; sourceTree = "<group>"; };
 		FDEA1B58164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSJSONSerializationJSONDeserializer.m; sourceTree = "<group>"; };
@@ -233,8 +234,6 @@
 		FD0815461655958600F60A0B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				FD0815471655959D00F60A0B /* IntegrationTestURLFactory.h */,
-				FD0815481655959D00F60A0B /* IntegrationTestURLFactory.m */,
 				FD08154A1655A54E00F60A0B /* NotFoundURLFactory.h */,
 				FD08154B1655A54E00F60A0B /* NotFoundURLFactory.m */,
 			);
@@ -552,6 +551,8 @@
 			children = (
 				FDEFA8C5161F094800FCED39 /* FriendLocatorPresenterFactory.h */,
 				FDEFA8C6161F094800FCED39 /* FriendLocatorPresenterFactory.m */,
+				FDDA9EE21659853A00169B51 /* IntegrationTestURLFactory.h */,
+				FDDA9EE11659853A00169B51 /* IntegrationTestURLFactory.m */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -618,6 +619,7 @@
 				FDEA1B59164EE7C8005A8C27 /* JSONDeserializer.h in Headers */,
 				FDEA1B5A164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.h in Headers */,
 				FD4D5303164FE45D00AA0F71 /* WebServiceFriendBearingSource.h in Headers */,
+				FDDA9EE41659853A00169B51 /* IntegrationTestURLFactory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,7 +765,6 @@
 				FD1BCE8E162611B00036E3E8 /* WebServiceSessionSourceIntegrationTest.m in Sources */,
 				FD1BCE93162613700036E3E8 /* TestUtils.m in Sources */,
 				FD0815451655953700F60A0B /* WebServiceFriendBearingSourceIntegrationTest.m in Sources */,
-				FD0815491655959D00F60A0B /* IntegrationTestURLFactory.m in Sources */,
 				FD08154C1655A54E00F60A0B /* NotFoundURLFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,6 +784,7 @@
 				FDC63EA41649B6DC0010B478 /* NSURLHTTPClient.m in Sources */,
 				FDEA1B5B164EE7C8005A8C27 /* NSJSONSerializationJSONDeserializer.m in Sources */,
 				FD4D5304164FE45D00AA0F71 /* WebServiceFriendBearingSource.m in Sources */,
+				FDDA9EE31659853A00169B51 /* IntegrationTestURLFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

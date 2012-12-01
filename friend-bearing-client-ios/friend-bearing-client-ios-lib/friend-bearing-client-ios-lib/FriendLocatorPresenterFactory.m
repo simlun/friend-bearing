@@ -13,8 +13,7 @@
 - (FriendLocatorPresenter *)build {
     FriendLocatorPresenter *f = [FriendLocatorPresenter new];
     
-    // TODO: Set friendBearingSource
-    f.friendBearingSource = nil;
+    f.friendBearingSource = self.friendBearingSource;
     
     // TODO: Set deviceHeadingSupplier
     f.deviceHeadingSupplier = nil;

@@ -9,8 +9,16 @@
 #import <Foundation/Foundation.h>
 
 #import "FriendLocatorPresenter.h"
+#import "FriendBearingSource.h"
 
 @interface FriendLocatorPresenterFactory : NSObject
+
+#pragma mark - Dependencies
+
+@property (nonatomic, strong) id<FriendBearingSource> friendBearingSource;
+
+
+#pragma mark -
 
 - (FriendLocatorPresenter *)build;
 

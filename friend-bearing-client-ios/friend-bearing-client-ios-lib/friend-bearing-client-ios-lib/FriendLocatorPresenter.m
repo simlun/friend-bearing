@@ -65,6 +65,7 @@
 
 
 #pragma mark - Data Setters
+
 - (void)setFriendID:(NSString *)friendID
 {
     _friendID = friendID;
@@ -74,7 +75,7 @@
 - (void)setFriendBearing:(double)friendBearing
 {
     _friendBearing = friendBearing;
-    self.display.isFriendBearingLoaded = true;
+    self.display.isFriendBearingLoaded = YES;
     [self recalculateHeading];
 }
 
