@@ -13,4 +13,6 @@
 
 @property (nonatomic) id<DeviceHeadingReceiver> receiver;
 
+- (void)start;
+
 @end

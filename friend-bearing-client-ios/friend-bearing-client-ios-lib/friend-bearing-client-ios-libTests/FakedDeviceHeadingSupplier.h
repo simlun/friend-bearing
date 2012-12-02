@@ -11,6 +11,8 @@
 
 @interface FakedDeviceHeadingSupplier : NSObject <DeviceHeadingSupplier>
 
+@property (nonatomic) BOOL isStarted;
+
 - (void)simulateDeviceHeadingUpdate;
 
 @end

@@ -17,4 +17,9 @@
     [self.receiver setDeviceHeading:123.0];
 }
 
+- (void)start
+{
+    self.isStarted = YES;
+}
+
 @end

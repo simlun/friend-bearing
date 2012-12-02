@@ -25,7 +25,13 @@
 
 @synthesize display = _display;
 @synthesize friendBearingSource = _friendBearingSource;
+
 @synthesize deviceHeadingSupplier = _deviceHeadingSupplier;
+- (void)setDeviceHeadingSupplier:(id<DeviceHeadingSupplier>)deviceHeadingSupplier
+{
+    _deviceHeadingSupplier = deviceHeadingSupplier;
+    [deviceHeadingSupplier start];
+}
 
 
 #pragma mark - Data

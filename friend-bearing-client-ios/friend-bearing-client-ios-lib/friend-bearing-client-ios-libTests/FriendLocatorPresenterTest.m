@@ -89,6 +89,18 @@
     STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
 }
 
+- (void)test_itStartsTheDeviceHeadingSupplier_whenItIsSet
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    FakedDeviceHeadingSupplier *fakedSupplier = [FakedDeviceHeadingSupplier new];
+    id<DeviceHeadingReceiver> r = p;
+    fakedSupplier.receiver = r;
+    
+    p.deviceHeadingSupplier = fakedSupplier;
+    
+    STAssertTrue(fakedSupplier.isStarted, nil);
+}
+
 - (void)test_itGetsADeviceHeading_whenDeviceHeadingSource_isUpdated
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
