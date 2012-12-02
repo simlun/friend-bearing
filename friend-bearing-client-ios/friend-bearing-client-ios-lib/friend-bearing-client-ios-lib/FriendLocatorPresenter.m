@@ -51,6 +51,7 @@
 - (void)updateFriendBearing
 {
     SuccessfulFriendBearingSourceBlock_t success = ^(double bearing) {
+        NSLog(@"FriendLocatorPresenter.updateFriendBearing, success block called with bearing: %f", bearing);
         self.friendBearing = bearing;
     };
     [self.friendBearingSource getBearingOf:self.friendID andSucceed:success orFail:nil];
@@ -74,6 +75,8 @@
 
 - (void)setFriendBearing:(double)friendBearing
 {
+    NSLog(@"FriendLocatorPresenter.setFriendBearing: %f", friendBearing);
+    NSLog(@"FriendLocatorPresenter.setFriendBearing, self.display = %@", self.display);
     _friendBearing = friendBearing;
     self.display.isFriendBearingLoaded = YES;
     [self recalculateHeading];

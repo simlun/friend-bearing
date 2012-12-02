@@ -11,4 +11,7 @@
 
 @interface FriendLocatorViewController : UIViewController <FriendLocatorDisplay>
 
+@property (weak, nonatomic) IBOutlet UILabel *isDevicePointingAtFriendLabel;
+@property (weak, nonatomic) IBOutlet UILabel *isFriendBearingLoadedLabel;
+
 @end

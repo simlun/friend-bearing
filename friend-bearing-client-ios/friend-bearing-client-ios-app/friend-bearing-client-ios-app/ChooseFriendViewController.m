@@ -93,6 +93,7 @@
     if ([segue.identifier isEqualToString:@"goToFriendLocator"]) {
         id<FriendLocatorDisplay> destinationDisplay = segue.destinationViewController;
         destinationDisplay.presenter = self.presenter.friendLocatorPresenter;
+        self.presenter.friendLocatorPresenter.display = destinationDisplay;
     }
 }
 

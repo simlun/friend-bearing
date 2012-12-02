@@ -16,12 +16,23 @@
 
 @synthesize presenter = _presenter;
 
-// TODO: Implement displaying these Display properties
+// TODO: Implement displaying this Display property
 @synthesize deviceIsPointingAtFriend;
+
+// TODO: Implement displaying this Display property
 @synthesize isFriendBearingLoaded = _isFriendBearingLoaded;
 - (void)setIsFriendBearingLoaded:(BOOL)isFriendBearingLoaded
 {
     // TODO: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!isFriendBearingLoaded];
+    
+    if (isFriendBearingLoaded) {
+        NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: YES");
+        self.isFriendBearingLoadedLabel.text = @"Yes";
+    } else {
+        NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: NO");
+        self.isFriendBearingLoadedLabel.text = @"No";
+    }
+    
     _isFriendBearingLoaded = isFriendBearingLoaded;
 }
 
@@ -38,6 +49,7 @@
 - (void)setInitialState
 {
     self.isFriendBearingLoaded = self.isFriendBearingLoaded;
+    //self.isFriendBearingLoaded = NO;
 }
 
 - (void)viewDidLoad
@@ -66,6 +78,8 @@
 
 - (void)viewDidUnload
 {
+    [self setIsDevicePointingAtFriendLabel:nil];
+    [self setIsFriendBearingLoadedLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

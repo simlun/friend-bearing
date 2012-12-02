@@ -20,7 +20,7 @@
     dispatch_async(queue, ^{
         NSLog(@"FakeSleepingAsyncSessionSource, entering async block");
         NSLog(@"FakeSleepingAsyncSessionSource, sleeping...");
-        [NSThread sleepForTimeInterval:3.0];
+        [NSThread sleepForTimeInterval:2.0];
         NSLog(@"FakeSleepingAsyncSessionSource, succeeding - eventually...");
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"FakeSleepingAsyncSessionSource, succeeding!");
