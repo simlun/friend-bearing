@@ -19,19 +19,20 @@
 // TODO: Implement displaying this Display property
 @synthesize deviceIsPointingAtFriend;
 
-// TODO: Implement displaying this Display property
 @synthesize isFriendBearingLoaded = _isFriendBearingLoaded;
 - (void)setIsFriendBearingLoaded:(BOOL)isFriendBearingLoaded
 {
-    // TODO: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!isFriendBearingLoaded];
+    NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded");
     
-    if (isFriendBearingLoaded) {
-        NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: YES");
-        self.isFriendBearingLoadedLabel.text = @"Yes";
-    } else {
-        NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: NO");
-        self.isFriendBearingLoadedLabel.text = @"No";
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (isFriendBearingLoaded) {
+            NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: YES");
+            self.isFriendBearingLoadedLabel.text = @"Yes";
+        } else {
+            NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: NO");
+            self.isFriendBearingLoadedLabel.text = @"No";
+        }
+    });
     
     _isFriendBearingLoaded = isFriendBearingLoaded;
 }
@@ -49,7 +50,6 @@
 - (void)setInitialState
 {
     self.isFriendBearingLoaded = self.isFriendBearingLoaded;
-    //self.isFriendBearingLoaded = NO;
 }
 
 - (void)viewDidLoad
@@ -73,7 +73,6 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     NSLog(@"FriendLocatorViewController.viewDidDisappear");
-    // TODO: [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 - (void)viewDidUnload

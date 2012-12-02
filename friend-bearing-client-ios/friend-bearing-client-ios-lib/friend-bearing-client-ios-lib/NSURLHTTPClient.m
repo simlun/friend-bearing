@@ -46,9 +46,11 @@
             return;
         }
         
+        NSLog(@"NSURLHTTPClient.do:requestWithURL, completionHandler succeeding!");
         onSucceed(json);
     };
     
+    NSLog(@"NSURLHTTPClient.do:requestWithURL, sending async request");
     [self.asyncRequestSender sendAsynchronousRequest:request queue:self.queue completionHandler:handler];
 }
 

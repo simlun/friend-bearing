@@ -10,7 +10,7 @@
 #import "FriendLocatorDisplay.h"
 
 #import "OfflineAppFactory.h"
-//#import "OnlineAppFactory.h"
+#import "OnlineAppFactory.h"
 
 
 @interface ChooseFriendViewController()
@@ -28,8 +28,9 @@
 
 - (void)bindPresenter
 {
-    self.presenter = [[OfflineAppFactory new] buildChooseFriendPresenter];
-    //self.presenter = [[OnlineAppFactory new] buildChooseFriendPresenter];
+    //self.presenter = [[OfflineAppFactory new] buildChooseFriendPresenter];
+    self.presenter = [[OnlineAppFactory new] buildChooseFriendPresenter];
+    
     self.presenter.display = self;
     
     [self.presenter showUserID];
@@ -62,7 +63,10 @@
 - (void)setUserID:(NSString *)userID
 {
     NSLog(@"ChooseFriendViewController.setUserID was called with userID %@", userID);
-    self.userIDLabel.text = userID;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"ChooseFriendViewController.setUserID, on main queue");
+        self.userIDLabel.text = userID;
+    });
 }
 
 - (NSString*)friendID

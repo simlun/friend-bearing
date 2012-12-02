@@ -24,6 +24,7 @@
                 fail(@"INCOMPLETE_WEB_SERVICE_RESPONSE");
                 return;
             }
+            NSLog(@"WebServiceSessionSource.getCurrentSessionAndSucceed, success block succeding!");
             succeed(s);
         };
         
@@ -33,6 +34,7 @@
         
         int expectedStatus = 201;
 
+        NSLog(@"WebServiceSessionSource.getCurrentSessionAndSucceed, now posting using httpClient");
         [self.httpClient doPostRequestWithURL:urlString andSucceed:onSuccess orFail:onFailure expectingResponseStatus:expectedStatus];
     }
 }

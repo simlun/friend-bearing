@@ -14,6 +14,7 @@
                           queue:(NSOperationQueue*)queue
               completionHandler:(void (^)(NSURLResponse*, NSData*, NSError*))handler
 {
+    NSLog(@"NSURLConnectionAsyncRequestSender.sendAsynchronousRequest");
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:handler];
 }
 
