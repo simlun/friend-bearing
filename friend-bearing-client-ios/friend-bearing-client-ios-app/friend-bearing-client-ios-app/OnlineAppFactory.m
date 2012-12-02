@@ -16,6 +16,8 @@
 #import "WebServiceFriendBearingSource.h"
 #import "IntegrationTestURLFactory.h"
 
+#import "CoreLocationDeviceHeadingSupplier.h"
+
 
 @implementation OnlineAppFactory
 
@@ -47,10 +49,16 @@
     return ws;
 }
 
+- (id<DeviceHeadingSupplier>)createDeviceHeadingSupplier
+{
+    return [CoreLocationDeviceHeadingSupplier new];
+}
+
 - (FriendLocatorPresenterFactory *)createFriendLocatorPresenterFactory
 {
     FriendLocatorPresenterFactory *factory = [FriendLocatorPresenterFactory new];
     factory.friendBearingSource = [self createFriendBearingSource];
+    factory.deviceHeadingSupplier = [self createDeviceHeadingSupplier];
     return factory;
 }
 

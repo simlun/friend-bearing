@@ -11,6 +11,8 @@
 #import "FakeSleepingAsyncFriendBearingSource.h"
 #import "FakeDeviceHeadingSupplier.h"
 
+#import "CoreLocationDeviceHeadingSupplier.h"
+
 
 @implementation OfflineAppFactory
 
@@ -29,7 +31,10 @@
 
 - (id<DeviceHeadingSupplier>)createDeviceHeadingSupplier
 {
-    return [FakeDeviceHeadingSupplier new];
+    // TODO: Use the fake one:
+    //return [FakeDeviceHeadingSupplier new];
+    
+    return [CoreLocationDeviceHeadingSupplier new];
 }
 
 - (FriendLocatorPresenterFactory *)createFriendLocatorPresenterFactory
