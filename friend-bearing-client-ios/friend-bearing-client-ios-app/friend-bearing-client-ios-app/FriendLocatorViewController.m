@@ -24,14 +24,14 @@
 {
     NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded");
     
+    NSString *text = @"No";
+    if (isFriendBearingLoaded) {
+        text = @"Yes";
+    }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (isFriendBearingLoaded) {
-            NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: YES");
-            self.isFriendBearingLoadedLabel.text = @"Yes";
-        } else {
-            NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: NO");
-            self.isFriendBearingLoadedLabel.text = @"No";
-        }
+        NSLog(@"FriendLocatorViewController.setIsFriendBearingLoaded: %@", text);
+        self.isFriendBearingLoadedLabel.text = text;
     });
     
     _isFriendBearingLoaded = isFriendBearingLoaded;
@@ -50,6 +50,7 @@
 - (void)setInitialState
 {
     self.isFriendBearingLoaded = self.isFriendBearingLoaded;
+    self.deviceIsPointingAtFriend = self.deviceIsPointingAtFriend;
 }
 
 - (void)viewDidLoad
