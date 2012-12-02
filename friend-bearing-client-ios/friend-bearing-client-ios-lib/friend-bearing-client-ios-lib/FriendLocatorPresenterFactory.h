@@ -10,12 +10,14 @@
 
 #import "FriendLocatorPresenter.h"
 #import "FriendBearingSource.h"
+#import "DeviceHeadingSupplier.h"
 
 @interface FriendLocatorPresenterFactory : NSObject
 
 #pragma mark - Dependencies
 
 @property (nonatomic, strong) id<FriendBearingSource> friendBearingSource;
+@property (nonatomic, strong) id<DeviceHeadingSupplier> deviceHeadingSupplier;
 
 
 #pragma mark -

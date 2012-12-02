@@ -16,8 +16,23 @@
 
 @synthesize presenter = _presenter;
 
-// TODO: Implement displaying this Display property
-@synthesize deviceIsPointingAtFriend;
+@synthesize deviceIsPointingAtFriend = _deviceIsPointingAtFriend;
+- (void)setDeviceIsPointingAtFriend:(BOOL)deviceIsPointingAtFriend
+{
+    NSLog(@"FriendLocatorViewController.setDeviceIsPointingAtFriend");
+    
+    NSString *text = @"No";
+    if (deviceIsPointingAtFriend) {
+        text = @"Yes";
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"FriendLocatorViewController.setDeviceIsPointingAtFriend: %@", text);
+        self.isDevicePointingAtFriendLabel.text = text;
+    });
+    
+    _deviceIsPointingAtFriend = deviceIsPointingAtFriend;
+}
 
 @synthesize isFriendBearingLoaded = _isFriendBearingLoaded;
 - (void)setIsFriendBearingLoaded:(BOOL)isFriendBearingLoaded

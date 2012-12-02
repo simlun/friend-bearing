@@ -9,6 +9,7 @@
 #import "OfflineAppFactory.h"
 #import "FakeSleepingAsyncSessionSource.h"
 #import "FakeSleepingAsyncFriendBearingSource.h"
+#import "FakeDeviceHeadingSupplier.h"
 
 
 @implementation OfflineAppFactory
@@ -26,10 +27,16 @@
     return [FakeSleepingAsyncFriendBearingSource new];
 }
 
+- (id<DeviceHeadingSupplier>)createDeviceHeadingSupplier
+{
+    return [FakeDeviceHeadingSupplier new];
+}
+
 - (FriendLocatorPresenterFactory *)createFriendLocatorPresenterFactory
 {
     FriendLocatorPresenterFactory *factory = [FriendLocatorPresenterFactory new];
     factory.friendBearingSource = [self createFriendBearingSource];
+    factory.deviceHeadingSupplier = [self createDeviceHeadingSupplier];
     return factory;
 }
 

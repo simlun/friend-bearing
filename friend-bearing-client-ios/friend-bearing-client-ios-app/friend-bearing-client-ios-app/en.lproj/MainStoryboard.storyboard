@@ -130,6 +130,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Friend Locator" id="Hlq-9n-daG"/>
                     <connections>
+                        <outlet property="isDevicePointingAtFriendLabel" destination="YbG-ck-iGa" id="2I8-X6-ibY"/>
                         <outlet property="isFriendBearingLoadedLabel" destination="EFs-bu-wqd" id="O4B-Hl-4Li"/>
                     </connections>
                 </viewController>
@@ -158,6 +159,23 @@
             <point key="canvasLocation" x="293" y="224"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ChooseFriendViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChooseFriendViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="searchButtonPressed:"/>
+                <relationship kind="outlet" name="friendIDField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userIDLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FriendLocatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FriendLocatorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="isDevicePointingAtFriendLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="isFriendBearingLoadedLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

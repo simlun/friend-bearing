@@ -39,6 +39,7 @@
 		FD5D883E16260BA2006B8779 /* TestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5D883D16260BA2006B8779 /* TestUtils.m */; };
 		FD63D37C1587AC7C00308336 /* FriendLocatorPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD63D37A1587AC7C00308336 /* FriendLocatorPresenter.h */; };
 		FD63D37D1587AC7C00308336 /* FriendLocatorPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63D37B1587AC7C00308336 /* FriendLocatorPresenter.m */; };
+		FDA3D696166B996F008D4883 /* DeviceHeadingSupplier.h in Headers */ = {isa = PBXBuildFile; fileRef = FD18145E15BB50A5004ADD09 /* DeviceHeadingSupplier.h */; };
 		FDAE22E715701E34006B3353 /* ChooseFriendPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E515701E34006B3353 /* ChooseFriendPresenter.h */; };
 		FDAE22E815701E34006B3353 /* ChooseFriendPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAE22E615701E34006B3353 /* ChooseFriendPresenter.m */; };
 		FDAE22EA15701E43006B3353 /* ChooseFriendDisplay.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAE22E915701E43006B3353 /* ChooseFriendDisplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -622,6 +623,7 @@
 				FD4D5303164FE45D00AA0F71 /* WebServiceFriendBearingSource.h in Headers */,
 				FDDA9EE41659853A00169B51 /* IntegrationTestURLFactory.h in Headers */,
 				FDC71BCF166ABF22001C766D /* SessionSource.h in Headers */,
+				FDA3D696166B996F008D4883 /* DeviceHeadingSupplier.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

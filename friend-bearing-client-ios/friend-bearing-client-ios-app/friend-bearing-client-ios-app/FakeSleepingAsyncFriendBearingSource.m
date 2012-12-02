@@ -19,9 +19,9 @@
     dispatch_async(queue, ^{
         NSLog(@"FakeSleepingAsyncFriendBearingSource, entering async block");
         NSLog(@"FakeSleepingAsyncFriendBearingSource, sleeping...");
-        [NSThread sleepForTimeInterval:3.0];
+        [NSThread sleepForTimeInterval:1.0];
         NSLog(@"FakeSleepingAsyncFriendBearingSource, succeeding!");
-        succeed(145.0);
+        succeed(180.0);
         NSLog(@"FakeSleepingAsyncFriendBearingSource, succeeded.");
     });
 }

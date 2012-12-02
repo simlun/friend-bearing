@@ -28,8 +28,8 @@
 
 - (void)bindPresenter
 {
-    //self.presenter = [[OfflineAppFactory new] buildChooseFriendPresenter];
-    self.presenter = [[OnlineAppFactory new] buildChooseFriendPresenter];
+    self.presenter = [[OfflineAppFactory new] buildChooseFriendPresenter];
+    //self.presenter = [[OnlineAppFactory new] buildChooseFriendPresenter];
     
     self.presenter.display = self;
     

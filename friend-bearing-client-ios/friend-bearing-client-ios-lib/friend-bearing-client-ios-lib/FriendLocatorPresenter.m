@@ -29,8 +29,9 @@
 @synthesize deviceHeadingSupplier = _deviceHeadingSupplier;
 - (void)setDeviceHeadingSupplier:(id<DeviceHeadingSupplier>)deviceHeadingSupplier
 {
-    _deviceHeadingSupplier = deviceHeadingSupplier;
+    deviceHeadingSupplier.receiver = self;
     [deviceHeadingSupplier start];
+    _deviceHeadingSupplier = deviceHeadingSupplier;
 }
 
 
@@ -65,6 +66,7 @@
 
 - (void)recalculateHeading
 {
+    NSLog(@"FriendLocatorPresenter.recalculateHeading");
     self.compass.deviceHeading = self.deviceHeading;
     self.compass.friendBearing = self.friendBearing;
     self.display.deviceIsPointingAtFriend = self.compass.isPointingAtFriend;
@@ -90,6 +92,7 @@
 
 - (void)setDeviceHeading:(double)deviceHeading
 {
+    NSLog(@"FriendLocatorPresenter.setDeviceHeading: %f", deviceHeading);
     _deviceHeading = deviceHeading;
     [self recalculateHeading];
 }

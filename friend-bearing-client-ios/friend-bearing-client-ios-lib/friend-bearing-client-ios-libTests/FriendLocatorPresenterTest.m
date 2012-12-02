@@ -89,13 +89,19 @@
     STAssertTrue(p.display.deviceIsPointingAtFriend, nil);
 }
 
+- (void)test_itAssignsItself_asTheReceiverOfDeviceHeadingUpdates_whenTheDeviceHeadingSupplier_isSet
+{
+    FriendLocatorPresenter *p = [FriendLocatorPresenter new];
+    FakedDeviceHeadingSupplier *fakedSupplier = [FakedDeviceHeadingSupplier new];
+    p.deviceHeadingSupplier = fakedSupplier;
+    
+    STAssertEquals(fakedSupplier.receiver, p, nil);
+}
+
 - (void)test_itStartsTheDeviceHeadingSupplier_whenItIsSet
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     FakedDeviceHeadingSupplier *fakedSupplier = [FakedDeviceHeadingSupplier new];
-    id<DeviceHeadingReceiver> r = p;
-    fakedSupplier.receiver = r;
-    
     p.deviceHeadingSupplier = fakedSupplier;
     
     STAssertTrue(fakedSupplier.isStarted, nil);
@@ -105,8 +111,6 @@
 {
     FriendLocatorPresenter *p = [FriendLocatorPresenter new];
     FakedDeviceHeadingSupplier *fakedSupplier = [FakedDeviceHeadingSupplier new];
-    id<DeviceHeadingReceiver> r = p;
-    fakedSupplier.receiver = r;
     p.deviceHeadingSupplier = fakedSupplier;
     
     double before = p.deviceHeading;
