@@ -94,13 +94,18 @@
     [self.presenter submitButtonPressed];
 }
 
+- (void)setFriendLocatorDisplayDependencies:(id<FriendLocatorDisplay>)display
+{
+    display.presenter = self.presenter.friendLocatorPresenter;
+    display.presenter.display = display;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSLog(@"ChooseFriendViewController.prepareForSegue");
     if ([segue.identifier isEqualToString:@"goToFriendLocator"]) {
-        id<FriendLocatorDisplay> destinationDisplay = segue.destinationViewController;
-        destinationDisplay.presenter = self.presenter.friendLocatorPresenter;
-        self.presenter.friendLocatorPresenter.display = destinationDisplay;
+        id<FriendLocatorDisplay> friendLocatorDisplay = segue.destinationViewController;
+        [self setFriendLocatorDisplayDependencies:friendLocatorDisplay];
     }
 }
 
