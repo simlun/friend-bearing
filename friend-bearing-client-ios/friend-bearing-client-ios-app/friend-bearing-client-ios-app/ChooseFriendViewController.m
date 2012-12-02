@@ -7,9 +7,11 @@
 //
 
 #import "ChooseFriendViewController.h"
-#import "ChooseFriendPresenterFactory.h"
 #import "FriendLocatorDisplay.h"
-#import "FriendLocatorPresenterFactory.h"
+
+#import "OfflineAppFactory.h"
+//#import "OnlineAppFactory.h"
+
 
 @interface ChooseFriendViewController()
 @property (nonatomic, strong) ChooseFriendPresenter* presenter;
@@ -26,7 +28,8 @@
 
 - (void)bindPresenter
 {
-    self.presenter = [ChooseFriendPresenterFactory build];
+    self.presenter = [[OfflineAppFactory new] buildChooseFriendPresenter];
+    //self.presenter = [[OnlineAppFactory new] buildChooseFriendPresenter];
     self.presenter.display = self;
     
     [self.presenter showUserID];

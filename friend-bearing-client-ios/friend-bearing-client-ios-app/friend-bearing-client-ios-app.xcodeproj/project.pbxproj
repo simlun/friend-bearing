@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD170A48166B84BE00D6C7F7 /* OnlineAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FD170A47166B84BE00D6C7F7 /* OnlineAppFactory.m */; };
 		FD2C9BE01587FF6F00EF0978 /* FriendLocatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C9BDF1587FF6F00EF0978 /* FriendLocatorViewController.m */; };
 		FD31CFB51570094500905B59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB41570094500905B59 /* UIKit.framework */; };
 		FD31CFB71570094500905B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31CFB61570094500905B59 /* Foundation.framework */; };
@@ -25,7 +26,7 @@
 		FDDA9EE716598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDA9EE616598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.m */; };
 		FDEFA8D4161F863E00FCED39 /* FakeSleepingAsyncSessionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8D3161F863E00FCED39 /* FakeSleepingAsyncSessionSource.m */; };
 		FDEFA8D5161F863E00FCED39 /* FakeSleepingAsyncSessionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8D3161F863E00FCED39 /* FakeSleepingAsyncSessionSource.m */; };
-		FDEFA8DA161F8CF400FCED39 /* ChooseFriendPresenterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8D9161F8CF400FCED39 /* ChooseFriendPresenterFactory.m */; };
+		FDEFA8DA161F8CF400FCED39 /* OfflineAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEFA8D9161F8CF400FCED39 /* OfflineAppFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD170A44166B830500D6C7F7 /* AppFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFactory.h; sourceTree = "<group>"; };
+		FD170A46166B84BE00D6C7F7 /* OnlineAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineAppFactory.h; sourceTree = "<group>"; };
+		FD170A47166B84BE00D6C7F7 /* OnlineAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineAppFactory.m; sourceTree = "<group>"; };
 		FD2C9BDE1587FF6F00EF0978 /* FriendLocatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendLocatorViewController.h; sourceTree = "<group>"; };
 		FD2C9BDF1587FF6F00EF0978 /* FriendLocatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendLocatorViewController.m; sourceTree = "<group>"; };
 		FD31CFB01570094500905B59 /* friend-bearing-client-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "friend-bearing-client-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +69,8 @@
 		FDDA9EE616598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeSleepingAsyncFriendBearingSource.m; sourceTree = "<group>"; };
 		FDEFA8D2161F863E00FCED39 /* FakeSleepingAsyncSessionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeSleepingAsyncSessionSource.h; sourceTree = "<group>"; };
 		FDEFA8D3161F863E00FCED39 /* FakeSleepingAsyncSessionSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeSleepingAsyncSessionSource.m; sourceTree = "<group>"; };
-		FDEFA8D8161F8CF400FCED39 /* ChooseFriendPresenterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendPresenterFactory.h; sourceTree = "<group>"; };
-		FDEFA8D9161F8CF400FCED39 /* ChooseFriendPresenterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendPresenterFactory.m; sourceTree = "<group>"; };
+		FDEFA8D8161F8CF400FCED39 /* OfflineAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineAppFactory.h; sourceTree = "<group>"; };
+		FDEFA8D9161F8CF400FCED39 /* OfflineAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineAppFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,8 +214,11 @@
 		FDEFA8D7161F8CD300FCED39 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				FDEFA8D8161F8CF400FCED39 /* ChooseFriendPresenterFactory.h */,
-				FDEFA8D9161F8CF400FCED39 /* ChooseFriendPresenterFactory.m */,
+				FD170A44166B830500D6C7F7 /* AppFactory.h */,
+				FDEFA8D8161F8CF400FCED39 /* OfflineAppFactory.h */,
+				FDEFA8D9161F8CF400FCED39 /* OfflineAppFactory.m */,
+				FD170A46166B84BE00D6C7F7 /* OnlineAppFactory.h */,
+				FD170A47166B84BE00D6C7F7 /* OnlineAppFactory.m */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -328,8 +335,9 @@
 				FD63D36F15879DAC00308336 /* ChooseFriendViewController.m in Sources */,
 				FD2C9BE01587FF6F00EF0978 /* FriendLocatorViewController.m in Sources */,
 				FDEFA8D4161F863E00FCED39 /* FakeSleepingAsyncSessionSource.m in Sources */,
-				FDEFA8DA161F8CF400FCED39 /* ChooseFriendPresenterFactory.m in Sources */,
+				FDEFA8DA161F8CF400FCED39 /* OfflineAppFactory.m in Sources */,
 				FDDA9EE716598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.m in Sources */,
+				FD170A48166B84BE00D6C7F7 /* OnlineAppFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
