@@ -28,7 +28,6 @@
     [fakeSessionSource doneLoading];
     
     STAssertEqualObjects(p.display.userID, @"17", nil);
-    
 }
 
 - (void)test_onSubmitButtonPressed_itCreatesTheFriendLocatorPresenter

@@ -77,6 +77,7 @@ _TODO: Link to a [Trello](http://www.trello.com/) board?_
 
 _TODO: Move this to a [Trello](http://www.trello.com/) board?_
 
+- Use the Solarized color schemes in the user interfaces.
 - Only update location while app is opened?
 - Use Google Latitude API for updating location?
 - When both are using the app at the same time and are turned towards each other, it switches to webcam mode? (or initiates a FaceTime call)?
