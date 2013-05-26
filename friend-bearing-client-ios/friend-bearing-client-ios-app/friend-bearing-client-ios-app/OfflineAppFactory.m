@@ -31,10 +31,7 @@
 
 - (id<DeviceHeadingSupplier>)createDeviceHeadingSupplier
 {
-    // TODO: Use the fake one:
-    //return [FakeDeviceHeadingSupplier new];
-    
-    return [CoreLocationDeviceHeadingSupplier new];
+    return [FakeDeviceHeadingSupplier new];
 }
 
 - (FriendLocatorPresenterFactory *)createFriendLocatorPresenterFactory
