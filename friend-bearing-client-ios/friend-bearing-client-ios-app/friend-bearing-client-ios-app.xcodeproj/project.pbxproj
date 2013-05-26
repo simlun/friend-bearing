@@ -24,6 +24,7 @@
 		FD63D36F15879DAC00308336 /* ChooseFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD63D36E15879DAC00308336 /* ChooseFriendViewController.m */; };
 		FD63D3761587A13300308336 /* libfriend-bearing-client-ios-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD63D3751587A13300308336 /* libfriend-bearing-client-ios-lib.a */; };
 		FDA3D69A166B9A9E008D4883 /* FakeDeviceHeadingSupplier.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA3D699166B9A9E008D4883 /* FakeDeviceHeadingSupplier.m */; };
+		FDCE1AE21752D7250085BC96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDCE1AE11752D7250085BC96 /* Default-568h@2x.png */; };
 		FDDA9EE716598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDA9EE616598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.m */; };
 		FDEC72EF166BAEB20054E0ED /* CoreLocationDeviceHeadingSupplier.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEC72EE166BAEB20054E0ED /* CoreLocationDeviceHeadingSupplier.m */; };
 		FDEC72F1166BB0EB0054E0ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEC72F0166BB0EB0054E0ED /* CoreLocation.framework */; };
@@ -70,6 +71,7 @@
 		FD63D3751587A13300308336 /* libfriend-bearing-client-ios-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libfriend-bearing-client-ios-lib.a"; path = "../DerivedData/friend-bearing/Build/Products/Debug-iphonesimulator/libfriend-bearing-client-ios-lib.a"; sourceTree = SOURCE_ROOT; };
 		FDA3D698166B9A9E008D4883 /* FakeDeviceHeadingSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeDeviceHeadingSupplier.h; sourceTree = "<group>"; };
 		FDA3D699166B9A9E008D4883 /* FakeDeviceHeadingSupplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeDeviceHeadingSupplier.m; sourceTree = "<group>"; };
+		FDCE1AE11752D7250085BC96 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FDDA9EE516598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeSleepingAsyncFriendBearingSource.h; sourceTree = "<group>"; };
 		FDDA9EE616598A3900169B51 /* FakeSleepingAsyncFriendBearingSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeSleepingAsyncFriendBearingSource.m; sourceTree = "<group>"; };
 		FDEC72ED166BAEB20054E0ED /* CoreLocationDeviceHeadingSupplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationDeviceHeadingSupplier.h; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		FD31CFA51570094500905B59 = {
 			isa = PBXGroup;
 			children = (
+				FDCE1AE11752D7250085BC96 /* Default-568h@2x.png */,
 				FD63D3751587A13300308336 /* libfriend-bearing-client-ios-lib.a */,
 				FD31CFBA1570094500905B59 /* friend-bearing-client-ios-app */,
 				FD31CFD81570094500905B59 /* friend-bearing-client-ios-appTests */,
@@ -290,7 +293,7 @@
 		FD31CFA71570094500905B59 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Simon Lundmark";
 			};
 			buildConfigurationList = FD31CFAA1570094500905B59 /* Build configuration list for PBXProject "friend-bearing-client-ios-app" */;
@@ -318,6 +321,7 @@
 			files = (
 				FD31CFBF1570094500905B59 /* InfoPlist.strings in Resources */,
 				FD31CFC81570094500905B59 /* MainStoryboard.storyboard in Resources */,
+				FDCE1AE21752D7250085BC96 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +422,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -443,6 +451,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
