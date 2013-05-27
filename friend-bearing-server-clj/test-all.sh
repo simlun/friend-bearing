@@ -7,7 +7,7 @@ do
     cd $PROJECT
     lein clean
     lein deps
-    lein test
+    lein midje
     lein install
     cd ..
     echo "> Done testing $PROJECT"
