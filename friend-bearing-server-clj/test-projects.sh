@@ -1,5 +1,4 @@
-#!/bin/bash -x
-set +e
+#!/bin/bash -ex
 
 for PROJECT in lib webservice server
 do
