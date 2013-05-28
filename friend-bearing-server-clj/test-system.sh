@@ -29,18 +29,15 @@ function stop-system {
 }
 
 function new-session {
-    echo todo
-    exit 1
+    curl -sS -X POST http://localhost:3000/session
 }
 
 function update-position {
-    echo todo
-    exit 1
+    echo TODO
 }
 
 function find-friend {
-    echo todo
-    exit 1
+    echo TODO
 }
 
 
