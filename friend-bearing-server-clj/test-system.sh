@@ -15,13 +15,17 @@ EXPECTED_BEARING="329"
 ###########
 
 function start-system {
-    echo todo
-    exit 1
+    (
+        cd server
+        ./start.sh
+    )
 }
 
 function stop-system {
-    echo todo
-    exit 1
+    (
+        cd server
+        ./stop.sh
+    )
 }
 
 function new-session {

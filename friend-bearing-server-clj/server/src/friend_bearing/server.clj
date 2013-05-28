@@ -1,6 +1,6 @@
-(ns friend-bearing.server)
+(ns friend-bearing.server
+  (:require [friend-bearing.webservice :as webservice]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn -main []
+  (webservice/start))
+
