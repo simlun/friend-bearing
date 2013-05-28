@@ -1,6 +1,6 @@
 (ns friend-bearing.server
   (:require [friend-bearing.webservice :as webservice]))
 
-(defn -main []
+(defn -main [& args]
   (webservice/start))
 
