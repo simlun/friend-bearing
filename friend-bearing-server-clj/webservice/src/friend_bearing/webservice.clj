@@ -16,15 +16,31 @@
   {:status 201
    :body (as-json (domain/create-session))})
 
+(defn throw-exception
+  [_]
+  (throw (Exception. "Something went wrong")))
+
 (compojure/defroutes routes
   (compojure/POST "/session" [] create-session)
+  (compojure/GET "/error" [] throw-exception)
   (route/not-found "Not found"))
+
+(defn wrap-exception [f]
+  (fn [request]
+    (try (f request)
+      (catch Exception e
+         {:status 500
+          :body "Exception caught"}))))
+
+(def handler
+  (-> routes
+      wrap-exception))
 
 (defn start
   []
   (println "Starting web service")
   (util/on-shutdown #(println "Stopping web service"))
-  (let [stop-server (httpkit/run-server routes {:port 3000})]
+  (let [stop-server (httpkit/run-server handler {:port 3000})]
     (util/on-shutdown stop-server)))
 
 (defn -main
