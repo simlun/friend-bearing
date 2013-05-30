@@ -1,17 +1,31 @@
 (ns friend-bearing.webservice
   (:require [simlun.util :as util]
-            [org.httpkit.server :as httpkit]))
+            [compojure.core :as compojure]
+            [compojure.route :as route]
+            [org.httpkit.server :as httpkit]
+            [friend-bearing.lib :as lib]
+            [cheshire.core :as cheshire]))
 
-(defn app [req]
-  {:status  200
-   :headers {"Content-Type" "text/html"}
-   :body    "hello HTTP!"})
+(defn as-json
+  [data]
+  (cheshire/generate-string data))
+
+(defn create-session
+  [_]
+  (println "Creating session")
+  {:status 201
+   :body (as-json (lib/create-session))})
+
+(compojure/defroutes routes
+  (compojure/POST "/session" [] create-session)
+  (route/not-found "Not found"))
 
 (defn start
   []
   (println "Starting web service")
   (util/on-shutdown #(println "Stopping web service"))
-  (httpkit/run-server app {:port 3000}))
+  (let [stop-server (httpkit/run-server routes {:port 3000})]
+    (util/on-shutdown stop-server)))
 
 (defn -main
   []
