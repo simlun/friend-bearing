@@ -3,7 +3,7 @@
             [compojure.core :as compojure]
             [compojure.route :as route]
             [org.httpkit.server :as httpkit]
-            [friend-bearing.lib :as lib]
+            [friend-bearing.domain :as domain]
             [cheshire.core :as cheshire]))
 
 (defn as-json
@@ -14,7 +14,7 @@
   [_]
   (println "Creating session")
   {:status 201
-   :body (as-json (lib/create-session))})
+   :body (as-json (domain/create-session))})
 
 (compojure/defroutes routes
   (compojure/POST "/session" [] create-session)

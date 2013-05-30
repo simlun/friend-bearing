@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-for PROJECT in lib webservice server
+for PROJECT in domain webservice server
 do
     echo "> Started testing $PROJECT"
     cd $PROJECT

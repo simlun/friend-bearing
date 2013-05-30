@@ -1,4 +1,4 @@
-(ns friend-bearing.lib)
+(ns friend-bearing.domain)
 
 (defn create-session
   []
