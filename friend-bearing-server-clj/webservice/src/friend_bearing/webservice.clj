@@ -6,17 +6,17 @@
             [friend-bearing.domain :as domain]
             [cheshire.core :as cheshire]))
 
-(defn as-json
+(defn- as-json
   [data]
   (cheshire/generate-string data))
 
-(defn create-session
+(defn- create-session
   [_]
   (println "Creating session")
   {:status 201
    :body (as-json (domain/create-session))})
 
-(defn throw-exception
+(defn- throw-exception
   [_]
   (throw (Exception. "Something went wrong")))
 
@@ -25,12 +25,12 @@
   (compojure/GET "/error" [] throw-exception)
   (route/not-found "Not found"))
 
-(defn wrap-exception [f]
+(defn- wrap-exception [f]
   (fn [request]
     (try (f request)
       (catch Exception e
          {:status 500
-          :body "Exception caught"}))))
+          :body "Internal server error. Sorry."}))))
 
 (def handler
   (-> routes
