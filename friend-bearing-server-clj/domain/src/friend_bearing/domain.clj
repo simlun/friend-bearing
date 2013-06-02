@@ -1,6 +1,13 @@
 (ns friend-bearing.domain)
 
-(defn create-session
+(def user-id-increment-value (atom 0))
+
+(defn- next-user-id!
   []
-  {:fisk "disk"})
+  (swap! user-id-increment-value inc))
+
+(defn create-session!
+  []
+  {:user-id (str (next-user-id!))
+   :session-key "fdsa"})
 

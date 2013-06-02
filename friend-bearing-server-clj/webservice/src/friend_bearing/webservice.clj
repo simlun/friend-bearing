@@ -14,7 +14,7 @@
   [_]
   (println "Creating session")
   {:status 201
-   :body (as-json (domain/create-session))})
+   :body (as-json (domain/create-session!))})
 
 (defn- throw-exception
   [_]
