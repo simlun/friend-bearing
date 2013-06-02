@@ -2,7 +2,7 @@
   (:use midje.sweet
         ring.mock.request)
   (:require [friend-bearing.webservice :as webservice]
-            [friend-bearing.domain :as domain]
+            [friend-bearing.domain.service :as service]
             [org.httpkit.client :as client]
             [org.httpkit.server :as server]))
 
@@ -15,13 +15,13 @@
   (webservice/routes (request :post "/session"))
   => (contains {:body "{\"foo\":17}"})
   (provided
-    (domain/create-session!) => {:foo 17}))
+    (service/create-session!) => {:foo 17}))
 
 (fact "POST to /session respond with '201 Created' status code"
   (webservice/routes (request :post "/session"))
   => (contains {:status 201})
   (provided
-    (domain/create-session!) => {:foo 17}))
+    (service/create-session!) => {:foo 17}))
 
 
 (defmacro with-server

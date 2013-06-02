@@ -3,7 +3,7 @@
             [compojure.core :as compojure]
             [compojure.route :as route]
             [org.httpkit.server :as httpkit]
-            [friend-bearing.domain :as domain]
+            [friend-bearing.domain.service :as service]
             [cheshire.core :as cheshire]))
 
 (defn- as-json
@@ -14,7 +14,7 @@
   [_]
   (println "Creating session")
   {:status 201
-   :body (as-json (domain/create-session!))})
+   :body (as-json (service/create-session!))})
 
 (defn- throw-exception
   [_]
