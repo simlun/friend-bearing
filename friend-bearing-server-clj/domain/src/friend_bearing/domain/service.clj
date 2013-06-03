@@ -4,5 +4,5 @@
 (defn create-session!
   []
   {:user-id (str (user/next-user-id!))
-   :session-key "fdsa"})
+   :session-key (str (user/next-session-key!))})
 
