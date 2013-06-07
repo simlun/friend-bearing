@@ -3,7 +3,6 @@ set -e
 
 cd integration-test-utils/stubbed-webserver
 lein ring server-headless &
-webserver_pid=$!
 cd ../..
 
 echo "Waiting for stubbed web server to start on port 3000"
@@ -19,7 +18,7 @@ BUILDSTATUS=$?
 set -e
 
 echo "Killing stubbed web server process"
-kill $(ps | grep "friend-bearing-client-ios/integration-test-utils/stubbed-webserver" | cut -f 1 -d ' ' | head -n 1)
+kill $(ps | grep "[r]ing server-headless" | tail -n 1 | cut -f 2 -d ' ')
 
 [[ $BUILDSTATUS == '0' ]] || exit 17
 
