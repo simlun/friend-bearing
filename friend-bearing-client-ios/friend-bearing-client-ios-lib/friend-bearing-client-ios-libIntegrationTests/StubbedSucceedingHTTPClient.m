@@ -10,8 +10,6 @@
 
 @implementation StubbedSucceedingHTTPClient
 
-@synthesize queue, asyncRequestSender, jsonDeserializer;
-
 - (void)doGetRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
 {
     onSucceed(self.stubbedResponse);

@@ -11,11 +11,13 @@
 
 @implementation NSURLHTTPClient
 
-@synthesize queue = _queue;
-@synthesize asyncRequestSender = _asyncRequestSender;
+@synthesize urlRequestSender = _urlRequestSender;
 @synthesize jsonDeserializer = _jsonDeserializer;
 
-- (void)do:(NSString *)method requestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
+- (void)do:(NSString *)method requestWithURL:(NSString *)urlString
+                                  andSucceed:(OnSuccessBlock_t)onSucceed
+                                      orFail:(OnFailureBlock_t)onFailure
+                     expectingResponseStatus:(int)expectedStatus
 {
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -50,18 +52,30 @@
         onSucceed(json);
     };
     
-    NSLog(@"NSURLHTTPClient.do:requestWithURL, sending async request");
-    [self.asyncRequestSender sendAsynchronousRequest:request queue:self.queue completionHandler:handler];
+    NSLog(@"NSURLHTTPClient.do:requestWithURL, sending request");
+    [self.urlRequestSender sendRequest:request withCompletionHandler:handler];
 }
 
-- (void)doGetRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
+- (void)doGetRequestWithURL:(NSString *)urlString
+                 andSucceed:(OnSuccessBlock_t)onSucceed
+                     orFail:(OnFailureBlock_t)onFailure
+    expectingResponseStatus:(int)expectedStatus
 {
-    [self do:@"GET" requestWithURL:urlString andSucceed:onSucceed orFail:onFailure expectingResponseStatus:expectedStatus];
+    [self do:@"GET" requestWithURL:urlString
+                        andSucceed:onSucceed
+                            orFail:onFailure
+           expectingResponseStatus:expectedStatus];
 }
 
-- (void)doPostRequestWithURL:(NSString *)urlString andSucceed:(OnSuccessBlock_t)onSucceed orFail:(OnFailureBlock_t)onFailure expectingResponseStatus:(int)expectedStatus
+- (void)doPostRequestWithURL:(NSString *)urlString
+                  andSucceed:(OnSuccessBlock_t)onSucceed
+                      orFail:(OnFailureBlock_t)onFailure
+     expectingResponseStatus:(int)expectedStatus
 {
-    [self do:@"POST" requestWithURL:urlString andSucceed:onSucceed orFail:onFailure expectingResponseStatus:expectedStatus];
+    [self do:@"POST" requestWithURL:urlString
+                         andSucceed:onSucceed
+                             orFail:onFailure
+            expectingResponseStatus:expectedStatus];
 }
 
 @end

@@ -9,7 +9,7 @@
 #import "WebServiceSessionSourceTest.h"
 #import "WebServiceSessionSource.h"
 #import "InMemorySessionStorage.h"
-#import "StubbedAsyncRequestSender.h"
+#import "StubbedURLRequestSender.h"
 #import "NSURLHTTPClient.h"
 #import "StubbedFailingHTTPClient.h"
 #import "StubbedSucceedingHTTPClient.h"

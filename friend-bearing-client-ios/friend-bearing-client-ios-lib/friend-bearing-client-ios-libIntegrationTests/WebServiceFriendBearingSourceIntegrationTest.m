@@ -9,7 +9,7 @@
 #import "WebServiceFriendBearingSourceIntegrationTest.h"
 #import "WebServiceFriendBearingSource.h"
 #import "NSURLHTTPClient.h"
-#import "NSURLConnectionAsyncRequestSender.h"
+#import "NSURLConnectionAsyncURLRequestSender.h"
 #import "NSJSONSerializationJSONDeserializer.h"
 #import "IntegrationTestURLFactory.h"
 #import "NotFoundURLFactory.h"
@@ -22,10 +22,12 @@
 - (void)test_itGetsAFriendsBearings_viaTheWebService
 {
     WebServiceFriendBearingSource *ws = [WebServiceFriendBearingSource new];
+
+    NSURLConnectionAsyncURLRequestSender *asyncURLRequestSender = [NSURLConnectionAsyncURLRequestSender new];
+    asyncURLRequestSender.queue = [NSOperationQueue new];
     
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.queue = [NSOperationQueue new];
-    httpClient.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
+    httpClient.urlRequestSender = asyncURLRequestSender;
     httpClient.jsonDeserializer = [NSJSONSerializationJSONDeserializer new];
     ws.httpClient = httpClient;
     
@@ -52,9 +54,11 @@
 {
     WebServiceFriendBearingSource *ws = [WebServiceFriendBearingSource new];
     
+    NSURLConnectionAsyncURLRequestSender *asyncURLRequestSender = [NSURLConnectionAsyncURLRequestSender new];
+    asyncURLRequestSender.queue = [NSOperationQueue new];
+    
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.queue = [NSOperationQueue new];
-    httpClient.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
+    httpClient.urlRequestSender = asyncURLRequestSender;
     httpClient.jsonDeserializer = [NSJSONSerializationJSONDeserializer new];
     ws.httpClient = httpClient;
     

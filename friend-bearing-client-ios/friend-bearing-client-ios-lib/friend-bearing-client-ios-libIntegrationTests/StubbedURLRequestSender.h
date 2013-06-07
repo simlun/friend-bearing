@@ -1,5 +1,5 @@
 //
-//  StubbedAsyncRequestSender.h
+//  StubbedURLRequestSender.h
 //  friend-bearing-client-ios-lib
 //
 //  Created by simlun on 2012-10-10.
@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AsyncRequestSender.h"
+#import "URLRequestSender.h"
 
-@interface StubbedAsyncRequestSender : NSObject <AsyncRequestSender>
+@interface StubbedURLRequestSender : NSObject <URLRequestSender>
 
 @property (nonatomic, strong) NSURLResponse* urlResponse;
 @property (nonatomic, strong) NSData* data;
 @property (nonatomic, strong) NSError* error;
 
-+ (id<AsyncRequestSender>)createAsyncRequestSenderFailingWithStatusCode500;
++ (id<URLRequestSender>)createURLRequestSenderFailingWithStatusCode500;
 
 @end

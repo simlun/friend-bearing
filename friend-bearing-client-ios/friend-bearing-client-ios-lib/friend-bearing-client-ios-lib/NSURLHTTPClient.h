@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "HTTPClient.h"
+#import "URLRequestSender.h"
+#import "JSONDeserializer.h"
 
 @interface NSURLHTTPClient : NSObject <HTTPClient>
+
+#pragma mark - Dependencies
+
+@property (nonatomic, strong) id<URLRequestSender> urlRequestSender;
+@property (nonatomic, strong) id<JSONDeserializer> jsonDeserializer;
+
+
 @end

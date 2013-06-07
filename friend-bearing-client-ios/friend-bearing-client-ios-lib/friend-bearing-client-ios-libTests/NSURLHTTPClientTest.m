@@ -8,14 +8,14 @@
 
 #import "NSURLHTTPClientTest.h"
 #import "NSURLHTTPClient.h"
-#import "StubbedAsyncRequestSender.h"
+#import "StubbedURLRequestSender.h"
 #import "StubbedFailingJSONDeserializer.h"
 
 @implementation NSURLHTTPClientTest
 
-- (id<AsyncRequestSender>)createFailingAsyncRequestSender
+- (id<URLRequestSender>)createFailingURLRequestSender
 {
-    StubbedAsyncRequestSender *requestSender = [StubbedAsyncRequestSender new];
+    StubbedURLRequestSender *requestSender = [StubbedURLRequestSender new];
     requestSender.error = [NSError errorWithDomain:@"se.simlun" code:0 userInfo:nil];
     return requestSender;
 }
@@ -23,7 +23,7 @@
 - (void)test_itFailsCleanly_onNSError_fromRequestSender
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [self createFailingAsyncRequestSender];
+    httpClient.urlRequestSender = [self createFailingURLRequestSender];
     
     __block BOOL didFail = NO;
     __block NSString *actualMessage;
@@ -39,7 +39,7 @@
 - (void)test_itFailsCleanly_onUnexpectedStatusCode
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [StubbedAsyncRequestSender createAsyncRequestSenderFailingWithStatusCode500];
+    httpClient.urlRequestSender = [StubbedURLRequestSender createURLRequestSenderFailingWithStatusCode500];
     
     __block BOOL didFail = NO;
     __block NSString *actualMessage;
@@ -56,7 +56,7 @@
 - (void)test_itDoesNotCareAboutResponseStatusZero
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [StubbedAsyncRequestSender createAsyncRequestSenderFailingWithStatusCode500];
+    httpClient.urlRequestSender = [StubbedURLRequestSender createURLRequestSenderFailingWithStatusCode500];
     
     __block BOOL didSucceed = NO;
     __block BOOL didFail = NO;
@@ -74,7 +74,7 @@
 - (void)test_itFailsCleanly_onNSError_fromJSONDeserializer
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.asyncRequestSender = [StubbedAsyncRequestSender new];
+    httpClient.urlRequestSender = [StubbedURLRequestSender new];
     httpClient.jsonDeserializer = [StubbedFailingJSONDeserializer new];
     
     __block BOOL didFail = NO;

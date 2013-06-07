@@ -10,8 +10,8 @@
 #import "WebServiceSessionSource.h"
 #import "InMemorySessionStorage.h"
 #import "TestUtils.h"
-#import "AsyncRequestSender.h"
-#import "NSURLConnectionAsyncRequestSender.h"
+#import "URLRequestSender.h"
+#import "NSURLConnectionAsyncURLRequestSender.h"
 #import "NSURLHTTPClient.h"
 #import "NSJSONSerializationJSONDeserializer.h"
 #import "IntegrationTestURLFactory.h"
@@ -31,8 +31,12 @@
 - (id<HTTPClient>)createHTTPClient
 {
     NSURLHTTPClient *httpClient = [NSURLHTTPClient new];
-    httpClient.queue = [NSOperationQueue new];
-    httpClient.asyncRequestSender = [NSURLConnectionAsyncRequestSender new];
+
+    NSURLConnectionAsyncURLRequestSender *asyncURLRequestSender = [NSURLConnectionAsyncURLRequestSender new];
+    asyncURLRequestSender.queue = [NSOperationQueue new];
+    
+    httpClient.urlRequestSender = asyncURLRequestSender;
+
     httpClient.jsonDeserializer = [NSJSONSerializationJSONDeserializer new];
     return httpClient;
 }

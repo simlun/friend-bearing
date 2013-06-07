@@ -11,7 +11,7 @@
 #import "StubbedSucceedingHTTPClient.h"
 #import "StubbedFailingHTTPClient.h"
 #import "NSURLHTTPClient.h"
-#import "StubbedAsyncRequestSender.h"
+#import "StubbedURLRequestSender.h"
 #import "URLFactorySpy.h"
 
 @implementation WebServiceFriendBearingSourceTest
