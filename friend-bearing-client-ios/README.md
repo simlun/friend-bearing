@@ -17,3 +17,14 @@ Since Xcode is not very intuitive when it comes to creating a modularized worksp
 9. Change _Derived Data Location_ to _Workspace-relative_
 
 Now running the unit tests for the `-lib` project should be successful, and starting the `-app` project in the simulator should work too.
+
+
+Coding Conventions
+------------------
+
+* Completely unit test the `lib` project.
+* The `app` project is only a _very_ thin UI layer on top of the `lib` project.
+    * Minimum amount of automated testing here. Rely on a well tested `lib`. Only bugs related to wiring are expected here.
+    * Expect the `lib` calling this code from any thread. It is a UI responsibility to only update the UI from the main thread. So use `dispatch_async(dispatch_get_main_queue(), ^{` when updating the UI (setting labels, etc).
+    * The only actual logic that might be here is real device implementaions of services like accessing the GPS.
+

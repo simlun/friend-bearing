@@ -38,7 +38,7 @@ Notice how both the `Client Library` and `Server Library` are free from dependen
 Dependencies:
 ```
                        +----------------+
-                       | Server Library |
+                       | Domain Library |
                        +----------------+
                         /             \
             +-------------+         +------+
@@ -47,7 +47,7 @@ Dependencies:
                         \            /
                          \          /
                           +---------+
-                          | Backend |
+                          | Server  |
                           +---------+
 ```
 
@@ -61,10 +61,10 @@ Client:
 
 Server:
 
-- `friend-bearing-server-lib`: `Server Library`
-- `friend-bearing-server-webservice`: `Web Service`
-- `friend-bearing-server-data`: `Data`
-- `friend-bearing-server`: `Backend`
+- `friend-bearing-server-clj/domain`: `Domain Library`
+- `friend-bearing-server-clj/webservice`: `Web Service`
+- `friend-bearing-server-clj/data`: `Data`
+- `friend-bearing-server-clj/server`: `Server`
 
 
 ## Features / Use Cases
