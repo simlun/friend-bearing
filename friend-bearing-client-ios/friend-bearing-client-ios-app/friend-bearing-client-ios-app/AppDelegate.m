@@ -15,9 +15,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // TODO: Get a DeviceLocationUpdater instance from the AppFactory, give it the same SessionSource
+    //       instance as the ChooseFriendPresenter uses, and start it.
+    //
+    //       Alternatively, implement some kind of event system listening for the app startup event..?!
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

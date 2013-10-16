@@ -28,6 +28,9 @@
 
 - (void)bindPresenter
 {
+    
+    // TODO: Make the AppFactory a Singleton
+    
     self.presenter = [[OfflineAppFactory new] buildChooseFriendPresenter];
     //self.presenter = [[OnlineAppFactory new] buildChooseFriendPresenter];
     

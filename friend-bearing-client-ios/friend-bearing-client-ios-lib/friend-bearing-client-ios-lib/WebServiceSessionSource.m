@@ -10,6 +10,12 @@
 
 @implementation WebServiceSessionSource
 
+// TODO: Make this synchronous or thread safe. Perhaps by wrappng the call in something that's making it synchronous.
+//       Perhaps that could include retrying? Is that a singleton (synchronous?) job queue?
+//
+//       SynchronousWebServiceSessionSource that runs NSInvocationOperations on a NSOperationQueue with number
+//       of concurrent operations limited to 1?
+
 - (void)getCurrentSessionAndSucceed:(SuccessfulSessionSourceBlock_t)succeed orFail:(FailedSessionSourceBlock_t)fail
 {
     if (self.sessionStorage.session != nil) {

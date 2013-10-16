@@ -13,4 +13,6 @@
 
 - (ChooseFriendPresenter *)buildChooseFriendPresenter;
 
+// TODO: Make the AppFactory a Singleton <-- NEXT UP!
+
 @end
